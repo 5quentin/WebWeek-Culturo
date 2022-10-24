@@ -1,0 +1,100 @@
+@font-face {
+    font-family: "GROBOLD";
+    src: url("./fonts/GROBOLD.ttf");
+}
+
+@font-face {
+    font-family: "Segoe UI Bold";
+    src: url("./fonts/segoe-ui/Segoe\ UI\ Bold.ttf"),
+}
+
+@font-face {
+    font-family: "Segoe UI";
+    src: url("./fonts/segoe-ui/Segoe\ UI.ttf"),
+}
+
+body, html {
+    margin: 0%;
+    padding: 0%;
+}
+
+body * {
+    font-family: "Segoe UI";
+    border-radius: 10px;
+}
+
+input {
+    border: none;
+}
+
+.container {
+    height: 90vh;
+    width: 100vw;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+h2 {
+    font-family: GROBOLD;
+    font-size: larger;
+}
+
+form {
+    height: 320px;
+    width: 500px;
+    padding-bottom: 30px;
+
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    flex-direction: column;
+
+    background-color: #E7E7E7;
+    position: relative;
+
+    border-radius: 50px;
+}
+
+.container>form>img {
+    position: absolute;
+    top: 20px;
+    left: 30px;
+
+    height: 35px;
+}
+
+.centre {
+    width: 60%;
+    margin-bottom: 10px;
+}
+
+p>input {
+    border: solid 1px #a8a8a8;
+
+    height: 50px;
+    width: 100%;
+}
+
+::placeholder {
+    padding: 10px;
+}
+
+.boutton {
+    width: 80%;
+
+    display: flex;
+    justify-content: space-between;
+}
+
+.boutton > * {
+    font-family: GROBOLD;
+    font-size: small;
+}
+
+.boutton > input {
+    width: 100px;
+    background-color: #161B4B;
+    color: white;
+}
