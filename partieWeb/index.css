@@ -1,0 +1,380 @@
+
+@font-face{
+  font-family: "Menu";
+  src: url("./9038-BBCReithSans_Rg.e3c4ef29\ 2.ttf");
+
+}
+@font-face{
+  font-family: "TitreArticle";
+  src: url("./BBC\ Reith\ Serif.ttf");
+
+}
+.info{
+  opacity: 0;
+}
+.Zoomer{
+  opacity: 100;
+  cursor: pointer;
+}
+.Zoomer::-webkit-scrollbar{
+  display: none;
+}
+body {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  font-family: 'Menu';
+}
+h1{
+  font-size: 2.3em;
+  font-weight: 700;
+  color: #4a4a4a;
+  font-family: 'TitreArticle' ;
+}
+h2{
+  font-size: 1.5em;
+  color: #4a4a4a;
+  
+}
+h3{
+  font-size: 1em;
+}
+p{
+  font-family: 'menu';
+  font-size: .8em;
+}
+/*/////////////////////////////////////////////////////*/
+header{
+  display: flex;
+  flex-direction: row;
+  height: 90px;
+  align-items: center;
+  background-color: black;
+}
+#header{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  height: 100%;
+  width: 84%;
+  margin: auto;
+  align-items: center;
+  font-weight: 700;
+  color: white;
+}
+#logo{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  width: 30%;
+  height: 100%;
+  
+  
+}
+#logo >p{
+  background-color: white;
+  color: black;
+  text-align: center;
+  font-size: 2.5em;
+  margin: 0;
+  width: 50px;
+  height: 50px;
+}
+.connexion{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  
+}
+.connexion p{
+  padding-right: 10px;
+  font-size: 1em;
+}
+.fa-user{
+  padding-right: 20px;
+}
+.fa-user::before{
+  text-align: center;
+  font-size: 1.5em;
+  
+}
+
+#navMenu{
+  width: 60%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  height: 100%;
+}
+#navMenu p{
+  font-size: 2em;
+  text-align: center;
+  align-self: start;
+  margin-top: 5px;
+}
+#navMenu ul{
+  margin: 0;
+  width: 90%;
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  padding-left: 20px;
+  border-left: #555 1px solid;
+}
+.menu a{
+  text-decoration: none;
+  color: white;
+}
+.fa-magnifying-glass::before{
+  font-size: 2em;
+}
+
+/*//////////////////////////////////////////////////////*/
+#main{
+  display: flex;
+  flex-direction: column;
+  margin-top: 2em;
+  width: 80%;
+  margin: auto;
+}
+#bandoNew{
+  background-color: #b80000;
+  display: flex;
+  flex-direction: row;
+  
+}
+#bandoNew p{
+  font-size: 3.5em;
+  font-weight: 700;
+  color: white;
+  width: 80%;
+  margin: .2em auto;
+}
+#h1Article{
+  width: 90%;
+  
+}
+.dateArticle{
+  width: 10em;
+  margin: 0;
+}
+.buttonContenaire{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin: 1em 0;
+}
+.buttonShare{
+  width: 60px;
+  height: 60px;
+  
+  display: flex;
+}
+.buttonShare div{
+  background-color: red;
+  margin: auto;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  cursor: pointer;
+}
+.buttonShare div:hover{
+  background-color: #b80000;
+  width: 60px;
+  height: 60px;
+}
+.fa-share-nodes{
+  margin: auto;
+}
+.fa-share-nodes::before{
+  color: #ffffff;
+}
+
+.buttonFrench{
+  border:#b80000 solid 1px;
+  height: 49px;
+  display: flex;
+  margin-left: .5em;
+  cursor: pointer;
+}
+.buttonFrench:hover{
+  background-color: #b80000;
+  color: white;
+}
+.buttonFrench p{
+  font-size: 1em;
+  font-weight: 700;
+  margin: auto 1em;
+}
+
+/*///////////////////////////*/
+#articleCampagne{
+  display: flex;
+  flex-direction: column;
+
+}
+#articleCampagne #imgCampagne{
+  margin: auto;
+  height: 120vh;
+  overflow: hidden;
+}
+#imgCampagne img{
+  width: 100%;
+}
+
+#articleCampagne h2 span{
+  font-size: .7em;
+  font-weight: 500;
+  color: #8a8c8e;
+}
+.ligneSepa{
+  border-bottom: #8a8c8e 5px solid;
+  width: 8em;
+}
+.legende{
+  color: #8a8c8e;
+  border-left: black solid 1px;
+  padding-left: 1em;
+}
+/*/////////////////////////////////////////*/
+#articleMap{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+#GroupeMap{
+  margin-top: 3em;
+  display: flex;
+  flex-direction: row;
+  height: 80vh;
+  width: 60%;
+  position: relative;
+}
+.mapContainer {
+  height: 100%;
+  width: 100%;
+  position: relative;
+  z-index: 1;
+  
+}
+.recouverement{
+  background-color: #4a4a4a;
+  position: absolute;
+  z-index: 2;
+  opacity: 40%;
+  height: 100%;
+  width: 100%;
+  display: flex;
+}
+.recouverement h2{
+  color: white;
+  opacity: 100%;
+  font-size: 3em;
+  margin:auto;
+}
+#GroupeMap:hover .recouverement{
+  z-index: 0;
+}
+.info {
+  padding: 6px 8px;
+  font: 14px/16px Arial, Helvetica, sans-serif;
+  background: white;
+  background: rgba(255,255,255,0.8);
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  border-radius: 5px;
+  max-height: 70vh;
+  overflow: scroll;
+}
+.info h4 {
+  margin: 0 0 5px;
+  color: #777;
+}
+.contenaireListe{
+  display: flex;
+  flex-direction: column;
+  padding: 1em;
+  width: 40%;
+}
+.InfoPoli{
+  margin: auto;
+}
+#SelectDep{
+  width: 100%;
+  font-size: 1.2em;
+
+}
+
+#blocGraphReg{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#blocGraphReg img{
+  width: 100%;
+}
+
+#blocGraphReg img:hover{
+  transform:scale(1.3);
+  z-index: 3;
+}
+
+/*/////////////////////////////////*/
+#h2ZoomAuvergne{
+  margin-top: 1em;
+}
+#zoomAuvergne{
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+#zoomAuvergne h4{
+  text-align: center;
+}
+.contenaireZoomAuvergne{
+ display: flex;
+  flex-direction: row;
+  justify-content:space-evenly;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.contenaireZoomAuvergne .AuvergneTxt{
+  width: 60%;
+}
+
+.contenaireZoomAuvergne .ImgZoomAuv{
+  width: 30%;
+
+}
+.contenaireZoomAuvergne .ImgZoomAuv:hover{
+  width: 30%;
+  transform:scale(1.3);
+  z-index: 3;
+
+}
+#zoomAuvergne .voirMoins .contenaireZoomAuvergne{
+  display: none;
+}
+#zoomAuvergne .voirMoins h4{
+  display: none;
+}
+#zoomAuvergne .voirPlus .contenaireZoomAuvergne{
+  display: block;
+}
+#zoomAuvergne .voirPlus h4{
+  display: block;
+}
+.ImgZoomAuv img{
+  width: 100%;
+}
+
+#voirPlus{
+  cursor: pointer;
+}
