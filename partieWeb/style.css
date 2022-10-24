@@ -85,23 +85,32 @@ a {
 }
 
 #profil{
-	background-color: white;
 	width: 80px;
-	padding: 0.8em;
-	margin-right: 0.5em;
+	height: 40px;
 	border-radius: 10px;
+	background-color: white;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+#billeterie{
+	width: 80px;
+	height: 40px;
+	border-radius: 10px;
+	background-color: #161B4B;
+	display: flex;
+	align-items: center;
+	justify-content: center;
 }
 
 #profil a{
-	color : black;
 	font-family: "GROBOLD";
+	background-color: white;
 }
 
 #billeterie a{
-	background-color: #161B4B;
 	color : white;
 	font-family: "GROBOLD";
-	padding: 0.8em;
-	border-radius: 10px;
 }
 
