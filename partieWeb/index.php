@@ -1,3 +1,8 @@
+<?php
+include "./include/connexionBDD.php";
+
+?>
+
 <!DOCTYPE html>
 <html lang="fr">
   <head>
@@ -66,11 +71,18 @@
       </article>
      
     </div>
-    
+    <?php $text1 = array(1,2,3,3,5);
+      print_r($text1)?>
+
     <script src="./Departements.js"></script>
     <script src="./webWeek.js"></script>
 
-  
-    <script> </script>
+    <script> 
+      <?php 
+          $NomVille = json_encode($tab_villes);
+          echo "var TabVille = ". $NomVille . ";\n";
+        ?>
+        console.log(TabVille[1]['nom']);
+    </script>
   </body>
 </html>
