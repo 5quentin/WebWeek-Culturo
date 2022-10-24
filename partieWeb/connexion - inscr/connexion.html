@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sign in Culturo</title>
+
+  <link rel="stylesheet" href="./style.css" />
+
+</head>
+
+<body>
+
+  <div class="container">
+    <form class="signup" method="POST" action="inscription.php" enctype="multipart/form-data"> 
+      <img src="./images/logo.png">
+
+      <div class="centre">
+
+        <div class="titre"><h2>Sign up :</h2></div>
+
+        <p>
+          <input type="text" name="nom" placeholder="Name..." required>
+          <input type="text" name="pnom" placeholder="First Name..." required>
+        </p>
+            
+        <p>
+          <input type="text" name="mdp" placeholder="Password..." required>
+        </p>
+
+      </div>
+
+      <div class="boutton">
+        <a href="./connexion.html">Already have an account? Sign in.</a>
+        <input type="button" name="connex" value="Sign up">
+      </div>
+      
+    </form>
+  </div>
+
+</body>

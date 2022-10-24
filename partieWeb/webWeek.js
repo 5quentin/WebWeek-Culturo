@@ -19,7 +19,6 @@ fetch('https://france-geojson.gregoiredavid.fr/repo/regions.geojson')
         var map = L.map('map').setView([51.01896550, 7.57780020], 4);
 
         L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-            maxZoom: 14,
 
 
         }).addTo(map);
@@ -124,7 +123,7 @@ fetch('https://france-geojson.gregoiredavid.fr/repo/regions.geojson')
 
 
                 if (valI != null) {
-
+                    
                     var NomVille = document.createElement('h3');
                     NomVille.setAttribute('id', 'NomVille');
                     NomVille.innerHTML = "Bonojur";
@@ -135,7 +134,7 @@ fetch('https://france-geojson.gregoiredavid.fr/repo/regions.geojson')
 
                     var DescripVille = document.createElement('p');
                     DescripVille.setAttribute('class', 'DescripVille');
-                    DescripVille.innerHTML = "qsdfghjklmmmmmmmmmmmmmmmmmmmmmmmmmm";
+                    DescripVille.innerHTML = TabVille[2]['presentation'];
 
                     blocNomVille.innerHTML = '';
                     blocNomVille.appendChild(NomVille);
