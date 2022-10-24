@@ -1,12 +1,5 @@
-<!DOCTYPE html>
-    <html>
-    	<head>
-        <meta charset="utf-8">
-        <title>Page de connexion</title>
-        <link rel="stylesheet" type="text/css" href="header.css" />
-     </head>
 
-     <body>
+        <link rel="stylesheet" type="text/css" href="header.css" />
      	<header>
      		<div class=tete>
 		     	<div class= "hg" >
@@ -31,6 +24,3 @@
 
 		<img class="top" src="./images_site/top.png">
 
-
-     </body>
-    </html>
