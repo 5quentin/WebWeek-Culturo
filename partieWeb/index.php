@@ -2,8 +2,14 @@
 include "./include/connexionBDD.php";
 include "./POO/CreerPorfil.php";
 
-$Eleve1 = new Profil('Beyler','Wilson','beyler.wilson@gmail.com','0783442122','2020');
+
+$BDDCo = new connexionBDD();
+
+$Eleve1 = new Profil('Beyler','Wilson','beyler.wilson@gmail.com','0783442122','2020','2020');
 $Eleve1->AchaBillet('BEYLER','Olivier',24,'Le Puy en Velay place VIP','24/06/2002');
+$Eleve1->setIdentifiant('0');
+$Eleve1->EnregistrementBDD((array)$Eleve1);
+
 ?>
 
 <!DOCTYPE html>
