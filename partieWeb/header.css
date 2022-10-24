@@ -125,12 +125,3 @@ a {
 	color : white;
 	font-family: "GROBOLD";
 }
-
-/*--------------------formes-------------------*/
-
-.top{
-	position: absolute;
-	top: 0;
-	left: 0;
-	z-index: -1;
-}
