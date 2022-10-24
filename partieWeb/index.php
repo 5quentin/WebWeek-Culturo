@@ -70,7 +70,7 @@
     <script src="./Departements.js"></script>
     <script src="./webWeek.js"></script>
 
-
+  
     <script> </script>
   </body>
 </html>

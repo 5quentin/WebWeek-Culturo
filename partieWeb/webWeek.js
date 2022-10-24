@@ -184,56 +184,5 @@ fetch('https://france-geojson.gregoiredavid.fr/repo/regions.geojson')
         }
         // method that we will use to update the control based on feature properties passed
 
-        let elec;
-        await fetch('https://yvan-thalamas.github.io/sae-mmi-api/election.json')
-            .then((response) => response.json())
-            .then((json => elec = json))
-
-        function tab(tableau) {
-            let poli = tableau['politicians'];
-
-            poli.sort(function (a, b) {
-                return a.votes - b.votes;
-            });
-
-            poli = poli.reverse();
-            var texte = '';
-
-            for (i = 0; i < tableau['politicians'].length; i++) {
-                texte = texte + '</b><br /><strong>' + tableau['politicians'][i].firstName + ' ' + tableau['politicians'][i].lastName + '</strong></br>' +
-                    tableau['politicians'][i].votes + " ==> " + ((tableau['politicians'][i].votes / tableau.registers) * 100).toFixed(2) +
-                    "%";
-            }
-            return texte;
-        }
-        /*var JsonDep = './departements-region.json';
-         var request = new XMLHttpRequest();
-         request.open('GET',JsonDep);
-    
-         request.responseType = 'json';
-         request.send();
-         request.onload = function(){
-            var Dep=request.reponse;
-         }
-        let JsonDep;
-         await fetch('./departements-region.json')
-         .then((response) => response.json())
-         .then((json => JsonDep = json))
-    
-         
-         function tabDep(tableau2){
-            let Dep = tableau2['Departements'];
-    
-            var TextDepart ='';
-    
-            for(i=0;i<tableau['Departements'].length; i++){
-                TextDepart = TextDepart + '</b><br /><strong>'+ tableau2['Departements'][i].nom +' '+
-                tableau2['Departements'][i].code + " ==> " + tableau2['Departements'][i].codeRedion;
-            }
-            console.log(TextDepart);
-            return TextDepart;
-            
-        }*/
-
     });
 
