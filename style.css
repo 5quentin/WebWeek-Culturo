@@ -1,0 +1,96 @@
+body {
+	margin : 0;
+}
+header{
+	padding: 2em 4em 2em 4em;
+	display: flex;
+	height: 50px;
+}
+
+
+.tete {
+	display: flex;
+	justify-content: space-between;
+	width: 100%;
+	height: 100%;
+
+}
+
+
+#logonb{
+	padding-right: 1em;
+	padding-bottom: 0.7em;
+	margin-top: 0.5em;
+}
+
+#dates{
+	color : white;
+	font-family: "GROBOLD";
+	font-size: 15px;
+	padding-left: 1em;
+}
+
+.hg{
+	background-color: #161B4B;
+	display: flex;
+	flex-direction: row;
+	justify-content: start;
+	width: 14%;
+	padding-left: 1em;
+	padding-right: 0.7em;
+	border-radius: 10px;
+	align-items: center;+
+}
+.hg img{
+	width: 45%;
+}
+.menuorange {
+	background-color: #FCA01F;
+	display: flex;
+	width: 40%;
+	border-radius: 10px;
+}
+.menu{
+	display: flex;
+	width: 100%;
+}
+.menu ul{
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+	list-style: none;
+	align-items: center;
+
+}
+.menu ul li{
+	height: 100%;
+}
+a {
+	text-decoration: none;
+	padding-right : 3em;
+	font-size: 13px;
+	font-family: "Segoe UI";
+	color : black;
+	font-weight: 500;
+}
+
+
+#profil a{
+	background-color: white;
+	color : black;
+	font-family: "GROBOLD";
+	padding: 0.8em;
+	margin-right: 0.5em;
+	border-radius: 10px;
+	font-size: 13px;
+
+}
+
+#billeterie a{
+	background-color: #161B4B;
+	color : white;
+	font-family: "GROBOLD";
+	padding: 0.8em;
+	border-radius: 10px;
+	font-size: 13px;
+}

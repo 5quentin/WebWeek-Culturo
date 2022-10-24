@@ -14,26 +14,32 @@
 <body>
 
   <div class="container">
-    <form class="signin" method="POST" action="inscription.php" enctype="multipart/form-data"> 
+    <form class="signup" method="POST" action="inscription.php" enctype="multipart/form-data"> 
       <img src="./images/logo.png">
 
       <div class="centre">
 
-        <div class="titre"><h2>Create an account :</h2></div>
+        <div class="titre"><h2>Sign up :</h2></div>
 
-        <p>
-          <input type="text" name="email" placeholder="Email..." required>
+        <p class="half">
+          <input type="text" name="nom" placeholder="Name..." required>
+          <input type="text" name="pnom" placeholder="First Name..." required>
         </p>
             
         <p>
           <input type="text" name="mdp" placeholder="Password..." required>
         </p>
 
+        <p class="half">
+          <input type="password" name="Password" placeholder="Password..." required>
+          <input type="password" name="Password" placeholder="Conirm..." required>
+        </p>
+
       </div>
 
       <div class="boutton">
-        <p hrreh="./inscription.php">Create an account</p>
-        <input type="button" name="connex" value="Sign in">
+        <a href="./connexion.html">Already have an account? Sign in.</a>
+        <input type="button" name="connex" value="Sign up">
       </div>
       
     </form>
