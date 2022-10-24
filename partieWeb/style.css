@@ -7,7 +7,6 @@ header{
 	height: 50px;
 }
 
-
 .tete {
 	display: flex;
 	justify-content: space-between;
@@ -27,23 +26,29 @@ header{
 	color : white;
 	font-family: "GROBOLD";
 	font-size: 15px;
-	padding-left: 1em;
 }
 
 .hg{
 	background-color: #161B4B;
+
 	display: flex;
-	flex-direction: row;
-	justify-content: start;
+	justify-content: space-between;
+	align-items: center;
+
 	width: 14%;
 	padding-left: 1em;
 	padding-right: 0.7em;
 	border-radius: 10px;
-	align-items: center;+
 }
+
 .hg img{
-	width: 45%;
+	height: 75%;
 }
+
+.hg > p {
+	line-height: 20px;
+}
+
 .menuorange {
 	background-color: #FCA01F;
 	display: flex;
@@ -56,34 +61,40 @@ header{
 }
 .menu ul{
 	display: flex;
-	flex-direction: row;
-	justify-content: space-around;
 	list-style: none;
+	justify-content: space-evenly;
 	align-items: center;
+	width: 100%;
+}
 
+.menu > ul {
+	padding: 0;
 }
-.menu ul li{
-	height: 100%;
+
+.menu > ul > li {
+	width: 80px;
+	text-align: center;
 }
+
 a {
 	text-decoration: none;
-	padding-right : 3em;
 	font-size: 13px;
 	font-family: "Segoe UI";
 	color : black;
 	font-weight: 500;
 }
 
-
-#profil a{
+#profil{
 	background-color: white;
-	color : black;
-	font-family: "GROBOLD";
+	width: 80px;
 	padding: 0.8em;
 	margin-right: 0.5em;
 	border-radius: 10px;
-	font-size: 13px;
+}
 
+#profil a{
+	color : black;
+	font-family: "GROBOLD";
 }
 
 #billeterie a{
@@ -92,5 +103,5 @@ a {
 	font-family: "GROBOLD";
 	padding: 0.8em;
 	border-radius: 10px;
-	font-size: 13px;
 }
+
