@@ -1,3 +1,5 @@
+/*--------------------Commun-------------------*/
+
 body {
 	margin : 0;
 }
@@ -13,6 +15,9 @@ header{
 	justify-content: center;
 }
 
+/*--------------------nav-------------------*/
+
+/*----------bleu--------*/
 .tete {
 	display: flex;
 	justify-content: space-between;
@@ -55,6 +60,7 @@ header{
 	line-height: 20px;
 }
 
+/*----------orange--------*/
 .menuorange {
 	background-color: #FCA01F;
 	display: flex;
@@ -120,3 +126,11 @@ a {
 	font-family: "GROBOLD";
 }
 
+/*--------------------formes-------------------*/
+
+.top{
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: -1;
+}
