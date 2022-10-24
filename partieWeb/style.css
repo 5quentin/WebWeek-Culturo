@@ -2,19 +2,21 @@ body {
 	margin : 0;
 }
 header{
-	padding: 2em 4em 2em 4em;
-	display: flex;
+	margin-top: 2em;
+	width: 100%;
 	height: 50px;
+	position: fixed;
+	display: flex;
+	justify-content: center;
 }
 
 .tete {
 	display: flex;
 	justify-content: space-between;
-	width: 100%;
+	width: 90%;
 	height: 100%;
 
 }
-
 
 #logonb{
 	padding-right: 1em;
@@ -35,7 +37,7 @@ header{
 	justify-content: space-between;
 	align-items: center;
 
-	width: 14%;
+	width: 220px;
 	padding-left: 1em;
 	padding-right: 0.7em;
 	border-radius: 10px;
@@ -52,7 +54,7 @@ header{
 .menuorange {
 	background-color: #FCA01F;
 	display: flex;
-	width: 40%;
+	width: 580px;
 	border-radius: 10px;
 }
 .menu{
