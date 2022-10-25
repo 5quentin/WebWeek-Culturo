@@ -29,7 +29,7 @@
 
     <h1 id="europe">Discover and vote for the works of your country <span id="bleu">!</span><br>Events in collaboration with Culturo <br>will be fixed at <span id="orange">50€</span></h1>
 
-  <h1>Reservation part :</h1>
+    <h1>Reservation part :</h1>
 
   </div>
 
@@ -42,10 +42,10 @@
         <div class="titre"><h2>What formula do you want ? :</h2></div>
 
         <p>
-          <select>
+          <select id="billet">
             <option>VIP Pass</option>
             <option>Standard Pass</option>
-            <option>Culturo's Selections</option>
+            <option value="euro">Culturo's Selections</option>
           </select>
         </p>
 
@@ -64,7 +64,7 @@
             
 
         <div>
-          <input type="checkbox" id="concert" name="concert" value="concert">
+          <input type="checkbox" id="checkConcert" name="concert" value="concert">
           <label for="concert">+10€ for concert access</label>
         </div>
 
@@ -72,7 +72,7 @@
       
 
       <div class="boutton">
-        <p>100€</p>
+        <p><span id="prix">100</span>€</p>
         <input type="submit" name="connex" value="Reserve">
       </div>
       
