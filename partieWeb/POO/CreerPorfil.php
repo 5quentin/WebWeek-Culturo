@@ -84,14 +84,11 @@
                 $req = $this->reqpreparee->execute();
                 if($req==true){
                     $coSauv = new funtionSauCo($this->tab_comptes[$v]['id'],'client');
-                    echo"<script>window.location.href='billet.php';</script>";
+                    //echo"<script>window.location.href='billet.php';</script>";
                 }
     
             }else {
-                echo "<script>
-                alert('You already have an acount');
-                document.location.href='./connexion.php'; 
-                </script>";
+                //echo "<script>alert('You already have an acount');document.location.href='./connexion.php'; </script>";
             } 
         }
     }

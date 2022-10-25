@@ -13,6 +13,11 @@ $billet = new Billets('Beyler','Olivier', 2, (array)$BDDCo);
 $billet->EnsembleBillets((array)$billet, 'Le Puy-En-Velay VIP');
 $billet->EnregistrementBDD_Billet((array)$billet);
 $billet->AffichageBillet((array)$BDDCo);
+
+$afficher = (array)$BDDCo;
+$afficher2  = $afficher['tab_typeBillet'];
+print_r($afficher2[1]['lib']);
+
 //print_r($BDDCo);
 echo "<br>";
 echo "<br>";
