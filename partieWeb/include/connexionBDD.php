@@ -9,7 +9,7 @@ class ConnexionBDD{
    
    public function __construct()
    {          
-       $this->connection = new PDO('mysql:host=localhost;port=3306;dbname=Culturo','root','');
+       $this->connection = new PDO('mysql:host=localhost;port=3306;dbname=Culturo','root','root');
    }
 //////////////////////////////////////////////
 
