@@ -24,23 +24,22 @@
             return $this->identifiant;
         }
 
-        public function __construct($nom,$prenom,$email,$tel,$mdp,$mdpVerif){
+        public function __construct($nom,$prenom,$email,$tel,$mdp){
             $this->nom = $nom;
             $this->prenom = $prenom;
             $this->email = $email;
             $this->tel = $tel;
             $this->mdp = $mdp;
-            $this->mdpVerif = $mdpVerif;
         }
 
 
-        public function AchaBillet($nom,$prenom,$numBillet,$typeBillet, $date){
+        /*public function AchaBillet($nom,$prenom,$numBillet,$typeBillet, $date){
             echo "Billet pour assister : ".$typeBillet."<br>";
             echo "Nom : ".$nom."<br>";
             echo "Prenom : ".$prenom."<br>";
             echo "Numéro de billet : ".$numBillet."<br>";
             echo "Date de l'évènement : ".$date."<br>";
-        }
+        }*/
 
         public function EnregistrementBDD($profil){
             
@@ -55,7 +54,6 @@
             if($this->tab_comptes!=null){
                 while($v<$this->nbComptes && $profil['email'] != $this->tab_comptes[$v]['mail']){
                     $v++;
-                    echo "<script>alert('OK')</script>";
                     if($profil['email'] != isset($this->tab_comptes[$v]['mail'])){
                         
                         $this->enregistre= true;
@@ -72,12 +70,6 @@
                // echo "<script>alert('OK')</script>";
             }
             
-            if($profil['mdp']==$profil['mdpVerif']){
-                $this->motdepass = true;
-                
-            }else{
-                //echo "<script>fenetreMessagePsw()</script>";
-            }
 
             if($this->enregistre== true){
                 
@@ -91,18 +83,15 @@
 
                 $req = $this->reqpreparee->execute();
                 if($req==true){
-                    echo "<script>alert('OK')</script>";
-                    /*
-                    $requete='SELECT * FROM eleves_info';
-                    $resultats=$connection->query($requete);
-                    $tab_eleves_info =$resultats->fetchAll();
-                    $resultats->closeCursor();
-                    $_SESSION['Id_Co_BDE'] ="";
-                    $_SESSION['Id_Co'] = $tab_eleves_info[$v]['id'];
-                // echo"<script>window.location.href='Accueil.php';</script>";*/
+                    echo"<script>window.location.href='billet.php';</script>";
                 }
     
-            }  
+            }else {
+                echo "<script>
+                alert('You already have an acount');
+                document.location.href='./connexion.php'; 
+                </script>";
+            } 
         }
     }
 

@@ -134,7 +134,7 @@ fetch('https://france-geojson.gregoiredavid.fr/repo/regions.geojson')
 
                     var DescripVille = document.createElement('p');
                     DescripVille.setAttribute('class', 'DescripVille');
-                    DescripVille.innerHTML = TabVille[2]['presentation'];
+                    DescripVille.innerHTML = "TabVille[2]['presentation']";
 
                     blocNomVille.innerHTML = '';
                     blocNomVille.appendChild(NomVille);

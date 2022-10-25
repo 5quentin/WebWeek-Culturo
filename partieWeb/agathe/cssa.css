@@ -1,0 +1,79 @@
+body {
+	display: flex;
+	justify-content: center;
+	margin: 0;
+}
+
+#contenaire{
+	display: flex;
+	flex-direction: column-reverse;
+	position: content;
+	width: 100%;
+}
+#contenaire > div:nth-child(1){
+	display: flex;
+	justify-content: center;
+	width: 100%;
+}
+.affiche {
+	display: flex;
+	justify-content:space-evenly;
+	z-index: 3;
+	width: 70%;
+}
+
+.carousel {
+	display: flex;
+	justify-content: center;
+	width:50%;
+
+}
+#harry {
+	border-radius: 15px;
+	width: 100%;
+}
+
+.description {
+	display: flex;
+	flex-direction: column;
+}
+
+.titre {
+	background-color: #F69F25;
+	font-family: GROBOLD;
+	font-size : 35px;
+	width: 190px;
+	text-align: center;
+	padding : 0.2em 0.5em 0.2em 0.5em;
+	border-radius: 10px;
+}
+
+.datesfest{
+	background-color: #161B4B;
+	color : white;
+	font-family: Segoe UI;
+	margin-top: 1.7em;
+	font-size: 20px;
+	border-radius: 10px;
+	padding: 2em 2em 1em 1.8em;
+	line-height: 45%;
+}
+
+.datesfest span{
+	font-family: Segoe UI;
+	font-weight: lighter;
+	font-size: 18px;
+}
+
+#white2023 {
+	font-size: 80px;
+	margin : 0.2em 0em 1em 1.3em;
+	text-shadow: 10px 2px #009289;
+}
+
+.tachej{
+	z-index: 0;
+	position: absolute;
+	top: 4em;
+	width: 50%;
+}

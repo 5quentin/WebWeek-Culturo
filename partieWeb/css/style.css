@@ -35,10 +35,10 @@ form a {
 }
 
 .container {
-    height: 90vh;
     width: 100vw;
 
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
 }
@@ -48,8 +48,29 @@ form h2 {
     font-size: larger;
 }
 
+.titre {
+    margin-top: 70px;
+
+    display: flex;
+    justify-content: flex-start;
+}
+
+#error {
+    font-family: GROBOLD;
+    font-size: smaller;
+    text-align: center;
+    color: #fd5353;
+}
+
+.space {
+    height: 20vh;
+    width: 100%;
+}
+
+
 form {
     padding-bottom: 30px;
+    width: 500px;
 
     display: flex;
     justify-content: flex-end;
@@ -107,22 +128,12 @@ p>input, select{
 
 /*---------------------Connexion--------------------*/
 
-.signin, .billet{
-    height: 320px;
-    width: 500px;
-}
-
 .signin > .centre > p > input, .billet > .centre > p > input, .billet > .centre > p > select {
     height: 50px;
     width: 100%;
 }
 
 /*---------------------Inscription--------------------*/
-
-.signup{
-    height: 380px;
-    width: 500px;
-}
 
 .half{
     display: flex;
