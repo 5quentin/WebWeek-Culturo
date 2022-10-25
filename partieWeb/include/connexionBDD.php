@@ -18,7 +18,7 @@
         
         public function __construct()
         {
-            $this->connection = new PDO('mysql:host=localhost;port=3306;dbname=Culturo', 'root', '');
+            $this->connection = new PDO('mysql:host=localhost;port=3306;dbname=Culturo', 'root', 'root');
 
             $this->requete = "SELECT * FROM type_billet";
             $this->resultats = $this->connection->query($this->requete);
@@ -51,7 +51,6 @@
                     }
                 }
             }
-
             if ($this->motDePasse == false) {
                 echo "<h3 id='error'>Email incorect</h3>";
             }

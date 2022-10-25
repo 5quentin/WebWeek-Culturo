@@ -20,7 +20,6 @@ body, html {
 
 body * {
     font-family: "Segoe UI";
-    border-radius: 10px;
 }
 
 /*---------------------Commun Connexion, Inscription, Billet--------------------*/
@@ -81,6 +80,10 @@ form {
     position: relative;
 
     border-radius: 50px;
+}
+
+form *{
+    border-radius: 10px;
 }
 
 form>img {

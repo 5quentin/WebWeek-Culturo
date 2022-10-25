@@ -14,7 +14,7 @@
 
 <body>
 
-  <?php include './header_footer/header.php';?>
+  <?php include './header_footer/header.html';?>
 
   <div class="container">
     <div class="space"></div>
@@ -56,4 +56,6 @@
     </form>
   </div>
 
+
+  <?php include './header_footer/footer.html';?>
 </body>
