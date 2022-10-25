@@ -83,6 +83,7 @@
 
                 $req = $this->reqpreparee->execute();
                 if($req==true){
+                    $coSauv = new funtionSauCo($this->tab_comptes[$v]['id'],'client');
                     echo"<script>window.location.href='billet.php';</script>";
                 }
     

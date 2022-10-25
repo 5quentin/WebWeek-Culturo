@@ -34,7 +34,7 @@ form a {
 }
 
 .container {
-    width: 100vw;
+    width: 100%;
 
     display: flex;
     flex-direction: column;
@@ -178,9 +178,17 @@ p>input, select{
     align-items: center;
 }
 
-.boutton > p {
-    margin: 10px;
+.boutton  p, .boutton  span {
     font-size: medium;
+    font-family: GROBOLD;
+}
+
+.billet .boutton > input {
+    margin-left: 10px;
+}
+
+#ville{
+    display: none;
 }
 
 .desc {
