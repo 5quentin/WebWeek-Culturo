@@ -48,10 +48,20 @@
             <option>Culturo's Selections</option>
           </select>
         </p>
+
+        <p id="ville">
+          <select>
+            <option>---Choose a city---</option>
+            <option>Le Puy en Velay</option>
+            <option>La ville Allemande là</option>
+            <option>Sienna</option>
+          </select>
+        </p>
             
         <p>
-          <input type="text" name="mdp" placeholder="Name of the incumbent..." required>
+          <input type="text" name="nom" placeholder="Name of the incumbent..." required>
         </p>
+            
 
         <div>
           <input type="checkbox" id="concert" name="concert" value="concert">
@@ -68,6 +78,8 @@
       
     </form>
   </div>
-
     <?php include './header_footer/footer.html';?>
+
+    
+    <script type="text/javascript" src="./js/scriptVilles.js"></script>
 </body>
