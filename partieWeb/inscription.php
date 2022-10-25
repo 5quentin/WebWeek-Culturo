@@ -14,7 +14,7 @@
 
 <body>
 
-  <?php include './include/header.php';?>
+  <?php include './header_footer/header.php';?>
 
   <div class="container">
     <form class="signup" method="POST" action="inscription.php" enctype="multipart/form-data"> 
@@ -35,17 +35,34 @@
 
         <p class="half">
           <input type="password" name="Password" placeholder="Password..." required>
-          <input type="password" name="Password" placeholder="Conirm..." required>
+          <input type="password" name="Password" placeholder="Confirm..." required>
         </p>
 
       </div>
 
       <div class="boutton">
         <a href="./connexion.php">Already have an account? Sign in.</a>
-        <input type="submit" name="connex" value="Sign up">
+        <input type="submit" name="inscr" value="Sign up">
       </div>
       
     </form>
   </div>
+
+
+  <?php
+    if(isset($_POST["inscr"])){
+
+      include "./include/connexionBDD.php";
+      include "./POO/CreerPorfil.php";
+
+      $BDDCo = new connexionBDD();
+
+      $Eleve1 = new Profil('Beyler','Wilson','beyler.wilson@gmail.com','0783442122','2020','2020');
+      $Eleve1->AchaBillet('BEYLER','Olivier',24,'Le Puy en Velay place VIP','24/06/2002');
+      $Eleve1->setIdentifiant('0');
+      $Eleve1->EnregistrementBDD((array)$Eleve1);
+
+    }
+  ?>
 
 </body>

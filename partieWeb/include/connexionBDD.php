@@ -4,6 +4,7 @@
 //session_start();
 //include('./fonction.php');
 //conserverIndentifiant();
+
     class ConnexionBDD
     {
         public $connection;
@@ -14,6 +15,7 @@
         public $nbComptes;
         public $motDePasse=false;
 
+        
         public function __construct()
         {
             $this->connection = new PDO('mysql:host=localhost;port=3306;dbname=Culturo', 'root', '');

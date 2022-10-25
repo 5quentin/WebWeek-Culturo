@@ -14,7 +14,7 @@
 
 <body>
 
-  <?php include './include/header.php';?>
+  <?php include './header_footer/header.php';?>
 
   <div class="container">
     <form class="signin" method="POST" action="inscription.php" enctype="multipart/form-data"> 
