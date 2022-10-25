@@ -31,7 +31,6 @@ html, body{
   flex-direction: row;
   height: 80vh;
   width: 60%;
-  position: relative;
 }
 .mapContainer {
   height: 100%;
@@ -111,7 +110,7 @@ html, body{
 .tacheorange{
   z-index: 0;
   position:absolute;
-  top: 4em;
+  top: 14em;
   right: 0;
   width: 50px;
 }
@@ -136,9 +135,12 @@ html, body{
   position: content;
   width: 100%;
 }
-
+.intro{
+  display: flex;
+  justify-content: center;
+}
 .intro>div{
-width: 50%;
+width: 45%;
 display: flex;
 flex-direction: column;
 }
@@ -149,11 +151,29 @@ flex-direction: column;
 
 .titre{
   font-family: 'GROBOLD';
+  margin : 0;
+  margin-bottom: 0.2em;
+}
+
+.titreE{
+  font-family: 'GROBOLD';
+  font-size: 25px;
+  font-weight: 200;
+  margin : 0;
 }
 
 
+.learn {
+  margin : 0;
+  font-weight: 700;
+  font-family: 'Segoe UI';
+}
+  
+
 .leint p {
   font-family: 'Segoe UI';
+  font-size: 21px;
+  font-weight: 600;
 }
 
 /* partie map */
@@ -194,7 +214,7 @@ flex-direction: column;
 #select{
   background-color: black;
   color: white;
-  border-radius: 20px;
+  border-radius: 15px;
   border: 50px;
   font-size: 25px;
 }
@@ -202,7 +222,7 @@ flex-direction: column;
 #ville{
   background-color: #161B4B;
   color: white;
-  border-radius: 20px;
+  border-radius: 15px;
   border: 50px;
   font-size: 25px;
 }
@@ -216,6 +236,20 @@ flex-direction: column;
 
 .titre2{
   margin: 0;
+  padding: 0.3em 1em 0.3em 1em;
+  text-align: center;
+}
+
+#select {
+  font-size: 21px;
+  padding: 0.5em 1.2em 0.5em 1.2em;
+}
+
+#ville {
+  font-size: 21px;
+  font-family: 'Segoe UI';
+  font-weight: bold;
+  padding: 0.5em 2em 0.5em 2em;
 }
 
 .imgcarte>img{
@@ -226,6 +260,8 @@ flex-direction: column;
   width: 500px;
   background-color: #FCA01F;
   border-radius: 15px;
+  padding : 0.5em;
+  color : white;
 }
 
 .textville p{
