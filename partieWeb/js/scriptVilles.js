@@ -3,7 +3,7 @@ window.addEventListener("load",setupListenerPrix);
 
 function setupListenerSelect (){
     let selectBillet=document.getElementById("billet");
-	selectBillet.addEventListener("click",cacheEuro);
+	selectBillet.addEventListener("change",cacheEuro);
 }
 
 function cacheEuro () {
