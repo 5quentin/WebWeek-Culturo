@@ -51,7 +51,6 @@
                     }
                 }
             }
-
             if ($this->motDePasse == false) {
                 echo "<h3 id='error'>Email incorect</h3>";
             }
