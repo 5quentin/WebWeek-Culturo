@@ -123,7 +123,7 @@ fetch('https://france-geojson.gregoiredavid.fr/repo/regions.geojson')
 
 
                 if (valI != null) {
-                    
+
                     var NomVille = document.createElement('h3');
                     NomVille.setAttribute('id', 'NomVille');
                     NomVille.innerHTML = "Bonojur";
@@ -161,22 +161,22 @@ fetch('https://france-geojson.gregoiredavid.fr/repo/regions.geojson')
             return this._div;
         };
         info.update = function (e) {
-            if(e!=null){
+            if (e != null) {
                 this._div.id = "infoZoom";
                 this._div.classList.add('Zoomer');
                 this._div.innerHTML = '<i class="fa-solid fa-compress"></i>';
-                
-            }else{
+
+            } else {
                 this._div.id = "infoZoom";
                 this._div.classList.remove('Zoomer');
             }
-            
+
         };
         info.addTo(map);
         const deZoom = document.getElementById('infoZoom');
-        deZoom.addEventListener('click',GrandCarte);
+        deZoom.addEventListener('click', GrandCarte);
 
-        function GrandCarte(){
+        function GrandCarte() {
             map.setView([51.01896550, 7.57780020], 4);
             InfoPays();
             info.update();

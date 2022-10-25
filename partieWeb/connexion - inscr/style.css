@@ -29,7 +29,7 @@ input {
 
 a {
     text-decoration: none;
-    color: black;
+    color: #161B4B;
 }
 
 .container {
@@ -121,7 +121,18 @@ p>input {
     width: 500px;
 }
 
+.half{
+    display: flex;
+    justify-content: space-between;
+}
+
 .signup > .centre > p > input {
     height: 50px;
     width: 100%;
 }
+
+.signup > .centre > .half > input {
+    height: 50px;
+    width: 46%;
+}
+
