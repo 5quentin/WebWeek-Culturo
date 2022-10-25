@@ -7,11 +7,14 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Sign up Culturo</title>
 
-  <link rel="stylesheet" href="./style.css" />
+  <link rel="stylesheet" href="./css/style.css" />
+  <link rel="stylesheet" href="./css/header.css" />
 
 </head>
 
 <body>
+
+  <?php include './include/header.php';?>
 
   <div class="container">
     <form class="signup" method="POST" action="inscription.php" enctype="multipart/form-data"> 
@@ -39,7 +42,7 @@
 
       <div class="boutton">
         <a href="./connexion.php">Already have an account? Sign in.</a>
-        <input type="button" name="connex" value="Sign up">
+        <input type="submit" name="connex" value="Sign up">
       </div>
       
     </form>

@@ -1,16 +1,16 @@
 @font-face {
     font-family: "GROBOLD";
-    src: url("./fonts/GROBOLD.ttf");
+    src: url("../fonts/GROBOLD.ttf");
 }
 
 @font-face {
     font-family: "Segoe UI Bold";
-    src: url("./fonts/segoe-ui/Segoe\ UI\ Bold.ttf"),
+    src: url("../fonts/segoe-ui/Segoe\ UI\ Bold.ttf"),
 }
 
 @font-face {
     font-family: "Segoe UI";
-    src: url("./fonts/segoe-ui/Segoe\ UI.ttf"),
+    src: url("../fonts/segoe-ui/Segoe\ UI.ttf"),
 }
 
 body, html {
@@ -23,13 +23,13 @@ body * {
     border-radius: 10px;
 }
 
-/*---------------------Commun Connexion, Inscription--------------------*/
+/*---------------------Commun Connexion, Inscription, Billet--------------------*/
 
 input {
     border: none;
 }
 
-a {
+form a {
     text-decoration: none;
     color: #161B4B;
 }
@@ -43,7 +43,7 @@ a {
     justify-content: center;
 }
 
-h2 {
+form h2 {
     font-family: GROBOLD;
     font-size: larger;
 }
@@ -62,7 +62,7 @@ form {
     border-radius: 50px;
 }
 
-.container>form>img {
+form>img {
     position: absolute;
     top: 20px;
     left: 30px;
@@ -75,11 +75,12 @@ form {
     margin-bottom: 10px;
 }
 
-p>input {
+p>input, select{
     border: solid 1px #a8a8a8;
 }
 
-::placeholder {
+
+::placeholder, select{
     padding: 10px;
 }
 
@@ -106,12 +107,12 @@ p>input {
 
 /*---------------------Connexion--------------------*/
 
-.signin{
+.signin, .billet{
     height: 320px;
     width: 500px;
 }
 
-.signin > .centre > p > input {
+.signin > .centre > p > input, .billet > .centre > p > input, .billet > .centre > p > select {
     height: 50px;
     width: 100%;
 }
@@ -136,5 +137,79 @@ p>input {
 .signup > .centre > .half > input {
     height: 50px;
     width: 46%;
+}
+
+
+/*---------------------billets--------------------*/
+
+.container_billet{
+    margin-top: 20px;
+    width: 100vw;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.signin > .centre > p > input {
+    height: 50px;
+    width: 100%;
+}
+
+.billet .boutton {
+    width: 80%;
+
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.boutton > p {
+    margin: 10px;
+    font-size: medium;
+}
+
+.desc {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.desc *{
+    text-align: center;
+    font-family: GROBOLD;
+}
+
+.desc > h1{
+    margin-top: 70px;
+}
+
+.desc > p{
+    margin: 0;
+}
+
+.desc > #prems {
+    margin-top: 250px;
+}
+
+.desc > #stand {
+    color: #009289;
+}
+
+.desc > #vip {
+    color: #FCA01F;
+}
+
+.desc > #concert {
+    color: #161B4B;
+}
+
+#europe > #orange {
+    color: #FCA01F;
+}
+
+#europe > #bleu {
+    color: #009289;
 }
 
