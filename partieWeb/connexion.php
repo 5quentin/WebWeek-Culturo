@@ -17,20 +17,34 @@
   <?php include './header_footer/header.php';?>
 
   <div class="container">
-    <form class="signin" method="POST" action="inscription.php" enctype="multipart/form-data"> 
+    <div class="space"></div>
+    <form class="signin" method="POST" action="connexion.php" enctype="multipart/form-data"> 
       <img src="./images/logo.png">
 
       <div class="centre">
 
-        <div class="titre"><h2>Create an account :</h2></div>
+        <div class="titre"><h2>Log in :</h2></div>
 
         <p>
-          <input type="text" name="email" placeholder="Email..." required>
+          <input type="email" name="email" placeholder="Email..." required>
         </p>
             
         <p>
-          <input type="text" name="mdp" placeholder="Password..." required>
+          <input type="password" name="mdp" placeholder="Password..." required>
         </p>
+
+        <?php
+          if(isset($_POST["connex"])){
+
+            include "./include/connexionBDD.php";
+            include "./POO/CreerPorfil.php";
+            
+            $BDD = new ConnexionBDD(); 
+            $BDD->__construct();
+            $BDD->connexion($_POST["email"],$_POST["mdp"]);
+
+            }
+        ?>
 
       </div>
 
