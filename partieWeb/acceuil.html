@@ -3,13 +3,34 @@
 <head>
   <meta charset="utf-8">
   <title>Culturo</title>
-  <link rel="stylesheet" href="index.css">
+  <link rel="stylesheet" href="./css/index.css">
+  <link rel="stylesheet" type="text/css" href="./css/header.css" />
   <script src="script.js"></script>
 </head>
 
 <body>
 <!-- header -->
- 
+    <header>
+      <div class=tete>
+        <div class= "hg" >
+          <img id="logonb" src="../partieWeb/images/logonb.png">
+          <p id="dates">Juil 7-9 Juil 21-23</p>
+        </div>
+
+        <div class="menuorange">
+          <nav class= "menu">
+            <ul>
+              <li><a href="europe">Europe</a></li>
+              <li><a href="europe">A l'affiche</a></li>
+              <li><a href="europe">Puy en Velay</a></li>
+              <li><a href="europe">Langue</a></li>
+              <div id="profil"><li><a href="europe">Profil</a></li></div>
+              <div id="billeterie"><li><a href="europe">Billeterie</a></li></div>
+            </ul>
+          </nav>
+        <div>
+      </div>
+    </header>
 
 <!-- landing page -->
   <div class="main">
@@ -17,18 +38,18 @@
     <div class="container">
       
         <div class="logo">
-          <img class="imglogo" src="../images site/logo.png" alt="logo">
+          <img class="imglogo" src="../partieWeb/images/logo.png" alt="logo">
         </div> 
 
         <div class="intro">
           <div class="leint">
-            <h1>CULTURO</h1>
-            <h2>L'évènement culturel européen</h2>
+            <h1 class="titre">CULTURO</h1>
+            <h2 class="titre">The European cultural event</h2>
             <p>
-              Chaque année, une ville Européenne se transforme en réunion culturelle.
-              Cette année, du 21 au 23 juillet 2023, venez profiter de la richesse offerte par Le Puy en Velay en FRANCE.
+              Every year, a European city turns into a cultural meeting.
+              This year, from July 21 to 23, 2023, come and enjoy the richness offered by Le Puy en Velay in FRANCE.
             </p>
-            <h4>En savoir plus</h4>
+            <h4>Learn more</h4>
           </div>
         </div>
     </div>
@@ -37,9 +58,42 @@
 
 <!-- Carte intéractive -->
 
+<div class="containerMap">
+  <div class="placemap">
+    <img src="https://picsum.photos/500/500" alt="dems">
+  </div>
 
 
+  <div class="contentcontainer">
+    <div class="selection">
+      <p class="titre2" id="select">SELECTION CULTURO</p>  
+      <div>
+        <p class="titre2" id="ville">PUY EN VELAY</p>
+      </div>  
+    </div>
+    
+      <div class="imgcarte">
+        <img src="../partieWeb/images/images villes/lepuy.png" alt="imgville">
+      </div>
+
+      <div class="textville">
+        <p>Le Puy-en-Velay is a French commune, it is the prefecture of the Haute-Loire department in the Auvergne-Rhône-Alpes region. Le Puy-en-Velay had 19,215 inhabitants in 2019 and its inhabitants are called Ponots</p>
+      </div>    
+  </div>   
+</div>
+ 
+<div class="bouton">
+  <div class="ticket">
+    <p>TICKETS <br>
+      Selection Culturo
+    </p>
+  </div>
+</div>
+  
 <!-- Carousel A l'affiche -->
+
+
+<!-- Map du Puy-en-Velay -->
 
 
 </body>

@@ -1,3 +1,7 @@
+*{
+font-family: 'GROBOLD';
+}
+
 
 /*********************** Partie Map ***********************/
 .info{
@@ -96,6 +100,7 @@
 
 /*********************** Home Page ***********************/
 
+/* partie intro */
 .main{
   display: flex;
   height: 100vh;
@@ -125,11 +130,93 @@ flex-direction: column;
   max-width: 600px;
 }
 
-h1, h2{
+.titre{
   font-family: 'GROBOLD';
 }
 
 
 .leint p {
   font-family: 'Segoe UI';
+}
+
+/* partie map */
+
+.containerMap{
+display: flex;
+width: 100vw;
+height: 500px;
+justify-content: space-evenly;
+}
+
+.placemap{
+  width: 500px;
+  height: 500px;
+}
+
+.selection{
+  display: flex;
+  width: auto;
+  height: auto;
+  width: 500px;
+  justify-content: space-between;
+
+}
+
+#select{
+  background-color: black;
+  color: white;
+  border-radius: 20px;
+  border: 50px;
+  font-size: 25px;
+}
+
+#ville{
+  background-color: #161B4B;
+  color: white;
+  border-radius: 20px;
+  border: 50px;
+  font-size: 25px;
+}
+
+
+.contentcontainer{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.titre2{
+  margin: 0;
+}
+
+.imgcarte>img{
+  width: 500px;
+}
+
+.textville{
+  width: 500px;
+  background-color: #FCA01F;
+  border-radius: 15px;
+}
+
+.textville p{
+  font-family: 'Segoe UI';
+  text-align: center;
+  
+}
+
+.bouton{
+  display: flex;
+  justify-content: center;
+  padding: 25px;
+}
+
+.ticket{
+  width: 180px;
+  height: 70px;
+  display: flex;
+  justify-content: center;
+  background-color: #009289;
+  border-radius: 25px;
+  text-align: center;
 }
