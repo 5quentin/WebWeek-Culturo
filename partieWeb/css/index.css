@@ -233,8 +233,8 @@ flex-direction: column;
 #select{
   background-color: black;
   color: white;
-  border-radius: 15px;
-  font-family: 'Segoe UI';
+  border-radius: 10px;
+  font-family: 'GROBOLD';
   border: 50px;
   font-size: 25px;
 }
@@ -242,11 +242,22 @@ flex-direction: column;
 #ville{
   background-color: #161B4B;
   color: white;
-  border-radius: 15px;
+  border-radius: 10px;
   border: 50px;
   font-size: 25px;
 }
 
+#select {
+  font-size: 21px;
+  padding: 0.5em 1em 0.5em 1em;
+}
+
+#ville {
+  font-size: 21px;
+  font-family: 'Segoe UI';
+  font-weight: bold;
+  padding: 0.5em 2em 0.5em 2em;
+}
 
 .contentcontainer{
   display: flex;
@@ -260,17 +271,7 @@ flex-direction: column;
   text-align: center;
 }
 
-#select {
-  font-size: 21px;
-  padding: 0.5em 1.2em 0.5em 1.2em;
-}
 
-#ville {
-  font-size: 21px;
-  font-family: 'Segoe UI';
-  font-weight: bold;
-  padding: 0.5em 2em 0.5em 2em;
-}
 
 .imgcarte>img{
   width: 500px;
@@ -483,6 +484,7 @@ flex-direction: column;
   display: flex;
   justify-content: center;
   width: 100%;
+	z-index: 4;
 }
 .TextSavoir>p{
   font-family: "Segoe UI";
