@@ -300,4 +300,128 @@ flex-direction: column;
 
 .ticket span{
   font-size: 22px;
+
+/* Profile Page */
+
+.sideContainer{
+  display: flex;
+  position: absolute;
+  flex-direction: column;
+  width: 250px;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+  background-color: lightgray;
+  z-index: -2000;
+}
+
+.signin > .centre > p > input, .billet > .centre > p > input, .billet > .centre > p > select {
+  height: 50px;
+  width: 100%;
+}
+
+input {
+  border: none;
+}
+
+form a {
+  text-decoration: none;
+  color: #161B4B;
+}
+
+.container {
+  width: 100%;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center ;
+
+}
+
+form h2 {
+  font-family: GROBOLD;
+  font-size: larger;
+}
+
+.titre {
+  margin-top: 70px;
+
+  display: flex;
+  justify-content: flex-start;
+}
+
+#error {
+  font-family: GROBOLD;
+  font-size: smaller;
+  text-align: center;
+  color: #fd5353;
+}
+
+.space {
+  height: 20vh;
+  width: 100%;
+}
+
+
+form {
+  padding-bottom: 30px;
+  width: 500px;
+
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  flex-direction: column;
+
+  background-color: #E7E7E7;
+  position: relative;
+
+  border-radius: 50px;
+}
+
+form *{
+  border-radius: 10px;
+}
+
+form>img {
+  position: absolute;
+  top: 20px;
+  left: 30px;
+
+  height: 35px;
+}
+
+.centre {
+  width: 60%;
+  margin-bottom: 10px;
+}
+
+p>input, select{
+  border: solid 1px #a8a8a8;
+}
+
+
+::placeholder, select{
+  padding: 10px;
+}
+
+.boutton {
+  width: 80%;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.boutton > * {
+  font-family: GROBOLD;
+  font-size: small;
+}
+
+.boutton > input {
+  width: 90px;
+  height: 40px;
+
+  background-color: #161B4B;
+  color: white;
 }
