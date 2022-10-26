@@ -1,35 +1,17 @@
+*{
+font-family: 'GROBOLD';
+}
+
 html, body{
   margin: 0;
   padding: 0;
   width: 100%;
   position: relative;
-  display: flex;
-	justify-content: space-between;
-	flex-direction: column;
-	margin: 0;
-  font-family: "GROBOLD";
 }
-
-
 /*********************** Partie Map ***********************/
-
-.info {
-  padding: 6px 8px;
-  font: 14px/16px Arial, Helvetica, sans-serif;
-  background: white;
-  background: rgba(255,255,255,0.8);
-  box-shadow: 0 0 15px rgba(0,0,0,0.2);
-  border-radius: 5px;
-  max-height: 70vh;
-  overflow: scroll;
+.info{
   opacity: 0;
 }
-
-.info h4 {
-  margin: 0 0 5px;
-  color: #777;
-}
-
 .Zoomer{
   opacity: 100;
   cursor: pointer;
@@ -50,14 +32,13 @@ html, body{
   height: 80vh;
   width: 60%;
 }
-
 .mapContainer {
   height: 100%;
   width: 100%;
   position: relative;
-  z-index: 1; 
+  z-index: 1;
+  
 }
-
 .recouverement{
   background-color: #4a4a4a;
   position: absolute;
@@ -67,18 +48,29 @@ html, body{
   width: 100%;
   display: flex;
 }
-
 .recouverement h2{
   color: white;
   opacity: 100%;
   font-size: 3em;
   margin:auto;
 }
-
 #GroupeMap:hover .recouverement{
   z-index: 0;
 }
-
+.info {
+  padding: 6px 8px;
+  font: 14px/16px Arial, Helvetica, sans-serif;
+  background: white;
+  background: rgba(255,255,255,0.8);
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  border-radius: 5px;
+  max-height: 70vh;
+  overflow: scroll;
+}
+.info h4 {
+  margin: 0 0 5px;
+  color: #777;
+}
 .contenaireListe{
   display: flex;
   flex-direction: column;
@@ -88,10 +80,10 @@ html, body{
 .InfoPoli{
   margin: auto;
 }
-
 #SelectDep{
   width: 100%;
   font-size: 1.2em;
+
 }
 
 #blocGraphReg{
@@ -133,7 +125,7 @@ html, body{
 .logo{
   display: flex;
   height: auto;
-  width: 160vw;
+  width: 100vw;
   justify-content: center;
 }
 
@@ -144,14 +136,12 @@ html, body{
   position: content;
   width: 100%;
 }
-
 .intro{
   display: flex;
-  justify-content: start;
+  justify-content: center;
 }
-
 .intro>div{
-width: 65%;
+width: 45%;
 display: flex;
 flex-direction: column;
 }
@@ -160,7 +150,7 @@ flex-direction: column;
   max-width: 600px;
 }
 
-.titreCULT{
+.titre{
   font-family: 'GROBOLD';
   margin : 0;
   margin-bottom: 0.2em;
@@ -172,6 +162,7 @@ flex-direction: column;
   font-weight: 200;
   margin : 0;
 }
+
 
 .learn {
   margin : 0;
@@ -189,21 +180,21 @@ flex-direction: column;
 /* partie map */
 .containerMap{
   display: flex;
+  flex-direction: column;
   grid-gap: 100px;
-  width: 0%;
-  justify-content:space-evenly;
+  width: 100%;
+  justify-content:center;
   z-index: 0;
   }
- 
-
-.partieMap{
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-}
-
+  .containerMap>article{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 500px;
+    justify-content:right;
+    z-index: 0;
+    position: relative;
+    }
 .containerMap>article>div:nth-child(1){
   display: flex;
   flex-direction: row;
@@ -234,7 +225,6 @@ flex-direction: column;
   background-color: black;
   color: white;
   border-radius: 15px;
-  font-family: 'Segoe UI';
   border: 50px;
   font-size: 25px;
 }
@@ -290,7 +280,9 @@ flex-direction: column;
   font-weight: 600;
 }
 
-
+.main .bouton{
+  grid-gap: 100px;
+}
 .bouton{ 
   display: flex;
   justify-content: center;
@@ -302,210 +294,134 @@ flex-direction: column;
   align-self: center;
 }
 
-#tickcult{
-  text-align: center;
-  padding : 0.8em;
-  
-}
-
 .ticket{ 
   text-align: center;
 }
 
 .ticket span{
   font-size: 22px;
-}
 
 /* Profile Page */
 
-.contEuro{
-	display: flex;
-	position: content;
-	width: 100%;
-	z-index: 3;
-  justify-content: space-evenly;
-	margin-top : 3em;
+.sideContainer{
+  display: flex;
+  position: absolute;
+  flex-direction: column;
+  width: 250px;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+  background-color: lightgray;
+  z-index: -2000;
 }
 
-
-.contenairePuy{
-	display: flex;
-	flex-direction: column-reverse;
-	position: content;
-	width: 100%;
-	z-index: 3;
-	flex-direction: row;
-  justify-content: space-evenly;
-	margin-top : 3em;
-}
-.contenairePuy #ContenaireProg{
-	display: flex;
-	flex-direction: column-reverse;
-	position: content;
-	width: 1000px;
-	z-index: 3;
-	flex-direction: row;
-	justify-content: space-evenly;
+.signin > .centre > p > input, .billet > .centre > p > input, .billet > .centre > p > select {
+  height: 50px;
+  width: 100%;
 }
 
-.contenairePuy > div:nth-child(1){
-	display: flex;
-	justify-content: center;
-	width: 100%;
-	
+input {
+  border: none;
 }
 
-
-
-.affiche {
-	display: flex;
-	justify-content:space-evenly;
-	z-index: 3;
-	width: 70%;
+form a {
+  text-decoration: none;
+  color: #161B4B;
 }
 
-.carousel {
-	display: flex;
-	justify-content: center;
-	width:50%;
+.container {
+  width: 100%;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center ;
 
 }
-#harry {
-	border-radius: 15px;
-	width: 100%;
-}
 
-.description {
-	display: flex;
-	flex-direction: column;
+form h2 {
+  font-family: GROBOLD;
+  font-size: larger;
 }
 
 .titre {
-	background-color: #F69F25;
-	font-family: GROBOLD;
-	font-size : 35px;
-	width: 190px;
-	text-align: center;
-	padding : 0.2em 0.5em 0.2em 0.5em;
-	border-radius: 10px;
-}
+  margin-top: 70px;
 
-.titrep {
-	background-color: #000000;
-	color : white;
-	font-family: "GROBOLD";
-	font-size : 35px;
-	width: 360px;
-	text-align: center;
-	padding : 0.2em 0.5em 0.2em 0.5em;
-	border-radius: 10px;
-}
-
-.datesfest{
-	background-color: #161B4B;
-	color : white;
-	font-family: Segoe UI;
-	margin-top: 1.7em;
-	font-size: 20px;
-	border-radius: 10px;
-	padding: 2em 2em 1em 1.8em;
-	line-height: 45%;
-}
-
-.datesfest span{
-	font-family: Segoe UI;
-	font-weight: lighter;
-	font-size: 18px;
-}
-
-#white2023 {
-	font-size: 80px;
-	margin : 0.2em 0em 1em 1.3em;
-	text-shadow: 10px 2px #009289;
-}
-
-.tachej{
-	z-index: 0;
-	position: absolute;
-	top: 90em;
-}
-
-
-
-.lieu{
-	background-color: #161B4B;
-	color : white;
-	display: flex;
-	justify-content: center;
-	font-family: 'Segoe UI';
-	font-weight: bold;
-	text-align: center;
-	width: 480px;
-	border-radius: 10px;
-	padding : 1.5em;
-	margin-top: 1.7em;
-}
-
-
-
-.zone {
-	line-height: 65px;
-	padding-left: 3em;
-  font-family:"Segoe UI"
-}
-
-
-.art {
-	background-color: #009289;
-  font-family:"Segoe UI";
-	display: flex;
-	color: black;
-	text-align: center;
-	border-radius: 10px;
-	justify-content: center;
-	padding-left: 1.5em;
-	padding-right: 1.5em;
-	line-height: 65px;
-	font-weight: 900;
-}
-
-.programme {
-	display: flex;
-	flex-direction: column;
-}
-
-#cartep {
-	border-radius: 10px;
-}
-
-
-.TextSavoir{
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
+}
+
+#error {
+  font-family: GROBOLD;
+  font-size: smaller;
+  text-align: center;
+  color: #fd5353;
+}
+
+.space {
+  height: 20vh;
   width: 100%;
 }
-.TextSavoir>p{
-  font-family: "Segoe UI";
-  font-weight: 600;
-  color : white;
-  background-color: #F69F25;
-  width: 800px;
-  border-radius: 15px;
-}
-#textesav {
-  padding : 2em;
-}
-
-#textesav>span {
-  text-align: center;
-  font-weight: 900;
-}
 
 
-.Buy {
+form {
+  padding-bottom: 30px;
+  width: 500px;
+
   display: flex;
+  justify-content: flex-end;
+  align-items: center;
   flex-direction: column;
-  justify-content: center;
-  margin-top: -12em;
+
+  background-color: #E7E7E7;
+  position: relative;
+
+  border-radius: 50px;
 }
 
+form *{
+  border-radius: 10px;
+}
+
+form>img {
+  position: absolute;
+  top: 20px;
+  left: 30px;
+
+  height: 35px;
+}
+
+.centre {
+  width: 60%;
+  margin-bottom: 10px;
+}
+
+p>input, select{
+  border: solid 1px #a8a8a8;
+}
+
+
+::placeholder, select{
+  padding: 10px;
+}
+
+.boutton {
+  width: 80%;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.boutton > * {
+  font-family: GROBOLD;
+  font-size: small;
+}
+
+.boutton > input {
+  width: 90px;
+  height: 40px;
+
+  background-color: #161B4B;
+  color: white;
+}
