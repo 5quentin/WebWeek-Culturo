@@ -20,8 +20,6 @@
       <ul>
         <li><a href="">Profile</a></li>
         <div class="space2"></div>
-        <li><a href="">Contact</a></li>
-        <div class="space2"></div>
         <li><a href="">Reserved tickets</a></li>
         <div class="space2"></div>
         <input type="button" value="desconnected">
@@ -49,6 +47,24 @@
         </p>
 
         <p>
+          <input type="text" name="adresse" placeholder="8 Rue du Cul" required>
+        </p>
+
+      </div>
+
+    </form>
+  </div>
+
+
+  <div class="container">
+    <div class="space2"></div>
+    <form>
+
+      <div class="centre">
+
+        <div class="titre"><h2>Contact</h2></div>
+
+        <p>
           <input type="text" name="Email adress" placeholder="@" required>
         </p>
             
@@ -61,6 +77,9 @@
     </form>
   </div>
 
+
+
+  
   <div class="container">
     <div class="space2"></div>
     <form>
