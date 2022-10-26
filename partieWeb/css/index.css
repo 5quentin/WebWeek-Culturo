@@ -254,11 +254,27 @@
   /* Profile Page */
   
   
+  ul > li > a{
+    text-decoration: none;
+    list-style: none;
+    color: black;
+  }
+  
+  ul {
+    list-style:none;
+    margin-left:0;
+    padding-left:0;
+    }
+    li {
+    margin-bottom:15px;/* à adapter */
+    }
+  
+  
   .sideContainer{
     display: flex;
     position: absolute;
     flex-direction: column;
-    width: 250px;
+    width: 13.021vw;
     height: 90%;
     justify-content: center;
     align-items: center;
