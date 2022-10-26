@@ -28,6 +28,7 @@
             parent::__construct($typeBillets);
             
         }
+        
        public function EnsembleBillets($billets,$nomBillet){
             $this->nbtypeBillets = $billets['type_billets'];
             for($i=0;$i<count($this->nbtypeBillets);$i++){

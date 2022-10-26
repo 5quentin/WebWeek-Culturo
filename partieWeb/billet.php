@@ -43,9 +43,19 @@
 
         <p>
           <select id="billet">
-            <option>VIP Pass</option>
-            <option>Standard Pass</option>
-            <option value="euro">Culturo's Selections</option>
+            <?php
+            include "./include/connexionBDD.php";
+            include "./POO/typeBillets.php";
+            
+            $BDDCo = new connexionBDD();
+
+            $afficher = (array)$BDDCo;
+            $afficher2  = $afficher['tab_typeBillet'];
+
+            for ($i=0 ; $i<count($afficher2) ; $i++){
+              echo("<option value='".$afficher2[$i]['lib']."'>  ".$afficher2[$i]['lib']."</option>");
+            }
+            ?>
           </select>
         </p>
 
@@ -72,7 +82,6 @@
       
 
       <div class="boutton">
-        <p><span id="prix">100</span>€</p>
         <input type="submit" name="connex" value="Reserve">
       </div>
       
