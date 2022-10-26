@@ -53,11 +53,8 @@
 
               $BDDCo = new connexionBDD();
               $Eleve1 = new Profil($_POST["nom"],$_POST["pnom"],$_POST["mail"],$_POST["tel"],$_POST["mdp"],$_POST["mdpconf"]);
+              $Eleve1->setIdentifiant(5);
               $Eleve1->EnregistrementBDD((array)$Eleve1);
-              
-              /* marche pas pour id
-              $Eleve1->setIdentifiant($lastId+1);
-              */
             }
 
             else {

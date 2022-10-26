@@ -118,14 +118,15 @@ header{
 	justify-content: center;
 }
 
-#profil a{
+#profil input{
 	font-family: "GROBOLD";
-	background-color: white;
+	background-color: transparent;
 }
 
-#billeterie a{
+#billeterie input{
 	color : white;
 	font-family: "GROBOLD";
+	background-color: transparent;
 }
 
 /*--------------------forme-------------------*/
