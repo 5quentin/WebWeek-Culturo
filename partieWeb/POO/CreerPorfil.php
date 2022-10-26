@@ -20,6 +20,7 @@
         public function setIdentifiant($id_compte){
             $this->identifiant = $id_compte;
         }
+
         public function getIdentifiant(){
             return $this->identifiant;
         }
@@ -47,8 +48,7 @@
             $this->requete = "SELECT * FROM compte";
             $this->resultats = $BDD->connection->query($this->requete);
             $this->tab_comptes = $this->resultats->fetchAll();
-
-            print_r($this->tab_comptes);
+    
             $this->nbComptes = count($this->tab_comptes);
             $v = 0;
             if($this->tab_comptes!=null){
@@ -65,6 +65,7 @@
                     }
                     
                 }
+
             }else{
                 $this->enregistre= true;
                // echo "<script>alert('OK')</script>";
@@ -88,7 +89,7 @@
                 }
     
             }else {
-                //echo "<script>alert('You already have an acount');document.location.href='./connexion.php'; </script>";
+                echo "<script>alert('You already have an acount');document.location.href='./connexion.php'; </script>";
             } 
         }
     }
