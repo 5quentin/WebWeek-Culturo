@@ -1,14 +1,17 @@
 <?php
 include "./include/connexionBDD.php";
+include "./POO/CreerPorfil.php";
 include "./POO/typeBillets.php";
-
+include "./POO/Billets.php";
 
 $BDDCo = new connexionBDD();
 
-$afficher = (array)$BDDCo;
-$afficher2  = $afficher['tab_typeBillet'];
+$TypeBillets = new TypeBillets((array)$BDDCo);
 
-echo($afficher2);
-print_r($afficher2[0]['prix']);
-print_r($afficher2[0]['lib']);
+$billet = new Billets('lol','lol', 2, (array)$BDDCo);
+$billet->EnsembleBillets((array)$billet, 'Le Puy-En-Velay VIP');
+$billet->EnregistrementBDD_Billet((array)$billet);
+$billet->AffichageBillet((array)$BDDCo);
+
+?>
 

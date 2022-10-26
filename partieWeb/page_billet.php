@@ -34,7 +34,7 @@
   </div>
 
   <div class="container_billet">
-    <form class="billet" method="POST" action="inscription.php" enctype="multipart/form-data"> 
+    <form class="billet" method="POST" action="page_billet.php" enctype="multipart/form-data"> 
       <img src="./images/logo.png">
 
       <div class="centre">
@@ -42,7 +42,7 @@
         <div class="titre"><h2>What formula do you want ? :</h2></div>
 
         <p>
-          <select id="billet">
+          <select id="billet" name="type_billet">
             <?php
             include "./include/connexionBDD.php";
             include "./POO/typeBillets.php";
@@ -53,36 +53,47 @@
             $afficher2  = $afficher['tab_typeBillet'];
 
             for ($i=0 ; $i<count($afficher2) ; $i++){
-              echo("<option value='".$afficher2[$i]['lib']."'>  ".$afficher2[$i]['lib']."</option>");
+              echo("<option value='".$afficher2[$i]['lib']."'>  ".$afficher2[$i]['lib']." (".$afficher2[$i]['prix']."€)</option>");
             }
             ?>
           </select>
         </p>
-
-        <p id="ville">
-          <select>
-            <option>---Choose a city---</option>
-            <option>Le Puy en Velay</option>
-            <option>La ville Allemande là</option>
-            <option>Sienna</option>
-          </select>
-        </p>
             
-        <p>
-          <input type="text" name="nom" placeholder="Name of the incumbent..." required>
+        <p class="half">
+          <input type="text" name="nom" placeholder="Name..." required>
+          <input type="text" name="pnom" placeholder="First Name..." required>
         </p>
+
+        
             
 
         <div>
-          <input type="checkbox" id="checkConcert" name="concert" value="concert">
+          <input type="checkbox" id="checkConcert" name="concert" value="Oui">
           <label for="concert">+10€ for concert access</label>
         </div>
 
+        <?php
+        
+        if(isset($_POST["reserve"])){
+          include "./POO/Billets.php";
+
+          if(isset($_POST["concert"])!=null){
+            $select=$_POST["concert"];
+          }
+          else{
+            $select="Non";
+          }
+
+          $billet = new Billets($_POST["nom"],$_POST["pnom"], 2, (array)$BDDCo,$select);
+          $billet->EnsembleBillets((array)$billet, $_POST["type_billet"]);
+          $billet->EnregistrementBDD_Billet((array)$billet);
+        }
+
+        ?>
       </div>
       
-
       <div class="boutton">
-        <input type="submit" name="connex" value="Reserve">
+        <input type="submit" name="reserve" value="Reserve">
       </div>
       
     </form>
