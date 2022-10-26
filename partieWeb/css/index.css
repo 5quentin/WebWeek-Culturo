@@ -107,18 +107,19 @@ html, body{
 /* partie intro */
 
 
-.tacheorange{
+#tache1 {
   z-index: 0;
   position:absolute;
-  top: 14em;
   right: 0;
-  width: 50px;
+  width: 12%;
 }
 
 .main{
   display: flex;
   height: 100vh;
-  width: 100vw;
+  width: 100%;
+  flex-direction: column;
+  grid-gap: 200px;
 }
 
 .logo{
@@ -179,15 +180,24 @@ flex-direction: column;
 /* partie map */
 .containerMap{
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
+  grid-gap: 100px;
   width: 100%;
-  height: 500px;
-  justify-content:right;
+  justify-content:center;
   z-index: 0;
-  position: relative;
   }
-.containerMap>div:nth-child(1){
+  .containerMap>article{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 500px;
+    justify-content:right;
+    z-index: 0;
+    position: relative;
+    }
+.containerMap>article>div:nth-child(1){
   display: flex;
+  flex-direction: row;
   height: 500px;
   width: 100%;
   z-index: 0;
@@ -260,28 +270,34 @@ flex-direction: column;
   width: 500px;
   background-color: #FCA01F;
   border-radius: 15px;
-  padding : 0.5em;
   color : white;
 }
 
 .textville p{
   font-family: 'Segoe UI';
-  text-align: center;
-  
+  text-align: justify;
+  padding: 1.5em 3.2em 1.5em 3.2em;
+  font-weight: 600;
 }
 
-.bouton{
-  display: flex;
-  justify-content: center;
-  padding: 25px;
+.main .bouton{
+  grid-gap: 100px;
 }
-
-.ticket{
-  width: 180px;
-  height: 70px;
+.bouton{ 
   display: flex;
   justify-content: center;
+  font-size: 28px;
   background-color: #009289;
-  border-radius: 25px;
+  width: 350px;
+  height: auto;
+  border-radius: 15px;
+  align-self: center;
+}
+
+.ticket{ 
   text-align: center;
+}
+
+.ticket span{
+  font-size: 22px;
 }
