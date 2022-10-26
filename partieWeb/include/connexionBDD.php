@@ -56,9 +56,12 @@ include('./fonction.php');
                         //$this->coSauv -> conserverIndentifiant();;
                     } else {
                         $this->motDePasse = false;
-                        echo "<h3 id='error'>Password or Email incorect</h3>";
                     }
                 }
+            }
+
+            if ($this->motDePasse == false){
+                echo "<h3 id='error'>Password or Email incorect</h3>";
             }
         }
     }
