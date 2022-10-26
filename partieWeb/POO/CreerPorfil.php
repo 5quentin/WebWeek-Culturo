@@ -75,7 +75,6 @@
             if($this->enregistre== true){
                 
                 $this->reqpreparee = $BDD->connection -> prepare("INSERT INTO compte(nom,prenom,mail,tel,mdp) Values(:nom,:prenom,:mail,:tel,:mdp)");
-                //$this->reqpreparee->bindValue(':id', $profil['identifiant'], PDO::PARAM_STR);
                 $this->reqpreparee->bindValue(':nom', $profil['nom'], PDO::PARAM_STR);
                 $this->reqpreparee->bindValue(':prenom', $profil['prenom'], PDO::PARAM_STR);
                 $this->reqpreparee->bindValue(':mail', $profil['email'], PDO::PARAM_STR);
@@ -84,7 +83,12 @@
 
                 $req = $this->reqpreparee->execute();
                 if($req==true){
-                    $coSauv = new funtionSauCo($this->tab_comptes[$v]['id'],'client');
+                    $BDD2 = new ConnexionBDD();
+                    $this->requete = "SELECT id FROM `compte` WHERE mail='".$profil['email']."';";
+                    $this->resultats = $BDD2->connection->query($this->requete);
+                    $idCree = $this->resultats->fetchAll();
+                    
+                    $coSauv = new funtionSauCo($idCree[0]['id'],'client');
                     //echo"<script>window.location.href='billet.php';</script>";
                 }
     

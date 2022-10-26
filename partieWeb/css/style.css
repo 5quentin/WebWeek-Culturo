@@ -67,7 +67,7 @@ form h2 {
 }
 
 
-form {
+.container >form , .container_billet >form {
     padding-bottom: 30px;
     width: 500px;
 
@@ -82,7 +82,7 @@ form {
     border-radius: 50px;
 }
 
-form *{
+.container >form * , .container_billet >form *{
     border-radius: 10px;
 }
 
