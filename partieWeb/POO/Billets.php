@@ -21,10 +21,11 @@
             return $this->identifiant;
         }
 
-        public function __construct($nom,$prenom,$id_compte,$typeBillets){
+        public function __construct($nom,$prenom,$id_compte,$typeBillets,$concert){
             $this->nom = $nom;
             $this->prenom = $prenom;
             $this->id_compte = $id_compte;
+            $this->concert = $concert;
             parent::__construct($typeBillets);
             
         }
@@ -46,17 +47,18 @@
             for($i=0;$i<count($ensembillet['tab_Billet']);$i++){
                 
                 if($this->id_compte == $this->tab_Billet[$i]['id_compte']){
+                    echo"<br>";
                     echo "Billet pour assister : ".$this->type_billets."<br>";
                     echo "Nom : ".$this->tab_Billet[$i]['nom']."<br>";
                     echo "Prenom : ".$this->tab_Billet[$i]['prenom']."<br>";
                     echo "Numéro de billet : ".$this->tab_Billet[$i]['id']."<br>";
-                    echo "Date de l'évènement : ";
+                    echo "Concert : ".$this->tab_Billet[$i]['concert']."<br>";
                     for($y=0;$y<count($this->nbtypeBillets);$y++){
                         if($this->id_type == $this->nbtypeBillets[$y]['id']){
                             print_r($this->nbtypeBillets[$y]['date']);
                         }
                     }
-                    echo"<br>";
+                    echo "Numéro de billet : ".$this->tab_Billet[$i]['id']."<br>";
                     echo"<br>";
                 }
             }
@@ -77,7 +79,7 @@
             if($this->tab_billetBDD!=null){
                 while($v<$this->nbBillet ){
                     $v++;
-                    $this->prorioBillet2 = $this->tab_billetBDD[$v]['nom'].$this->tab_billetBDD[$v]['prenom'];
+                    $this->prorioBillet2 = $this->tab_billetBDD[$v-1]['nom'].$this->tab_billetBDD[$v-1]['prenom'];
                     //print_r($this->prorioBillet2);
                     //echo "<script>alert('OK')</script>";
                     if($this->prorioBillet == $this->prorioBillet2){
@@ -91,6 +93,7 @@
                     }
                     
                 }
+                
             }else{
                 $this->enregistre= true;
                // echo "<script>alert('OK')</script>";
@@ -98,12 +101,13 @@
 
             if($this->enregistre== true){
                
-                $this->reqpreparee = $BDD->connection -> prepare("INSERT INTO billet(nom,prenom,id_compte,id_type) Values(:nom,:prenom,:id_compte,:id_type)");
+                $this->reqpreparee = $BDD->connection -> prepare("INSERT INTO billet(nom,prenom,id_compte,id_type,concert) Values(:nom,:prenom,:id_compte,:id_type,:concert)");
                 //$this->reqpreparee->bindValue(':id', $profil['identifiant'], PDO::PARAM_STR);
                 $this->reqpreparee->bindValue(':nom', $billet['nom'], PDO::PARAM_STR);
                 $this->reqpreparee->bindValue(':prenom', $billet['prenom'], PDO::PARAM_STR);
-                $this->reqpreparee->bindValue(':id_compte', $billet['id_compte'], PDO::PARAM_STR);
-                $this->reqpreparee->bindValue(':id_type', $billet['id_type'], PDO::PARAM_STR);
+                $this->reqpreparee->bindValue(':id_compte', $billet['id_compte'], PDO::PARAM_INT);
+                $this->reqpreparee->bindValue(':id_type', $billet['id_type'], PDO::PARAM_INT);
+                $this->reqpreparee->bindValue(':concert', $billet['concert'], PDO::PARAM_STR);
 
                 $req = $this->reqpreparee->execute();
                 if($req==true){

@@ -148,8 +148,7 @@ p>input, select{
     width: 100%;
 }
 
-.signup > .centre > .half > input {
-    height: 50px;
+.signup > .centre > .half > input, .billet > .centre > .half > input {
     width: 46%;
 }
 
