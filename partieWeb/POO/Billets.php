@@ -6,8 +6,10 @@
         public $prenom;
         public $id_compte;
         public $id_type;
+        public $concert;
         public $prorioBillet;
         public $prorioBillet2;
+        public $supBillet;
         public $type_billets = array();
         public $nbtypeBillets = array();
         public $tab_Billet = array();
@@ -21,7 +23,7 @@
             return $this->identifiant;
         }
 
-        public function __construct($nom,$prenom,$id_compte,$typeBillets,$concert){
+        public function __construct($nom,$prenom,$id_compte,$concert,$typeBillets){
             $this->nom = $nom;
             $this->prenom = $prenom;
             $this->id_compte = $id_compte;
@@ -117,6 +119,17 @@
             }  else{
                 echo "<script>alert('Billet déjà existant')</script>";
                 
+            }
+        }
+
+        public function AnnulationBillet($id_compte,$idBillet){
+            $BDD = new ConnexionBDD();
+
+            $this->reqpreparee = $BDD->connection -> prepare("DELETE FROM `billet` WHERE id=".$idBillet." AND `id_compte`=".$id_compte.";");
+
+            $req = $this->reqpreparee->execute();
+            if($req==true){
+                echo "<script>alert('Billet sup')</script>";
             }
         }
     }
