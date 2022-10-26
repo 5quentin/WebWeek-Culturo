@@ -19,9 +19,13 @@
     <div class="sidebar">
       <ul>
         <li><a href="">Profile</a></li>
+        <div class="space2"></div>
         <li><a href="">Contact</a></li>
+        <div class="space2"></div>
         <li><a href="">Reserved tickets</a></li>
+        <div class="space2"></div>
         <input type="button" value="desconnected">
+        <div class="space3"></div>
       </ul>
     </div>
   </div> 
@@ -30,30 +34,69 @@
 
   <div class="container">
     <div class="space"></div>
-    <form class="signin" method="POST" action="connexion.php" enctype="multipart/form-data"> 
-      <img src="./images/logo.png">
+    <form> 
 
       <div class="centre">
 
-        <div class="titre"><h2>Log in :</h2></div>
+        <div class="titre"><h2>Profile</h2></div>
 
         <p>
-          <input type="email" name="email" placeholder="Email..." required>
+          <input type="text" name="name" placeholder="Jean" required>
         </p>
             
         <p>
-          <input type="password" name="mdp" placeholder="Password..." required>
+          <input type="text" name="firstname" placeholder="Jack" required>
+        </p>
+
+        <p>
+          <input type="text" name="adresse" placeholder="8 Rue du Cul" required>
         </p>
 
       </div>
 
-      <div class="boutton">
-        <a href="./inscription.php">Create an account</a>
-        <input type="submit" name="connex" value="Sign in">
-      </div>
-      
     </form>
   </div>
+
+
+  <div class="container">
+    <div class="space2"></div>
+    <form>
+
+      <div class="centre">
+
+        <div class="titre"><h2>Contact</h2></div>
+
+        <p>
+          <input type="text" name="Email adress" placeholder="@" required>
+        </p>
+            
+        <p>
+          <input type="text" name="Phone number" placeholder="06..." required>
+        </p>
+
+      </div>
+
+    </form>
+  </div>
+
+
+
+  
+  <div class="container">
+    <div class="space2"></div>
+    <form>
+
+      <div class="centre">
+
+        <div class="titre"><h2>Ticketing</h2></div>
+
+        <div class="space"></div>
+      </div>
+
+    </form>
+  </div>
+
+
 
   <?php include './header_footer/footer.html';?>
 </body>
