@@ -81,3 +81,23 @@ footer{
 	padding-left: 3.8em;
 }
 
+@media screen and (max-width: 650px) {
+
+	.footer2{
+		flex-direction: column;
+		height:auto;
+	}
+
+	.email {
+		padding-top: 0;
+		padding-left: 0;
+	}
+	
+	.rs {
+		padding-left: 0;
+	}
+
+	.ml {
+		padding-right: 0;
+	}
+}
