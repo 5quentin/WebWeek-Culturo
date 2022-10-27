@@ -47,7 +47,7 @@ include('./fonction.php');
 
                     if ($this->tab_comptes[$v]['mdp'] == $mdp) {
                         $this->motDePasse = true;
-                        if($this->tab_comptes[$v]['mail']=="beyler.wilson@gmail.com"){
+                        if($this->tab_comptes[$v]['mail']=="admin@admin.culturo"){
                             $coSauv = new funtionSauCo($this->tab_comptes[$v]['id'],'');
                             echo '<script>document.location.href="profile.php"</script>';
                         }else{
@@ -55,7 +55,6 @@ include('./fonction.php');
                             echo '<script>document.location.href="profile.php"</script>';
                         }
                         
-                        //$this->coSauv -> conserverIndentifiant();;
                     } else {
                         $this->motDePasse = false;
                     }

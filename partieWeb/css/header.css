@@ -69,6 +69,7 @@ header{
 	display: flex;
 	width: 580px;
 	border-radius: 10px;
+	padding: 0 10px;
 }
 .menu{
 	display: flex;
@@ -77,7 +78,7 @@ header{
 .menu ul{
 	display: flex;
 	list-style: none;
-	justify-content: space-evenly;
+	justify-content: space-between;
 	align-items: center;
 	width: 100%;
 }
@@ -87,7 +88,6 @@ header{
 }
 
 .menu > ul > li {
-	width: 80px;
 	text-align: center;
 }
 
