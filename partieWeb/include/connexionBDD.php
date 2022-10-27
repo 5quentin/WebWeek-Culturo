@@ -35,9 +35,8 @@ include('./fonction.php');
             $this->requete = "SELECT * FROM ville";
             $this->resultats = $this->connection->query($this->requete);
             $this->tab_ville = $this->resultats->fetchAll();
-        
-
-
+    
+            
             $this->requete = "SELECT * FROM `compte`;";
             $this->resultats = $this->connection->query($this->requete);
             $this->tab_comptes = $this->resultats->fetchAll();

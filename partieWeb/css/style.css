@@ -131,7 +131,7 @@ p>input, select{
 
 /*---------------------Connexion--------------------*/
 
-.signin > .centre > p > input, .billet > .centre > p > input,select, .profile > .centre > p > input {
+.signin > .centre > p > input, .billet > .centre > p > input,select, .profile > .centre > p > input, .adminVille > .centre > p > input {
     height: 50px;
     width: 100%;
 }
@@ -148,7 +148,7 @@ p>input, select{
     width: 100%;
 }
 
-.signup > .centre > .half > input, .billet > .centre > .half > input, .profile > .centre > .half > input {
+.signup > .centre > .half > input, .billet > .centre > .half > input, .profile > .centre > .half > input, .adminVille > .centre > .half > input {
     width: 46%;
 }
 
@@ -252,5 +252,24 @@ p>input, select{
 #disconect , #Cancel{
     background-color: #fd5353;
     color: black;
+}
+
+/*---------------------admin--------------------*/
+
+.titre2{
+    margin-top: 50px;
+}
+
+.adminVille .boutton{
+    justify-content: flex-end;
+}
+
+#file{
+    border-radius: 0;
+}
+
+.adminVille textarea{
+    width: 100%;
+    height: 100px;
 }
 
