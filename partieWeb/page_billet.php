@@ -64,9 +64,6 @@
           <input type="text" name="pnom" placeholder="First Name..." required>
         </p>
 
-        
-            
-
         <div>
           <input type="checkbox" id="checkConcert" name="concert" value="Oui">
           <label for="concert">+10€ for concert access</label>
@@ -74,32 +71,32 @@
 
         <?php
 
-        include_once('./fonction.php');
-        include "./POO/Billets.php";
-            
-        $file ="./sauv.txt";
-
-        if (file_exists($file)!=false){
+          include_once('./fonction.php');
+          include "./POO/Billets.php";
+              
           $file ="./sauv.txt";
-          $read=file($file);
 
-          if($read[0]!="" && $read[0]!="null"){
-            $idCo = $read[0];
+          if (file_exists($file)!=false){
+            $file ="./sauv.txt";
+            $read=file($file);
+
+            if($read[0]!="" && $read[0]!="null"){
+              $idCo = $read[0];
+            }
+
+            else {
+              echo "<script>alert('Your not connected')</script>";
+              echo '<script>document.location.href="connexion.php"</script>';
+            }
           }
 
           else {
             echo "<script>alert('Your not connected')</script>";
             echo '<script>document.location.href="connexion.php"</script>';
           }
-        }
-
-        else {
-          echo "<script>alert('Your not connected')</script>";
-          echo '<script>document.location.href="connexion.php"</script>';
-        }
         
-
         if(isset($_POST["reserve"])){
+          include "./POO/Billets.php";
 
           if(isset($_POST["concert"])!=null){
             $select=$_POST["concert"];
@@ -108,12 +105,10 @@
             $select="Non";
           }
 
-          $billet = new Billets($_POST["nom"],$_POST["pnom"],$idCo, (array)$BDDCo,$select);
+          $billet = new Billets($_POST["nom"],$_POST["pnom"],$idCo,$select, (array)$BDDCo);
           $billet->EnsembleBillets((array)$billet, $_POST["type_billet"]);
           $billet->EnregistrementBDD_Billet((array)$billet);
         }
-
-
         ?>
       </div>
       

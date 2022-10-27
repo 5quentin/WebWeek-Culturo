@@ -1,0 +1,155 @@
+body {
+	display: flex;
+	justify-content: space-between;
+	flex-direction: column;
+	margin: 0;
+}
+
+.contenaire{
+	display: flex;
+	flex-direction: column-reverse;
+	position: content;
+	width: 100%;
+	z-index: 3;
+	flex-direction: row;
+	margin-top : 15em;
+}
+.contenaire #ContenaireProg{
+	display: flex;
+	flex-direction: column-reverse;
+	position: content;
+	width: 100%;
+	z-index: 3;
+	flex-direction: row;
+	justify-content: space-evenly;
+}
+
+.contenaire > div:nth-child(1){
+	display: flex;
+	justify-content: center;
+	width: 100%;
+	
+}
+
+
+
+
+
+.affiche {
+	display: flex;
+	justify-content:space-evenly;
+	z-index: 3;
+	width: 70%;
+}
+
+.carousel {
+	display: flex;
+	justify-content: center;
+	width:50%;
+
+}
+#harry {
+	border-radius: 15px;
+	width: 100%;
+}
+
+.description {
+	display: flex;
+	flex-direction: column;
+}
+
+.titre {
+	background-color: #F69F25;
+	font-family: GROBOLD;
+	font-size : 35px;
+	width: 190px;
+	text-align: center;
+	padding : 0.2em 0.5em 0.2em 0.5em;
+	border-radius: 10px;
+}
+
+.titrep {
+	background-color: #000000;
+	color : white;
+	font-family: GROBOLD;
+	font-size : 35px;
+	width: 360px;
+	text-align: center;
+	padding : 0.2em 0.5em 0.2em 0.5em;
+	border-radius: 10px;
+}
+
+.datesfest{
+	background-color: #161B4B;
+	color : white;
+	font-family: Segoe UI;
+	margin-top: 1.7em;
+	font-size: 20px;
+	border-radius: 10px;
+	padding: 2em 2em 1em 1.8em;
+	line-height: 45%;
+}
+
+.datesfest span{
+	font-family: Segoe UI;
+	font-weight: lighter;
+	font-size: 18px;
+}
+
+#white2023 {
+	font-size: 80px;
+	margin : 0.2em 0em 1em 1.3em;
+	text-shadow: 10px 2px #009289;
+}
+
+.tachej{
+	z-index: 0;
+	position: absolute;
+	top: 4em;
+}
+
+
+
+.lieu{
+	background-color: #161B4B;
+	color : white;
+	display: flex;
+	justify-content: center;
+	font-family: 'Segoe UI';
+	font-weight: bold;
+	text-align: center;
+	width: 480px;
+	border-radius: 10px;
+	padding : 1.5em;
+	margin-top: 1.7em;
+}
+
+
+
+.zone {
+	line-height: 65px;
+	padding-left: 3em;
+}
+
+
+.art {
+	background-color: #009289;
+	display: flex;
+	color: black;
+	text-align: center;
+	border-radius: 10px;
+	justify-content: center;
+	padding-left: 1.5em;
+	padding-right: 1.5em;
+	line-height: 65px;
+	font-weight: 900;
+}
+
+.programme {
+	display: flex;
+	flex-direction: column;
+}
+
+#cartep {
+	border-radius: 10px;
+}

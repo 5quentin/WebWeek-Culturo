@@ -18,7 +18,7 @@
 
   <div class="container">
     <div class="space"></div>
-    <form class="signup" method="POST" action="inscription.php"> 
+    <form class="signup" method="POST" action="index.php"> 
       <img src="./images/logo.png">
 
       <div class="centre">
@@ -44,21 +44,20 @@
         </p>
 
         <?php
-          if(isset($_POST["inscr"])){
+          if (isset($_POST["inscr"])){
 
             if($_POST["mdp"]==$_POST["mdpconf"]){
 
-            include "./include/connexionBDD.php";
-            include "./POO/CreerPorfil.php";
+              include "./include/connexionBDD.php";
+              include "./POO/CreerPorfil.php";
 
-            $BDDCo = new connexionBDD();
-            $Eleve1 = new Profil($_POST["nom"],$_POST["pnom"],$_POST["mail"],$_POST["tel"],$_POST["mdp"],$_POST["mdpconf"]);
-            $Eleve1->setIdentifiant('2');
-            $Eleve1->EnregistrementBDD((array)$Eleve1);
-
+              $BDDCo = new connexionBDD();
+              $Eleve1 = new Profil($_POST["nom"],$_POST["pnom"],$_POST["mail"],$_POST["tel"],$_POST["mdp"],$_POST["mdpconf"]);
+              $Eleve1->EnregistrementBDD((array)$Eleve1);
             }
+
             else {
-              echo "<h3 id='error'>incorrect password confirmation<h3>";
+              echo "<h3 id='error'>Confirm password incorect</h3>";
             }
           }
         ?>

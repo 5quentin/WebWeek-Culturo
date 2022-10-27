@@ -124,6 +124,16 @@
             }
         }
 
+        public function SelectionBillet($ensembillet){
+            $this->tab_Billet = $ensembillet['tab_Billet'];
+            for($i=0;$i<count($ensembillet['tab_Billet']);$i++){
+                
+                if($this->id_compte == $this->tab_Billet[$i]['id_compte']){
+                    echo "<option value='".$this->tab_Billet[$i]['id']."'>Ticket number : ".$this->tab_Billet[$i]['id']."</option>";
+                }
+            }
+        }
+
         public function AnnulationBillet($id_compte,$idBillet){
             $BDD = new ConnexionBDD();
 
@@ -132,6 +142,7 @@
             $req = $this->reqpreparee->execute();
             if($req==true){
                 echo "<script>alert('Billet sup')</script>";
+                echo "<script>document.location.href='profile.php'</script>";
             }
         }
     }

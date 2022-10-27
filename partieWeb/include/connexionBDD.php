@@ -21,7 +21,7 @@ include('./fonction.php');
 
         public function __construct()
         {
-            $this->connection = new PDO('mysql:host=localhost;port=3306;dbname=Culturo', 'root', '');
+            $this->connection = new PDO('mysql:host=localhost;port=3306;dbname=Culturo', 'root', 'root');
             
             $this->requete = "SELECT * FROM type_billet";
             $this->resultats = $this->connection->query($this->requete);
@@ -31,18 +31,21 @@ include('./fonction.php');
             $this->resultats = $this->connection->query($this->requete);
             $this->tab_Billet = $this->resultats->fetchAll();
 
+
             $this->requete = "SELECT * FROM ville";
             $this->resultats = $this->connection->query($this->requete);
             $this->tab_ville = $this->resultats->fetchAll();
-        }
+        
 
-        ///////////////////////////////////////////////
 
-        public function connexion($email, $mdp){
-
-            $this->requete = "SELECT id,mail , mdp FROM `compte`;";
+            $this->requete = "SELECT * FROM `compte`;";
             $this->resultats = $this->connection->query($this->requete);
             $this->tab_comptes = $this->resultats->fetchAll();
+        }
+
+        //////////////////////////////////////////////
+
+        public function connexion($email, $mdp){
 
             $this->nbComptes = count($this->tab_comptes);
 
@@ -54,17 +57,27 @@ include('./fonction.php');
                         $this->motDePasse = true;
                         if($this->tab_comptes[$v]['mail']=="beyler.wilson@gmail.com"){
                             $coSauv = new funtionSauCo($this->tab_comptes[$v]['id'],'');
+                            echo '<script>document.location.href="profile.php"</script>';
                         }else{
                             $coSauv = new funtionSauCo($this->tab_comptes[$v]['id'],'client');
+                            echo '<script>document.location.href="profile.php"</script>';
                         }
                         
                         //$this->coSauv -> conserverIndentifiant();;
                     } else {
                         $this->motDePasse = false;
-                        echo "<h3 id='error'>Password or Email incorect</h3>";
                     }
                 }
             }
+
+            if ($this->motDePasse == false){
+                echo "<h3 id='error'>Password or Email incorect</h3>";
+            }
+        }
+
+        public function affichageCompteActif ($idActif){
+            $nomActif=$this->tab_comptes[$idActif]['nom'];
+            echo $nomActif;
         }
     }
 ?>
