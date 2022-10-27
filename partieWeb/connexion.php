@@ -14,7 +14,32 @@
 
 <body>
 
-  <?php include './header_footer/header.html';?>
+  <?php include './header_footer/header.html';
+    include "./include/connexionBDD.php";
+
+    $file ="./sauv.txt";
+
+    if (file_exists($file)==true){
+      $read=file($file);
+
+      if($read[0]!="" && $read[0]!="null"){
+
+        if(isset($_POST["profil"])){
+          echo '<script>document.location.href="profile.php"</script>';
+        } 
+
+        elseif(isset($_POST["billet"])){
+          echo '<script>document.location.href="page_billet.php"</script>';
+        }
+        
+        else{
+          echo '<script>document.location.href="index.php"</script>';
+        } 
+      }
+    }
+
+    
+  ?>
 
   <div class="container">
     <div class="space"></div>
@@ -36,13 +61,10 @@
         <?php
           if(isset($_POST["connex"])){
 
-            include "./include/connexionBDD.php";
             include "./POO/CreerPorfil.php";
-            
             $BDD = new ConnexionBDD(); 
             $BDD->__construct();
             $BDD->connexion($_POST["email"],$_POST["mdp"]);
-
             }
         ?>
 

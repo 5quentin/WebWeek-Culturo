@@ -18,7 +18,7 @@
 
   <div class="container">
     <div class="space"></div>
-    <form class="signup" method="POST" action="inscription.php"> 
+    <form class="signup" method="POST" action="index.php"> 
       <img src="./images/logo.png">
 
       <div class="centre">
@@ -53,7 +53,6 @@
 
               $BDDCo = new connexionBDD();
               $Eleve1 = new Profil($_POST["nom"],$_POST["pnom"],$_POST["mail"],$_POST["tel"],$_POST["mdp"],$_POST["mdpconf"]);
-              $Eleve1->setIdentifiant(5);
               $Eleve1->EnregistrementBDD((array)$Eleve1);
             }
 

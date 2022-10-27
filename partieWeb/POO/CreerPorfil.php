@@ -87,6 +87,8 @@
                     $this->requete = "SELECT id FROM `compte` WHERE mail='".$profil['email']."';";
                     $this->resultats = $BDD2->connection->query($this->requete);
                     $idCree = $this->resultats->fetchAll();
+
+                    $this->identifiant = $idCree;
                     
                     $coSauv = new funtionSauCo($idCree[0]['id'],'client');
                     //echo"<script>window.location.href='billet.php';</script>";

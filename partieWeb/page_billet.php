@@ -105,12 +105,10 @@
             $select="Non";
           }
 
-          $billet = new Billets($_POST["nom"],$_POST["pnom"],$idCo, (array)$BDDCo,$select);
+          $billet = new Billets($_POST["nom"],$_POST["pnom"],$idCo,$select, (array)$BDDCo);
           $billet->EnsembleBillets((array)$billet, $_POST["type_billet"]);
           $billet->EnregistrementBDD_Billet((array)$billet);
         }
-
-
         ?>
       </div>
       
