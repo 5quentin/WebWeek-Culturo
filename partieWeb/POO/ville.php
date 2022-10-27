@@ -16,23 +16,22 @@
             $this->nomVille = $nomVille;
             $this->paysVille = $paysVille;
             $this->img = $img;
+            $this->enregistre= false;
             $this->presentation = $presentation;
             $this->tabVille = $tabVille['tab_ville'];
             $this->nbVille = count($this->tabVille);
 
             $v = 0;
             if ($this->tabVille != null) {
-                while ($v < $this->nbVille && $this->nomVille != $this->tabVille[0]['nom']) {
-                    
-                    if ($this->nomVille != $this->tabVille[$v]['nom']) {
-                        
-                        $this->enregistre = true;
-                    } else {
-                        $this->enregistre = false;
-                        print_r($this->tabVille[$v]['nom']);
-                        break;
-                    }
+                while ($v < $this->nbVille && $this->nomVille != $this->tabVille[$v]['nom']) {
                     $v++;
+                    if ($this->nomVille == $this->tabVille[$v]['nom']) {
+                        $this->enregistre = false;
+                        
+                    } else {
+                        $this->enregistre = true;
+                    }
+                    
                 }
             } else {
                 $this->enregistre = true;
@@ -50,7 +49,6 @@
                 $this->reqpreparee->bindValue(':presentation', $this->presentation, PDO::PARAM_STR);
 
                 $req = $this->reqpreparee->execute();
-                //print_r($this->reqpreparee->execute());
                 if ($req == true) {
 
                     // $coSauv = new funtionSauCo($this->tab_comptes[$v]['id'],'client');
@@ -58,7 +56,7 @@
                     echo "<script>alert('Nouveau Ville créé');</script>";
                 }
             }else{
-                echo "<script>alert('Ville déjà existante');<script>";
+                echo "<script>alert('Ville déjà existante');</script>";
             }
         }
 
