@@ -1,0 +1,43 @@
+
+#bando /*bloc blanc au tour des slides*/{
+    height: 25em;
+    overflow: hidden;
+    margin: auto;
+    position: relative;
+    align-self: center;
+    justify-self: center;
+    
+}
+
+#cadre{
+    display: flex;
+    
+    
+}
+
+.carrousel {
+    width : 100%;
+
+}
+
+#past{
+    position: absolute;
+    top: 50%;
+    z-index: 1;
+    left: 2%;
+    font-size: 35px;
+    color: white;
+    opacity: 0.7;
+    cursor: pointer;
+}
+
+#next{
+    position: absolute;
+    top: 50%;
+    z-index: 1;
+    right: 2%;
+    font-size: 35px;
+    color: white;
+    opacity: 0.7;
+    cursor: pointer;
+}

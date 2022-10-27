@@ -20,6 +20,7 @@
         public function setIdentifiant($id_compte){
             $this->identifiant = $id_compte;
         }
+
         public function getIdentifiant(){
             return $this->identifiant;
         }
@@ -47,8 +48,7 @@
             $this->requete = "SELECT * FROM compte";
             $this->resultats = $BDD->connection->query($this->requete);
             $this->tab_comptes = $this->resultats->fetchAll();
-
-            print_r($this->tab_comptes);
+    
             $this->nbComptes = count($this->tab_comptes);
             $v = 0;
             if($this->tab_comptes!=null){
@@ -65,6 +65,7 @@
                     }
                     
                 }
+
             }else{
                 $this->enregistre= true;
                // echo "<script>alert('OK')</script>";
@@ -74,7 +75,6 @@
             if($this->enregistre== true){
                 
                 $this->reqpreparee = $BDD->connection -> prepare("INSERT INTO compte(nom,prenom,mail,tel,mdp) Values(:nom,:prenom,:mail,:tel,:mdp)");
-                //$this->reqpreparee->bindValue(':id', $profil['identifiant'], PDO::PARAM_STR);
                 $this->reqpreparee->bindValue(':nom', $profil['nom'], PDO::PARAM_STR);
                 $this->reqpreparee->bindValue(':prenom', $profil['prenom'], PDO::PARAM_STR);
                 $this->reqpreparee->bindValue(':mail', $profil['email'], PDO::PARAM_STR);
@@ -83,12 +83,19 @@
 
                 $req = $this->reqpreparee->execute();
                 if($req==true){
-                    $coSauv = new funtionSauCo($this->tab_comptes[$v]['id'],'client');
+                    $BDD2 = new ConnexionBDD();
+                    $this->requete = "SELECT id FROM `compte` WHERE mail='".$profil['email']."';";
+                    $this->resultats = $BDD2->connection->query($this->requete);
+                    $idCree = $this->resultats->fetchAll();
+
+                    $this->identifiant = $idCree;
+                    
+                    $coSauv = new funtionSauCo($idCree[0]['id'],'client');
                     //echo"<script>window.location.href='billet.php';</script>";
                 }
     
             }else {
-                //echo "<script>alert('You already have an acount');document.location.href='./connexion.php'; </script>";
+                echo "<script>alert('You already have an acount');document.location.href='./connexion.php'; </script>";
             } 
         }
     }

@@ -67,7 +67,7 @@ form h2 {
 }
 
 
-form {
+.container >form , .container_billet >form {
     padding-bottom: 30px;
     width: 500px;
 
@@ -82,7 +82,7 @@ form {
     border-radius: 50px;
 }
 
-form *{
+.container >form * , .container_billet >form *{
     border-radius: 10px;
 }
 
@@ -131,7 +131,7 @@ p>input, select{
 
 /*---------------------Connexion--------------------*/
 
-.signin > .centre > p > input, .billet > .centre > p > input, .billet > .centre > p > select {
+.signin > .centre > p > input, .billet > .centre > p > input,select, .profile > .centre > p > input {
     height: 50px;
     width: 100%;
 }
@@ -148,7 +148,7 @@ p>input, select{
     width: 100%;
 }
 
-.signup > .centre > .half > input, .billet > .centre > .half > input {
+.signup > .centre > .half > input, .billet > .centre > .half > input, .profile > .centre > .half > input {
     width: 46%;
 }
 
@@ -232,5 +232,25 @@ p>input, select{
 
 #europe > #bleu {
     color: #009289;
+}
+
+/*---------------------Profil--------------------*/
+
+.space2 {
+    height: 100PX;
+    width: 100%;
+  }
+
+.titre2{
+    margin-top: 50px;
+}
+
+.profile .boutton{
+    justify-content: flex-end;
+}
+
+#disconect , #Cancel{
+    background-color: #fd5353;
+    color: black;
 }
 
