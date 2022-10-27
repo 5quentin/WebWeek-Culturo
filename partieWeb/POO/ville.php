@@ -31,8 +31,8 @@
                     } else {
                         $this->enregistre = true;
                     }
-                    
                 }
+
             } else {
                 $this->enregistre = true;
                 // echo "<script>alert('OK')</script>";
