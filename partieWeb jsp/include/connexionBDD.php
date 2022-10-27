@@ -31,7 +31,7 @@ include('./fonction.php');
             $this->tab_Billet = $this->resultats->fetchAll();
         }
 
-        //////////////////////////////////////////////
+        ///////////////////////////////////////////////
 
         public function connexion($email, $mdp){
 
