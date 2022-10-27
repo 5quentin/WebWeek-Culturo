@@ -65,9 +65,8 @@
                     echo "Numéro de billet : ".$this->tab_Billet[$i]['id']."<br>";
                     echo"<br>";
                 }
+                
             }
-            
-
         }
 
         public function EnregistrementBDD_Billet($billet){

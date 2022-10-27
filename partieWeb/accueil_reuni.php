@@ -5,10 +5,14 @@
   <meta charset="utf-8">
   <title>Culturo</title>
   <link rel="stylesheet" href="css/index.css">
+  <link rel="stylesheet" href="./css/header.css" />
+  <link rel="stylesheet" href="./css/footer.css" />
   <script src="script.js"></script>
 </head>
 
 <body>
+
+<?php include './header_footer/header.html';?>
   <!-- header -->
   <div class="main">
 
@@ -69,11 +73,9 @@
             
           </div>
 
-          <div class="bouton">
+          <div class="bouton2">
             <div class="ticket">
-              <p>TICKETS <br>
-                <span> CULTURO SELECTION  </span>
-              </p>
+              <a class="rose" href="./page_billet.php">TICKETS <br> CULTURO SELECTION</a>
             </div>
           </div>
 
@@ -165,11 +167,9 @@
     
 
   </div>
+
+  <?php include './header_footer/footer.html';?>
+
 </body>
-
-
-<footer>
-
-</footer>
 
 </html>
