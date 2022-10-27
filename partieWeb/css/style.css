@@ -267,3 +267,17 @@ textarea{
 .adminSuprVille, .adminSuprSing{
     margin-top: 20px;
 }
+
+@media screen and (max-width: 550px) {
+    body{
+        background-color: #fff5f5;
+    }
+    .container >form{
+        width: 90vw;
+    }
+
+    .centre{
+        width: 90%;
+    }
+    
+}

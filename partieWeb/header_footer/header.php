@@ -7,6 +7,7 @@
 
 	     		<div class="menuorange">
 		     		<nav class= "menu">
+						<div class="burger"><img src="./images/burger.png"></div>
 		     			<ul>
 		     				<li><a href="#selection">Selections</a></li>
 		     				<li><a href="#onDisplay">On display</a></li>

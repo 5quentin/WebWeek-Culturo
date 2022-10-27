@@ -1,10 +1,10 @@
 /*--------------------Commun-------------------*/
 
 body {
-	margin : 0;
+	margin: 0;
 }
 
-header{
+header {
 	margin-top: 2em;
 	top: 20px;
 	width: 100%;
@@ -23,19 +23,19 @@ header{
 .tete {
 	display: flex;
 	justify-content: space-between;
-	
+
 	width: 90%;
 	height: 100%;
 
 }
 
-#dates{
-	color : white;
+#dates {
+	color: white;
 	font-family: "GROBOLD";
 	font-size: 15px;
 }
 
-.hg{
+.hg {
 	background-color: #161B4B;
 
 	display: flex;
@@ -48,18 +48,18 @@ header{
 	border-radius: 10px;
 }
 
-.hg > .logo{
+.hg>.logo {
 	height: 75%;
 }
 
-.hg > .logo > img{
+.hg>.logo>img {
 	height: 100%;
 	padding: 0;
 	margin-right: 5px;
 }
 
 
-.hg > p {
+.hg>p {
 	line-height: 20px;
 }
 
@@ -71,11 +71,13 @@ header{
 	border-radius: 10px;
 	padding: 0 10px;
 }
-.menu{
+
+.menu {
 	display: flex;
 	width: 100%;
 }
-.menu ul{
+
+.menu ul {
 	display: flex;
 	list-style: none;
 	justify-content: space-between;
@@ -83,23 +85,23 @@ header{
 	width: 100%;
 }
 
-.menu > ul {
+.menu>ul {
 	padding: 0;
 }
 
-.menu > ul > li {
+.menu>ul>li {
 	text-align: center;
 }
 
-.menu > ul > li > a {
+.menu>ul>li>a {
 	text-decoration: none;
 	font-size: 13px;
 	font-family: "Segoe UI";
-	color : black;
+	color: black;
 	font-weight: 500;
 }
 
-#profil{
+#profil {
 	width: 80px;
 	height: 40px;
 	border-radius: 10px;
@@ -109,7 +111,7 @@ header{
 	justify-content: center;
 }
 
-#billeterie{
+#billeterie {
 	width: 80px;
 	height: 40px;
 	border-radius: 10px;
@@ -119,24 +121,94 @@ header{
 	justify-content: center;
 }
 
-#profil input{
+#profil input {
 	font-family: "GROBOLD";
 	background-color: transparent;
 }
 
-#billeterie input{
-	color : white;
+#billeterie input {
+	color: white;
 	font-family: "GROBOLD";
 	background-color: transparent;
+}
+
+.burger{
+	display: none;
 }
 
 /*--------------------forme-------------------*/
 
-.top{
+.top {
 	width: 70vw;
 
 	position: absolute;
-	top: -10px; 
+	top: -10px;
 	left: -20px;
 	z-index: -1;
+}
+
+/*--------------------Responsive-------------------*/
+
+@media screen and (max-width: 800px) {
+	#dates {
+		display: none;
+	}
+
+	.hg {
+		justify-content: center;
+	}
+
+	.menuorange {
+		width: auto;
+		background: transparent;
+	}
+
+
+	.menu {
+		flex-direction: column;
+		align-items: center;
+	}
+
+
+
+	.menu>.burger>img {
+		height: 40px;
+	}
+
+	.menu ul {
+		flex-direction: column;
+		justify-content: center;
+		margin: 0%;
+		display: none;
+	}
+
+	.menu ul li,.menu>.burger {
+		width: 80px;
+		background-color: #FCA01F;
+		border-radius: 10px;
+
+		display: flex;
+		align-items: center;
+		justify-content: center;
+
+		border-radius: 10px;
+	}
+
+	.menu ul li{
+		margin: 10px;
+		height: 40px;
+	}
+
+	.burger{
+		height: 50px;
+	}
+
+	#profil{
+		border: solid 2px #FCA01F;
+	}
+
+	.menu:hover > ul{
+		display: block;
+	}
+
 }
