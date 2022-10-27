@@ -20,6 +20,19 @@
 
     $BDDCo = new connexionBDD();
 
+    $file ="./sauv.txt";
+
+    if (file_exists($file)==true){
+      $read=file($file);
+
+      /*if($read[0]!="" && $read[0]!="null"){
+        
+        else{
+          echo '<script>document.location.href="index.php"</script>';
+        } 
+      }*/
+    }
+
     
     if (isset($_POST['addCity'])) {
 
@@ -70,7 +83,7 @@
             <div class="centre">
 
                 <div class="titre">
-                    <h2>City</h2>
+                    <h2>City : </h2>
                 </div>
 
                 <p class="half">

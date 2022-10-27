@@ -22,7 +22,7 @@ include('./fonction.php');
 
         public function __construct()
         {
-            $this->connection = new PDO('mysql:host=localhost;port=3306;dbname=Culturo', 'root', '');
+            $this->connection = new PDO('mysql:host=localhost;port=3306;dbname=Culturo', 'root', 'root');
             
             $this->requete = "SELECT * FROM type_billet";
             $this->resultats = $this->connection->query($this->requete);
@@ -61,10 +61,8 @@ include('./fonction.php');
                         $this->motDePasse = true;
                         if($this->tab_comptes[$v]['mail']=="admin@admin.culturo"){
                             $coSauv = new funtionSauCo($this->tab_comptes[$v]['id'],'');
-                            //echo '<script>document.location.href="profile.php"</script>';
                         }else{
                             $coSauv = new funtionSauCo($this->tab_comptes[$v]['id'],'client');
-                            //echo '<script>document.location.href="profile.php"</script>';
                         }
                         
                     } else {
