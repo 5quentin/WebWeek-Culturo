@@ -40,30 +40,26 @@
 
     if (isset($_POST['addCity']) or isset($_POST['addSing'])) {
 
-        $imageTrait="";
-        echo isset($_POST['addCity']);
-
         if (isset($_POST['addCity'])) {
-            $imageTrait='imageVille';
+            $imageLink='./images/images villes/';
         }elseif (isset($_POST['addSing'])){
-            $imageTrait='imageSing';
+            $imageLink='./images_stars/';
         }
-        echo '<br>'.$imageTrait;
-
+        echo '<br>'.$imageLink;
 
         // taille autorisées (min & max -- en octets)
         $file_min_size = 0;
         $file_max_size = 10000000;
         // On vérifie la présence d"un fichier à uploader
-        if (($_FILES[$imageTrait]["size"] > $file_min_size) && ($_FILES[$imageTrait]["size"] < $file_max_size)) :
+        if (($_FILES["image"]["size"] > $file_min_size) && ($_FILES["image"]["size"] < $file_max_size)) :
             // dossier où sera déplacé le fichier; ce dossier doit exister
-            $content_dir = "./images/images villes/";
-            $tmp_file = $_FILES[$imageTrait]["tmp_name"];
+            $content_dir = $imageLinks;
+            $tmp_file = $_FILES["image"]["tmp_name"];
             if (!is_uploaded_file($tmp_file)) {
                 echo "Fichier non trouvé";
             }
             // on vérifie l"extension
-            $path = $_FILES[$imageTrait]["name"];
+            $path = $_FILES["image"]["name"];
             $ext = pathinfo($path, PATHINFO_EXTENSION); // on récupère l"extension
             if (!strstr($ext, "jpg") && !strstr($ext, "png") && !strstr($ext, "webp") && !strstr($ext, "jpeg")) {
                 echo "EXTENSION " . $ext . " NON AUTORISEE";
@@ -122,7 +118,7 @@
                     <textarea name="desc" placeholder="Description of the city..."></textarea>
                 </p>
 
-                <input id="file" type="file" name="imageVille">
+                <input id="file" type="file" name="image">
 
             </div>
 
@@ -178,7 +174,7 @@
                     <input type="text" name="nomSing" placeholder="Name or nickname of the artiste..." required>
                 </p>
 
-                <input id="file" type="file" name="imageSing">
+                <input id="file" type="file" name="image">
 
             </div>
 
