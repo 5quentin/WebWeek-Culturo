@@ -53,7 +53,7 @@
         // On vérifie la présence d"un fichier à uploader
         if (($_FILES["image"]["size"] > $file_min_size) && ($_FILES["image"]["size"] < $file_max_size)) :
             // dossier où sera déplacé le fichier; ce dossier doit exister
-            $content_dir = $imageLinks;
+            $content_dir = $imageLink;
             $tmp_file = $_FILES["image"]["tmp_name"];
             if (!is_uploaded_file($tmp_file)) {
                 echo "Fichier non trouvé";
