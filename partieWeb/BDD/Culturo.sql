@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : 127.0.0.1
--- Généré le : mar. 25 oct. 2022 à 16:55
+-- Généré le : jeu. 27 oct. 2022 à 16:27
 -- Version du serveur : 10.4.22-MariaDB
 -- Version de PHP : 7.4.27
 
@@ -32,25 +32,41 @@ CREATE TABLE `billet` (
   `nom` varchar(50) NOT NULL,
   `prenom` varchar(20) NOT NULL,
   `id_compte` int(3) NOT NULL,
-  `id_type` int(3) NOT NULL
+  `id_type` int(3) NOT NULL,
+  `concert` varchar(10) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
 -- Déchargement des données de la table `billet`
 --
 
-INSERT INTO `billet` (`id`, `nom`, `prenom`, `id_compte`, `id_type`) VALUES
-(1, 'Beyler', 'Wilson', 2, 2),
-(2, 'Beyler', 'Wilson', 2, 2),
-(3, 'Beyler', 'Wilson', 2, 2),
-(4, 'Beyler', 'Wilson', 2, 2),
-(5, 'Beyler', 'Wilson', 2, 2),
-(6, 'Beyler', 'Wilson', 2, 2),
-(7, 'Beyler', 'Wilson', 2, 2),
-(8, 'Beyler', 'Olivier', 2, 2),
-(9, 'Beyler', 'Olivier', 2, 2),
-(10, 'Beyler', 'Olivier', 2, 2),
-(11, 'Beyler', 'Cecile', 2, 2);
+INSERT INTO `billet` (`id`, `nom`, `prenom`, `id_compte`, `id_type`, `concert`) VALUES
+(3, 'Beyler', 'Wilson', 2, 2, NULL),
+(9, 'Beyler', 'Olivier', 2, 2, NULL),
+(10, 'Beyler', 'Olivier', 1, 2, NULL),
+(11, 'Beyler', 'Cecile', 3, 2, NULL);
+
+-- --------------------------------------------------------
+
+--
+-- Structure de la table `chanteurs`
+--
+
+CREATE TABLE `chanteurs` (
+  `id` int(10) NOT NULL,
+  `nom` varchar(50) NOT NULL,
+  `img` varchar(50) NOT NULL DEFAULT './images_stars/chanteur'
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Déchargement des données de la table `chanteurs`
+--
+
+INSERT INTO `chanteurs` (`id`, `nom`, `img`) VALUES
+(27, 'Gotaga', './images_stars/chanteur'),
+(28, 'David Getta', './images_stars/chanteur'),
+(29, 'DjSnake', './images_stars/chanteur'),
+(30, 'Harry Styles', './images_stars/chanteur');
 
 -- --------------------------------------------------------
 
@@ -108,7 +124,7 @@ CREATE TABLE `ville` (
   `id` int(11) NOT NULL,
   `nom` varchar(50) NOT NULL,
   `pays` varchar(50) NOT NULL,
-  `image` varchar(100) NOT NULL,
+  `image` varchar(100) NOT NULL DEFAULT './images/images villes/',
   `presentation` varchar(500) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
@@ -117,10 +133,11 @@ CREATE TABLE `ville` (
 --
 
 INSERT INTO `ville` (`id`, `nom`, `pays`, `image`, `presentation`) VALUES
-(1, 'ville1', 'France', 'uuu.png', 'rrrttyh'),
 (2, 'ville2', 'France', 'zzz.png', 'ggggg'),
 (3, 'ville3', 'English', 'zza.png', 'qqz'),
-(4, 'ville4', 'France', 'aaa.png', 'ddd');
+(4, 'ville4', 'France', 'aaa.png', 'ddd'),
+(58, 'Barcelogne', 'Espagne', './barc.png', 'Capital cosmopilite de l\'Espagne'),
+(61, 'lol', 'Espagne', './barc.png', 'Capital cosmopilite de l\'Espagne');
 
 --
 -- Index pour les tables déchargées
@@ -133,6 +150,12 @@ ALTER TABLE `billet`
   ADD PRIMARY KEY (`id`),
   ADD KEY `id_compte` (`id_compte`),
   ADD KEY `id_type` (`id_type`);
+
+--
+-- Index pour la table `chanteurs`
+--
+ALTER TABLE `chanteurs`
+  ADD PRIMARY KEY (`id`);
 
 --
 -- Index pour la table `compte`
@@ -163,6 +186,12 @@ ALTER TABLE `billet`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
 
 --
+-- AUTO_INCREMENT pour la table `chanteurs`
+--
+ALTER TABLE `chanteurs`
+  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=31;
+
+--
 -- AUTO_INCREMENT pour la table `compte`
 --
 ALTER TABLE `compte`
@@ -172,13 +201,13 @@ ALTER TABLE `compte`
 -- AUTO_INCREMENT pour la table `type_billet`
 --
 ALTER TABLE `type_billet`
-  MODIFY `id` int(3) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` int(3) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT pour la table `ville`
 --
 ALTER TABLE `ville`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=62;
 
 --
 -- Contraintes pour les tables déchargées

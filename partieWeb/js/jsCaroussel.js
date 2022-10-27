@@ -16,7 +16,6 @@ function activationSlideBTN(){
     });      
 
 }
-
 function showSlides() {
     let i;
     let slides = document.getElementsByClassName("cadreImageEV");
@@ -30,3 +29,4 @@ function showSlides() {
   
     setTimeout(showSlides, 3000); // Change image every 2 seconds
   }
+  

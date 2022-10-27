@@ -6,10 +6,9 @@ require_once "./include/connexionBDD.php";
         public $tabArtiste = array();
         public $nbArtiste;
 
-        public function AjouterArtiste($nomArtiste,$imgArtiste,$tab_Artiste){
+        public function AjouterArtiste($nomArtiste,$tab_Artiste){
             $BDD = new ConnexionBDD();
             $this->nomArtiste= $nomArtiste;
-            $this->imgArtiste=$imgArtiste;
             $this->enregistre= false;
             $this->tabArtiste= $tab_Artiste['tab_chanteur'];
             $this->nbArtiste = count($this->tabArtiste);
@@ -37,10 +36,9 @@ require_once "./include/connexionBDD.php";
 
             if ($this->enregistre == true) {
                 
-                $this->reqpreparee = $BDD->connection->prepare("INSERT INTO chanteurs(nom,img) Values(:nom,:img);");
+                $this->reqpreparee = $BDD->connection->prepare("INSERT INTO chanteurs(nom) Values(:nom);");
                 
                 $this->reqpreparee->bindValue(':nom', $this->nomArtiste, PDO::PARAM_STR);
-                $this->reqpreparee->bindValue(':img', $this->imgArtiste, PDO::PARAM_STR);
 
                 $req = $this->reqpreparee->execute();
                 //print_r($this->reqpreparee->execute());
