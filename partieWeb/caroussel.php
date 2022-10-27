@@ -7,7 +7,6 @@ $requete = "SELECT img FROM `chanteurs`;";
 $resultats = $BDDCo->connection->query($requete);
 $tab_Slide= $resultats->fetchAll();   
 $nb_Slide=count($tab_Slide);           
-print_r($tab_Slide);
 ?>
 <html lang="en">
 <head>
@@ -82,7 +81,6 @@ print_r($tab_Slide);
             
         }
         window.onload= SlideAuto();
-        SlideAuto();
         activationSlideBTN();             
 </script>
 
