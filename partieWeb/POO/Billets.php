@@ -142,7 +142,7 @@
             $req = $this->reqpreparee->execute();
             if($req==true){
                 echo "<script>alert('Billet sup')</script>";
-                echo "<script>document.location.href='profile.php'</script>";
+                //echo "<script>document.location.href='profile.php'</script>";
             }
         }
     }

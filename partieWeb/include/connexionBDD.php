@@ -15,13 +15,14 @@ include('./fonction.php');
         public $tab_typeBillet;
         public $tab_Billet;
         public $tab_ville;
+        public $tab_chanteur;
         public $nbComptes;
         public $motDePasse=false;
 
 
         public function __construct()
         {
-            $this->connection = new PDO('mysql:host=localhost;port=3306;dbname=Culturo', 'root', 'root');
+            $this->connection = new PDO('mysql:host=localhost;port=3306;dbname=Culturo', 'root', '');
             
             $this->requete = "SELECT * FROM type_billet";
             $this->resultats = $this->connection->query($this->requete);
@@ -41,6 +42,10 @@ include('./fonction.php');
             $this->requete = "SELECT * FROM `compte`;";
             $this->resultats = $this->connection->query($this->requete);
             $this->tab_comptes = $this->resultats->fetchAll();
+
+            $this->requete = "SELECT * FROM `chanteurs`;";
+            $this->resultats = $this->connection->query($this->requete);
+            $this->tab_chanteur= $this->resultats->fetchAll();
         }
 
         //////////////////////////////////////////////
@@ -57,10 +62,10 @@ include('./fonction.php');
                         $this->motDePasse = true;
                         if($this->tab_comptes[$v]['mail']=="beyler.wilson@gmail.com"){
                             $coSauv = new funtionSauCo($this->tab_comptes[$v]['id'],'');
-                            echo '<script>document.location.href="profile.php"</script>';
+                            //echo '<script>document.location.href="profile.php"</script>';
                         }else{
                             $coSauv = new funtionSauCo($this->tab_comptes[$v]['id'],'client');
-                            echo '<script>document.location.href="profile.php"</script>';
+                            //echo '<script>document.location.href="profile.php"</script>';
                         }
                         
                         //$this->coSauv -> conserverIndentifiant();;
