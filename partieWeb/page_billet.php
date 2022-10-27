@@ -14,7 +14,7 @@
 
 <body>
 
-  <?php include './header_footer/header.html';?>
+  <?php include './header_footer/header.php';?>
 
   <div class="desc">
     <h1 id="prems">There are several formulas,<br> here is the list of them:</h1>

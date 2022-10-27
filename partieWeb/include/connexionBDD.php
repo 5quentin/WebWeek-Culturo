@@ -1,3 +1,4 @@
+@ -1,83 +1,82 @@
 <?php
 // Connexion PDO
 //Connexion à la page fonction qui contien la function session 
@@ -14,13 +15,15 @@ include('./fonction.php');
         public $resultats;
         public $tab_typeBillet;
         public $tab_Billet;
+        public $tab_ville;
+        public $tab_chanteur;
         public $nbComptes;
         public $motDePasse=false;
 
 
         public function __construct()
         {
-            $this->connection = new PDO('mysql:host=localhost;port=3306;dbname=Culturo', 'root', 'root');
+            $this->connection = new PDO('mysql:host=localhost;port=3306;dbname=Culturo', 'root', '');
             
             $this->requete = "SELECT * FROM type_billet";
             $this->resultats = $this->connection->query($this->requete);
@@ -30,9 +33,19 @@ include('./fonction.php');
             $this->resultats = $this->connection->query($this->requete);
             $this->tab_Billet = $this->resultats->fetchAll();
 
+
+            $this->requete = "SELECT * FROM ville";
+            $this->resultats = $this->connection->query($this->requete);
+            $this->tab_ville = $this->resultats->fetchAll();
+        
+
             $this->requete = "SELECT * FROM `compte`;";
             $this->resultats = $this->connection->query($this->requete);
             $this->tab_comptes = $this->resultats->fetchAll();
+
+            $this->requete = "SELECT * FROM `chanteurs`;";
+            $this->resultats = $this->connection->query($this->requete);
+            $this->tab_chanteur= $this->resultats->fetchAll();
         }
 
         //////////////////////////////////////////////
@@ -47,15 +60,14 @@ include('./fonction.php');
 
                     if ($this->tab_comptes[$v]['mdp'] == $mdp) {
                         $this->motDePasse = true;
-                        if($this->tab_comptes[$v]['mail']=="beyler.wilson@gmail.com"){
+                        if($this->tab_comptes[$v]['mail']=="admin@admin.culturo"){
                             $coSauv = new funtionSauCo($this->tab_comptes[$v]['id'],'');
-                            echo '<script>document.location.href="profile.php"</script>';
+                            echo '<script>document.location.href="admin.php"</script>';
                         }else{
                             $coSauv = new funtionSauCo($this->tab_comptes[$v]['id'],'client');
                             echo '<script>document.location.href="profile.php"</script>';
                         }
                         
-                        //$this->coSauv -> conserverIndentifiant();;
                     } else {
                         $this->motDePasse = false;
                     }

@@ -95,7 +95,7 @@
                 }
     
             }else {
-                echo "<script>alert('You already have an acount');document.location.href='./connexion.php'; </script>";
+                //echo "<script>alert('You already have an acount');document.location.href='./connexion.php'; </script>";
             } 
         }
     }
