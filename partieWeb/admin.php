@@ -1,4 +1,3 @@
-
 <!doctype html>
 <html lang="fr">
 
@@ -16,6 +15,7 @@
     <?php
 
     include './header_footer/header.php';
+
     include "./include/connexionBDD.php";
     include "./POO/ville.php";
     include "./POO/typeBillets.php";
@@ -31,21 +31,17 @@
         if ($read[0] != "5") {
             echo '<script>document.location.href="index.php"</script>';
         }
-    }
-
-    else{
+    } else {
         echo '<script>document.location.href="index.php"</script>';
     }
-
-
     if (isset($_POST['addCity']) or isset($_POST['addSing'])) {
 
         if (isset($_POST['addCity'])) {
-            $imageLink='./images/images villes/';
-        }elseif (isset($_POST['addSing'])){
-            $imageLink='./images_stars/';
+            $imageLink = './images/images villes/';
+        } elseif (isset($_POST['addSing'])) {
+            $imageLink = './images_stars/';
         }
-        echo '<br>'.$imageLink;
+        echo '<br>' . $imageLink;
 
         // taille autorisées (min & max -- en octets)
         $file_min_size = 0;
@@ -81,20 +77,32 @@
             echo "Pas de fichier joint";
         endif;
 
-        if (isset($_POST['addCity'])){
+        echo $get_the_file;
+
+        if (isset($_POST['addCity'])) {
             $ville = new Ville();
             $ville->AjouterVille($_POST['nom'], $_POST['pays'], $get_the_file, $_POST['desc'], (array)$BDDCo);
         }
 
-        if (isset($_POST['addSing'])){
+        if (isset($_POST['addSing'])) {
             $artiste = new Chanteur();
             $artiste->AjouterArtiste($_POST['nomSing'], $get_the_file, (array)$BDDCo);
         }
     }
 
-    if (isset($_POST['addTicket'])){
+    if (isset($_POST['addTicket'])) {
         $billet = new typeBillets((array)$BDDCo);
         $billet->CreerTypeBillet($_POST['prix'], $_POST['nomBillet'], $_POST['descBillet'], $_POST['date']);
+    }
+
+    if (isset($_POST['suprVille'])){
+        $ville = new Ville();
+        $ville->SuprimerVille($_POST['villeSupr']);
+    }
+    
+    if (isset($_POST['suprGuest'])){
+        $guest = new Chanteur();
+        $guest->SuprimerChanteur($_POST['guestSupr']);
     }
     ?>
 
@@ -120,12 +128,32 @@
 
                 <input id="file" type="file" name="image">
 
-            </div>
 
+            </div>
             <div class="boutton">
                 <input type="submit" name="addCity" value="Add city">
             </div>
+        </form>
 
+        <form class="adminSuprVille" method="POST" action="admin.php" enctype="multipart/form-data">
+            <div class="centre">
+
+                <div class="titre2">
+                    <h2>Delete a guest :</h2>
+                </div>
+                <p>
+                    <select id="villeSupr" name="villeSupr">
+                        <?php
+                        $ville = new Ville();
+                        $ville->SelectionVille((array)$BDDCo);
+                        ?>
+                    </select>
+                </p>
+            </div>
+
+            <div class="boutton">
+                <input id="Cancel" type="submit" name="suprVille" value="Delete city">
+            </div>
         </form>
 
         <div class="space2"></div>
@@ -145,7 +173,7 @@
                 <p>
                     <textarea name="descBillet" placeholder="Description of the ticket..."></textarea>
                 </p>
-                
+
                 <p class="half">
                     <input type="number" name="prix" placeholder="Price of the ticket..." required>
                     <input type="date" name="date" placeholder="Date of the event..." required>
@@ -159,19 +187,19 @@
             </div>
 
         </form>
-        
+
         <div class="space2"></div>
-        <form class="adminSing" method="POST" action="admin.php">
+        <form class="adminSing" method="POST" action="admin.php" enctype="multipart/form-data">
             <img src="./images/logo.png">
 
             <div class="centre">
 
                 <div class="titre">
-                    <h2>New Singer : </h2>
+                    <h2>New Artiste : </h2>
                 </div>
 
                 <p>
-                    <input type="text" name="nomSing" placeholder="Name or nickname of the artiste..." required>
+                    <input type="text" name="nomSing" placeholder="Name or nickame of the artiste.." required>
                 </p>
 
                 <input id="file" type="file" name="image">
@@ -179,9 +207,30 @@
             </div>
 
             <div class="boutton">
-                <input type="submit" name="addSing" value="Add Artiste">
+                <input type="submit" name="addSing" value="Add Sing">
             </div>
 
+        </form>
+        
+        <form class="adminSuprSing" method="POST" action="admin.php" enctype="multipart/form-data">
+            <div class="centre">
+
+                <div class="titre2">
+                    <h2>Delete a guest :</h2>
+                </div>
+                <p>
+                    <select id="guestSupr" name="guestSupr">
+                        <?php
+                        $artiste = new Chanteur();
+                        $artiste->SelectionChanteur((array)$BDDCo);
+                        ?>
+                    </select>
+                </p>
+            </div>
+
+            <div class="boutton">
+                <input id="Cancel" type="submit" name="suprGuest" value="Delete guest">
+            </div>
         </form>
     </div>
 

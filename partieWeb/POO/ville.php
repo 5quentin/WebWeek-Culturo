@@ -70,5 +70,12 @@
                 echo "<script>alert('Ville Sup')</script>";
             }
         }
+
+        public function SelectionVille($ensembillet){
+            $this->tabVille = $ensembillet['tab_ville'];
+            for($i=0;$i<count($this->tabVille);$i++){
+                echo "<option value='".$this->tabVille[$i]['nom']."'>".$this->tabVille[$i]['nom']."</option>";
+            }
+        }
     }
 ?>
