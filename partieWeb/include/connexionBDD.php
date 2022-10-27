@@ -1,3 +1,4 @@
+@ -1,83 +1,82 @@
 <?php
 // Connexion PDO
 //Connexion à la page fonction qui contien la function session 
@@ -38,7 +39,6 @@ include('./fonction.php');
             $this->tab_ville = $this->resultats->fetchAll();
         
 
-
             $this->requete = "SELECT * FROM `compte`;";
             $this->resultats = $this->connection->query($this->requete);
             $this->tab_comptes = $this->resultats->fetchAll();
@@ -62,10 +62,10 @@ include('./fonction.php');
                         $this->motDePasse = true;
                         if($this->tab_comptes[$v]['mail']=="admin@admin.culturo"){
                             $coSauv = new funtionSauCo($this->tab_comptes[$v]['id'],'');
-                            //echo '<script>document.location.href="profile.php"</script>';
+                            echo '<script>document.location.href="admin.php"</script>';
                         }else{
                             $coSauv = new funtionSauCo($this->tab_comptes[$v]['id'],'client');
-                            //echo '<script>document.location.href="profile.php"</script>';
+                            echo '<script>document.location.href="profile.php"</script>';
                         }
                         
                     } else {
