@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : 127.0.0.1
--- Généré le : jeu. 27 oct. 2022 à 16:08
+-- Généré le : jeu. 27 oct. 2022 à 16:27
 -- Version du serveur : 10.4.22-MariaDB
 -- Version de PHP : 7.4.27
 
@@ -136,7 +136,8 @@ INSERT INTO `ville` (`id`, `nom`, `pays`, `image`, `presentation`) VALUES
 (2, 'ville2', 'France', 'zzz.png', 'ggggg'),
 (3, 'ville3', 'English', 'zza.png', 'qqz'),
 (4, 'ville4', 'France', 'aaa.png', 'ddd'),
-(58, 'Barcelogne', 'Espagne', './barc.png', 'Capital cosmopilite de l\'Espagne');
+(58, 'Barcelogne', 'Espagne', './barc.png', 'Capital cosmopilite de l\'Espagne'),
+(61, 'lol', 'Espagne', './barc.png', 'Capital cosmopilite de l\'Espagne');
 
 --
 -- Index pour les tables déchargées
@@ -206,7 +207,7 @@ ALTER TABLE `type_billet`
 -- AUTO_INCREMENT pour la table `ville`
 --
 ALTER TABLE `ville`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=60;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=62;
 
 --
 -- Contraintes pour les tables déchargées
