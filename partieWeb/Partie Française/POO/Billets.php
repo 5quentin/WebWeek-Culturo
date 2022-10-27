@@ -6,10 +6,8 @@
         public $prenom;
         public $id_compte;
         public $id_type;
-        public $concert;
         public $prorioBillet;
         public $prorioBillet2;
-        public $supBillet;
         public $type_billets = array();
         public $nbtypeBillets = array();
         public $tab_Billet = array();
@@ -23,7 +21,7 @@
             return $this->identifiant;
         }
 
-        public function __construct($nom,$prenom,$id_compte,$concert,$typeBillets){
+        public function __construct($nom,$prenom,$id_compte,$typeBillets,$concert){
             $this->nom = $nom;
             $this->prenom = $prenom;
             $this->id_compte = $id_compte;
@@ -55,13 +53,11 @@
                     echo "Prenom : ".$this->tab_Billet[$i]['prenom']."<br>";
                     echo "Numéro de billet : ".$this->tab_Billet[$i]['id']."<br>";
                     echo "Concert : ".$this->tab_Billet[$i]['concert']."<br>";
-                    echo "Date : ";
                     for($y=0;$y<count($this->nbtypeBillets);$y++){
                         if($this->id_type == $this->nbtypeBillets[$y]['id']){
                             print_r($this->nbtypeBillets[$y]['date']);
                         }
                     }
-                    echo"<br>";
                     echo "Numéro de billet : ".$this->tab_Billet[$i]['id']."<br>";
                     echo"<br>";
                 }
@@ -121,28 +117,6 @@
             }  else{
                 echo "<script>alert('Billet déjà existant')</script>";
                 
-            }
-        }
-
-        public function SelectionBillet($ensembillet){
-            $this->tab_Billet = $ensembillet['tab_Billet'];
-            for($i=0;$i<count($ensembillet['tab_Billet']);$i++){
-                
-                if($this->id_compte == $this->tab_Billet[$i]['id_compte']){
-                    echo "<option value='".$this->tab_Billet[$i]['id']."'>Ticket number : ".$this->tab_Billet[$i]['id']."</option>";
-                }
-            }
-        }
-
-        public function AnnulationBillet($id_compte,$idBillet){
-            $BDD = new ConnexionBDD();
-
-            $this->reqpreparee = $BDD->connection -> prepare("DELETE FROM `billet` WHERE id=".$idBillet." AND `id_compte`=".$id_compte.";");
-
-            $req = $this->reqpreparee->execute();
-            if($req==true){
-                echo "<script>alert('Billet sup')</script>";
-                echo "<script>document.location.href='profile.php'</script>";
             }
         }
     }
