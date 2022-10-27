@@ -55,11 +55,13 @@
                     echo "Prenom : ".$this->tab_Billet[$i]['prenom']."<br>";
                     echo "Numéro de billet : ".$this->tab_Billet[$i]['id']."<br>";
                     echo "Concert : ".$this->tab_Billet[$i]['concert']."<br>";
+                    echo "Date : ";
                     for($y=0;$y<count($this->nbtypeBillets);$y++){
                         if($this->id_type == $this->nbtypeBillets[$y]['id']){
                             print_r($this->nbtypeBillets[$y]['date']);
                         }
                     }
+                    echo"<br>";
                     echo "Numéro de billet : ".$this->tab_Billet[$i]['id']."<br>";
                     echo"<br>";
                 }

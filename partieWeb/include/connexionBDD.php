@@ -14,6 +14,7 @@ include('./fonction.php');
         public $resultats;
         public $tab_typeBillet;
         public $tab_Billet;
+        public $tab_ville;
         public $nbComptes;
         public $motDePasse=false;
 
@@ -29,6 +30,10 @@ include('./fonction.php');
             $this->requete = "SELECT * FROM billet";
             $this->resultats = $this->connection->query($this->requete);
             $this->tab_Billet = $this->resultats->fetchAll();
+
+            $this->requete = "SELECT * FROM ville";
+            $this->resultats = $this->connection->query($this->requete);
+            $this->tab_ville = $this->resultats->fetchAll();
         }
 
         ///////////////////////////////////////////////
