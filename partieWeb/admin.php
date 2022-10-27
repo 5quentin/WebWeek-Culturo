@@ -1,3 +1,4 @@
+
 <!doctype html>
 <html lang="fr">
 
@@ -12,28 +13,29 @@
 
 
 <body>
-    <?php 
-    
+    <?php
+
     include './header_footer/header.php';
     include "./include/connexionBDD.php";
     include "./POO/ville.php";
 
     $BDDCo = new connexionBDD();
 
-    $file ="./sauv.txt";
+    $file = "./sauv.txt";
 
-    if (file_exists($file)==true){
-      $read=file($file);
+    if (file_exists($file) == true) {
+        $read = file($file);
 
-      /*if($read[0]!="" && $read[0]!="null"){
-        
-        else{
-          echo '<script>document.location.href="index.php"</script>';
-        } 
-      }*/
+        if ($read[0] != "5") {
+            echo '<script>document.location.href="index.php"</script>';
+        }
     }
 
-    
+    else{
+        echo '<script>document.location.href="index.php"</script>';
+    }
+
+
     if (isset($_POST['addCity'])) {
 
         // taille autorisées (min & max -- en octets)
@@ -41,37 +43,37 @@
         $file_max_size = 10000000;
         // On vérifie la présence d"un fichier à uploader
         if (($_FILES["imageVille"]["size"] > $file_min_size) && ($_FILES["imageVille"]["size"] < $file_max_size)) :
-        // dossier où sera déplacé le fichier; ce dossier doit exister
-        $content_dir = "./images/images villes/";
-        $tmp_file = $_FILES["imageVille"]["tmp_name"];
-        if( !is_uploaded_file($tmp_file) ){
-            echo "Fichier non trouvé";
-        }
-        // on vérifie l"extension
-        $path = $_FILES["imageVille"]["name"];
-        $ext = pathinfo($path, PATHINFO_EXTENSION); // on récupère l"extension
-        if(!strstr($ext, "jpg")&& !strstr($ext, "png")&& !strstr($ext, "webp")&& !strstr($ext, "jpeg")){
-            echo "EXTENSION ".$ext." NON AUTORISEE";
-        }
-                            
-        // Si le formulaire est validé, on copie le fichier dans le dossier de destination
-        if(empty($errors)){
-            $name_file = md5(uniqid(rand(), true)).".".$ext; // on crée un nom unique en conservant l"extension
-            if( !move_uploaded_file($tmp_file, $content_dir . $name_file) ){
-                echo "Il y a des erreurs! Impossible de copier le fichier dans le dossier cible";
+            // dossier où sera déplacé le fichier; ce dossier doit exister
+            $content_dir = "./images/images villes/";
+            $tmp_file = $_FILES["imageVille"]["tmp_name"];
+            if (!is_uploaded_file($tmp_file)) {
+                echo "Fichier non trouvé";
             }
-        } 
-        // On récupère l"url du fichier envoyé
-        $get_the_file = $content_dir.$name_file;
-                        
-        elseif($_FILES["upfiles"]["size"] > $file_max_size):
+            // on vérifie l"extension
+            $path = $_FILES["imageVille"]["name"];
+            $ext = pathinfo($path, PATHINFO_EXTENSION); // on récupère l"extension
+            if (!strstr($ext, "jpg") && !strstr($ext, "png") && !strstr($ext, "webp") && !strstr($ext, "jpeg")) {
+                echo "EXTENSION " . $ext . " NON AUTORISEE";
+            }
+
+            // Si le formulaire est validé, on copie le fichier dans le dossier de destination
+            if (empty($errors)) {
+                $name_file = md5(uniqid(rand(), true)) . "." . $ext; // on crée un nom unique en conservant l"extension
+                if (!move_uploaded_file($tmp_file, $content_dir . $name_file)) {
+                    echo "Il y a des erreurs! Impossible de copier le fichier dans le dossier cible";
+                }
+            }
+            // On récupère l"url du fichier envoyé
+            $get_the_file = $content_dir . $name_file;
+
+        elseif ($_FILES["upfiles"]["size"] > $file_max_size) :
             echo "le fichier dépasse la limite autorisée";
-        else: 
+        else :
             echo "Pas de fichier joint";
         endif;
 
-        $ville=new Ville();
-        $ville->AjouterVille($_POST['nom'],$_POST['pays'],$get_the_file,$_POST['desc'],(array)$BDDCo);
+        $ville = new Ville();
+        $ville->AjouterVille($_POST['nom'], $_POST['pays'], $get_the_file, $_POST['desc'], (array)$BDDCo);
     }
     ?>
 
