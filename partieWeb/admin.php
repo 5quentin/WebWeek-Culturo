@@ -18,6 +18,8 @@
     include './header_footer/header.php';
     include "./include/connexionBDD.php";
     include "./POO/ville.php";
+    include "./POO/typeBillets.php";
+    include "./POO/Chanteur.php";
 
     $BDDCo = new connexionBDD();
 
@@ -36,21 +38,32 @@
     }
 
 
-    if (isset($_POST['addCity'])) {
+    if (isset($_POST['addCity']) or isset($_POST['addSing'])) {
+
+        $imageTrait="";
+        echo isset($_POST['addCity']);
+
+        if (isset($_POST['addCity'])) {
+            $imageTrait='imageVille';
+        }elseif (isset($_POST['addSing'])){
+            $imageTrait='imageSing';
+        }
+        echo '<br>'.$imageTrait;
+
 
         // taille autorisées (min & max -- en octets)
         $file_min_size = 0;
         $file_max_size = 10000000;
         // On vérifie la présence d"un fichier à uploader
-        if (($_FILES["imageVille"]["size"] > $file_min_size) && ($_FILES["imageVille"]["size"] < $file_max_size)) :
+        if (($_FILES[$imageTrait]["size"] > $file_min_size) && ($_FILES[$imageTrait]["size"] < $file_max_size)) :
             // dossier où sera déplacé le fichier; ce dossier doit exister
             $content_dir = "./images/images villes/";
-            $tmp_file = $_FILES["imageVille"]["tmp_name"];
+            $tmp_file = $_FILES[$imageTrait]["tmp_name"];
             if (!is_uploaded_file($tmp_file)) {
                 echo "Fichier non trouvé";
             }
             // on vérifie l"extension
-            $path = $_FILES["imageVille"]["name"];
+            $path = $_FILES[$imageTrait]["name"];
             $ext = pathinfo($path, PATHINFO_EXTENSION); // on récupère l"extension
             if (!strstr($ext, "jpg") && !strstr($ext, "png") && !strstr($ext, "webp") && !strstr($ext, "jpeg")) {
                 echo "EXTENSION " . $ext . " NON AUTORISEE";
@@ -72,8 +85,20 @@
             echo "Pas de fichier joint";
         endif;
 
-        $ville = new Ville();
-        $ville->AjouterVille($_POST['nom'], $_POST['pays'], $get_the_file, $_POST['desc'], (array)$BDDCo);
+        if (isset($_POST['addCity'])){
+            $ville = new Ville();
+            $ville->AjouterVille($_POST['nom'], $_POST['pays'], $get_the_file, $_POST['desc'], (array)$BDDCo);
+        }
+
+        if (isset($_POST['addSing'])){
+            $artiste = new Chanteur();
+            $artiste->AjouterArtiste($_POST['nomSing'], $get_the_file, (array)$BDDCo);
+        }
+    }
+
+    if (isset($_POST['addTicket'])){
+        $billet = new typeBillets((array)$BDDCo);
+        $billet->CreerTypeBillet($_POST['prix'], $_POST['nomBillet'], $_POST['descBillet'], $_POST['date']);
     }
     ?>
 
@@ -85,7 +110,7 @@
             <div class="centre">
 
                 <div class="titre">
-                    <h2>City : </h2>
+                    <h2>New city : </h2>
                 </div>
 
                 <p class="half">
@@ -103,6 +128,62 @@
 
             <div class="boutton">
                 <input type="submit" name="addCity" value="Add city">
+            </div>
+
+        </form>
+
+        <div class="space2"></div>
+        <form class="adminType" method="POST" action="admin.php">
+            <img src="./images/logo.png">
+
+            <div class="centre">
+
+                <div class="titre">
+                    <h2>New Ticket : </h2>
+                </div>
+
+                <p>
+                    <input type="text" name="nomBillet" placeholder="Name of the ticket..." required>
+                </p>
+
+                <p>
+                    <textarea name="descBillet" placeholder="Description of the ticket..."></textarea>
+                </p>
+                
+                <p class="half">
+                    <input type="number" name="prix" placeholder="Price of the ticket..." required>
+                    <input type="date" name="date" placeholder="Date of the event..." required>
+                </p>
+
+
+            </div>
+
+            <div class="boutton">
+                <input type="submit" name="addTicket" value="Add Ticket">
+            </div>
+
+        </form>
+        
+        <div class="space2"></div>
+        <form class="adminSing" method="POST" action="admin.php">
+            <img src="./images/logo.png">
+
+            <div class="centre">
+
+                <div class="titre">
+                    <h2>New Singer : </h2>
+                </div>
+
+                <p>
+                    <input type="text" name="nomSing" placeholder="Name or nickname of the artiste..." required>
+                </p>
+
+                <input id="file" type="file" name="imageSing">
+
+            </div>
+
+            <div class="boutton">
+                <input type="submit" name="addSing" value="Add Artiste">
             </div>
 
         </form>

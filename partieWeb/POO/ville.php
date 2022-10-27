@@ -25,14 +25,14 @@
             if ($this->tabVille != null) {
                 while ($v < $this->nbVille && $this->nomVille != $this->tabVille[$v]['nom']) {
                     $v++;
-                    if ($this->nomVille == $this->tabVille[$v]['nom']) {
+                    if ($this->nomVille == isset($this->tabVille[$v]['nom'])) {
                         $this->enregistre = false;
                         
                     } else {
                         $this->enregistre = true;
                     }
-                    
                 }
+
             } else {
                 $this->enregistre = true;
                 // echo "<script>alert('OK')</script>";
