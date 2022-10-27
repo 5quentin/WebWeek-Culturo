@@ -14,7 +14,7 @@
 
 <body>
 
-  <?php include './header_footer/header.html';
+  <?php include './header_footer/header.php';
     include "./include/connexionBDD.php";
 
     $file ="./sauv.txt";
@@ -38,7 +38,6 @@
       }
     }
 
-    
   ?>
 
   <div class="container">
