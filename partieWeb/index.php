@@ -176,8 +176,10 @@
           <span>Everybody is invited to share an unforgettable moment amoung european friends !</span>
         </p>
       </div>
-      <div class="bouton">
-        <div id="tickcult">Tickets </br> <span>CULTURO</span></div>
+      <div class="bouton2">
+        <div class="ticket">
+          <a class="rose">Tickets </br> <span>CULTURO</span></a>
+        </div>
       </div>
     </div> -->
 
