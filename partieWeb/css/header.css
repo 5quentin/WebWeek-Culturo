@@ -1,4 +1,18 @@
 /*--------------------Commun-------------------*/
+@font-face {
+    font-family: "GROBOLD";
+    src: url("../fonts/GROBOLD.ttf");
+}
+
+@font-face {
+    font-family: "Segoe UI Bold";
+    src: url("../fonts/segoe-ui/Segoe\ UI\ Bold.ttf"),
+}
+
+@font-face {
+    font-family: "Segoe UI";
+    src: url("../fonts/segoe-ui/Segoe\ UI.ttf"),
+}
 
 body {
 	margin : 0;
@@ -9,7 +23,6 @@ display: flex;
 height: 10em;
 }
 #headervide{
-	
 	width: 100%;
 }
 #contenaireHeader{
@@ -33,7 +46,6 @@ height: 10em;
 
 }
 #contenaireLogo{
-
 	display: flex;
 	width: 200px;
 }
@@ -218,3 +230,4 @@ height: 10em;
 		display: block;
 	}
 }
+

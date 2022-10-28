@@ -1,17 +1,4 @@
-@font-face {
-    font-family: "GROBOLD";
-    src: url("../fonts/GROBOLD.ttf");
-}
 
-@font-face {
-    font-family: "Segoe UI Bold";
-    src: url("../fonts/segoe-ui/Segoe\ UI\ Bold.ttf"),
-}
-
-@font-face {
-    font-family: "Segoe UI";
-    src: url("../fonts/segoe-ui/Segoe\ UI.ttf"),
-}
 
 body, html {
     margin: 0%;
