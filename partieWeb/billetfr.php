@@ -5,11 +5,10 @@
   <meta charset="UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Billet Culturo</title>
+  <title>Billets Culturo</title>
 
   <link rel="stylesheet" href="./css/formulaires.css" />
   <link rel="stylesheet" href="./css/header.css" />
-  <link rel="stylesheet" type="text/css" href="./css/footer.css" />
 
 </head>
 
@@ -18,19 +17,19 @@
   <?php include './header_footer/header.php';?>
 
   <div class="desc">
-    <h1 id="prems">There are several formulas,<br> here is the list of them:</h1>
+    <h1 id="prems">Il existe plusieurs formules,<br> en voici la liste:</h1>
     
-    <h1 id="stand">Standard Pass</h1>
-    <p>75€ : access to all areas except concert</p>
+    <h1 id="stand">Pass Standard</h1>
+    <p>75€ : un accès à toutes les zones sauf la zone concert</p>
 
     <h1 id="vip">VIP Pass ★</h1>
-    <p>100€ : all areas except concert + 1 meal + skip the line + front seats</p>
+    <p>100€ : accès à toutes les zones + 1 repas + coupe file + place privilégiées</p>
 
-    <h1 id="concert">+10€ for concert access</h1>
+    <h1 id="concert">+10€ pour l'accès à la zone concert</h1>
 
-    <h1 id="europe">Discover and vote for the works of your country <span id="bleu">!</span><br>Events in collaboration with Culturo <br>will be fixed at <span id="orange">50€</span></h1>
+    <h1 id="europe">Découvrer et votez pour les oeuvres des artistes de votre pays <span id="bleu">!</span><br>Les événements en collaboration avec CULTURO <br>sont au prix de <span id="orange">50€</span></h1>
 
-    <h1>Reservation part :</h1>
+    <h1>Réserver :</h1>
 
   </div>
 
@@ -40,7 +39,7 @@
 
       <div class="centre">
 
-        <div class="titre"><h2>What formula do you want ? :</h2></div>
+        <div class="titre"><h2>Quelle formule voulez vous ? :</h2></div>
 
         <p>
           <select id="billet" name="type_billet">
@@ -67,7 +66,7 @@
 
         <div>
           <input type="checkbox" id="checkConcert" name="concert" value="Oui">
-          <label for="concert">+10€ for concert access</label>
+          <label for="concert">+10€ pour l'accès à la zone concerts</label>
         </div>
 
         <?php

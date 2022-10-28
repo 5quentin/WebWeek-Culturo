@@ -5,11 +5,10 @@
   <meta charset="UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Sign up Culturo</title>
+  <title>S'inscrire'</title>
 
   <link rel="stylesheet" href="./css/formulaires.css" />
   <link rel="stylesheet" href="./css/header.css" />
-  <link rel="stylesheet" type="text/css" href="./css/footer.css" />
 
 </head>
 
@@ -24,7 +23,7 @@
 
       <div class="centre">
 
-        <div class="titre"><h2>Sign up :</h2></div>
+        <div class="titre"><h2>S'inscrire :</h2></div>
 
         <p class="half">
           <input type="text" name="nom" placeholder="* Name..." required>
@@ -66,7 +65,7 @@
       </div>
 
       <div class="boutton">
-        <a href="./connexion.php">Already have an account? Sign in.</a>
+        <a href="./connexion.php">Vous avez déjà un compte ? Connectez-vous</a>
         <input type="submit" name="inscr" value="Sign up">
       </div>
       

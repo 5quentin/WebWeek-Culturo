@@ -8,8 +8,8 @@
 						<div class= "hg" >
 							<a class="logo" href="index.php"><img src="./images/logonb.png"></a>
 							<span id="dates">
-								<p >July 7-9</p>
-								<p>July 21-23</p>
+								<p >Juil 7-9</p>
+								<p>Juil 21-23</p>
 							</span>
 							
 						</div>
@@ -21,8 +21,8 @@
 						<div class="burger"><img src="./images/burger.png"></div>
 							<ul>
 								<li><a href="#selection">Selections</a></li>
-								<li><a href="#onDisplay">On display</a></li>
-								<li><a href="#mapp">Map</a></li>
+								<li><a href="#onDisplay">A l'affiche</a></li>
+								<li><a href="map">Plan</a></li>
 								<li><a>Langue</a></li>
 								<?php
 									$file ="./sauv.txt";
