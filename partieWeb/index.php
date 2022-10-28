@@ -59,7 +59,7 @@
     <!-- Carte intéractive -->
 
 
-    <div class="GrandContenaireMap">
+    <div id ="selection" class="GrandContenaireMap">
       <div class="containerMap">
 
         <div id="GroupeMap">
@@ -100,7 +100,7 @@
     </div>
 
     <!-- Map du Puy-en-Velay -->
-     <div class="contenairePuy">
+     <div id="onDisplay" class="contenairePuy">
         <div class="affiche">
           <div class="carousel">
             <script src="./js/jsCaroussel.js"></script>
@@ -129,7 +129,7 @@
       </div>
   
   
-    <div class="contenairePuy">
+    <div id="mapp" class="contenairePuy">
       <div id="ContenaireProg">
         <div class="programme">
           <div class="titrep"> Culturo Program</div>
