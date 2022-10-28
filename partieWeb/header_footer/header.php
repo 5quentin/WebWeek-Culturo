@@ -22,7 +22,7 @@
 							<ul>
 								<li><a href="#selection">Selections</a></li>
 								<li><a href="#onDisplay">On display</a></li>
-								<li><a href="map">Map</a></li>
+								<li><a href="#mapp">Map</a></li>
 								<li><a>Langue</a></li>
 								<?php
 									$file ="./sauv.txt";

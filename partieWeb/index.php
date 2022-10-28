@@ -17,7 +17,7 @@
   <title>Culturo</title>
   <link rel="stylesheet" href="css/index.css">
   <link rel="stylesheet" href="./css/header.css" />
-  <link rel="stylesheet" href="./css/footer.css" />
+  <link rel="stylesheet" type="text/css" href="./css/footer.css" />
   <script src="https://kit.fontawesome.com/c6b95d0d70.js" crossorigin="anonymous"></script>
   <link rel="icon" type="image/png" href="https://static.files.bbci.co.uk/core/website/assets/static/icons/favicon/news/favicon-16.8a240ceacc28296a851d.png" sizes="16x16" data-rh="true">
   <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.1/dist/leaflet.css" integrity="sha256-sA+zWATbFveLLNqWO2gtiw3HL/lh1giY/Inf1BJ0z14=" crossorigin="" />
