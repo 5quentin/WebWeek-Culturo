@@ -23,7 +23,7 @@
 								<li><a href="index.php#selection">Selections</a></li>
 								<li><a href="index.php#onDisplay">On display</a></li>
 								<li><a href="index.php#mapp">Map</a></li>
-								<li><a>Langue</a></li>
+								<li><a href="indexfr.php">French</a></li>
 								<?php
 									$file ="./sauv.txt";
 									if (file_exists($file)!=false){

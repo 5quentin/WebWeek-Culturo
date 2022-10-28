@@ -17,8 +17,9 @@
   <title>Culturo</title>
   <link rel="stylesheet" href="css/index.css">
   <link rel="stylesheet" href="./css/header.css" />
-  <link rel="stylesheet" href="./css/footer.css" />
+  <link rel="stylesheet" type="text/css" href="./css/footer.css" />
   <script src="https://kit.fontawesome.com/c6b95d0d70.js" crossorigin="anonymous"></script>
+  <link rel="icon" type="image/png" href="./favicon/favicon.png" sizes="16x16" data-rh="true">
   <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.1/dist/leaflet.css" integrity="sha256-sA+zWATbFveLLNqWO2gtiw3HL/lh1giY/Inf1BJ0z14=" crossorigin="" />
   <link rel="stylesheet" href="./css/cssCarousel.css">
   <script src="https://unpkg.com/leaflet@1.9.1/dist/leaflet.js" integrity="sha256-NDI0K41gVbWqfkkaHj15IzU7PtMoelkzyKp8TOaFQ3s=" crossorigin="" ;></script>
@@ -27,7 +28,7 @@
 
 <body>
 
-  <?php include './header_footer/header.php'; ?>
+  <?php include './header_footer/headervf.php'; ?>
   <!-- header -->
   <div class="main">
 
@@ -58,7 +59,7 @@
     <!-- Carte intéractive -->
 
 
-    <div class="GrandContenaireMap">
+    <div id="selection" class="GrandContenaireMap">
       <div class="containerMap">
 
         <div id="GroupeMap">
@@ -99,7 +100,7 @@
     </div>
 
     <!-- Map du Puy-en-Velay -->
-     <div class="contenairePuy">
+     <div id="onDisplay" class="contenairePuy">
         <div class="affiche">
           <div class="carousel">
             <script src="./js/jsCaroussel.js"></script>
@@ -128,7 +129,7 @@
       </div>
   
   
-    <div class="contenairePuy">
+    <div id="mapp" class="contenairePuy">
       <div id="ContenaireProg">
         <div class="programme">
           <div class="titrep">Programme Culturo </div>
@@ -179,6 +180,7 @@
   </div>
 
   <?php /*include './header_footer/footer.html';*/ ?>
+
   <script src="./js/webWeek.js"></script>
   <script>
     function ecrirLog(){
@@ -197,6 +199,7 @@
     return NumVilleSelect;
     }
 
+  </script>
   </script>
 </body>
 
