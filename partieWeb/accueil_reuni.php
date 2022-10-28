@@ -91,7 +91,8 @@
       <div>
         <div class="affiche">
           <div class="carousel">
-            <img id="harry" src="images_stars/harry.png">
+          <?php include './caroussel.php';?>
+          <script src="./js/jsCaroussel.js"></script>
           </div>
   
           <div class="description">
