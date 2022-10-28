@@ -22,7 +22,7 @@
     include "./POO/Chanteur.php";
 
     $BDDCo = new connexionBDD();
-
+    $guest = new Chanteur();
     $file = "./sauv.txt";
 
     if (file_exists($file) == true) {
@@ -70,11 +70,8 @@
         else :
             echo "Pas de fichier joint";
         endif;
-
-        echo $get_the_file;
-
-        $artiste = new Chanteur();
-        $artiste->AjouterArtiste($_POST['nomSing'], $get_the_file, (array)$BDDCo);
+        ///////////////////////////////
+        $guest->AjouterArtiste($_POST['nomSing'], $get_the_file, (array)$BDDCo);
     
     }
 
@@ -89,7 +86,7 @@
     }
     
     if (isset($_POST['suprGuest'])){
-        $guest = new Chanteur();
+        
         $guest->SuprimerChanteur($_POST['guestSupr']);
     }
     ?>
@@ -183,8 +180,7 @@
                 <p>
                     <select id="guestSupr" name="guestSupr">
                         <?php
-                        $artiste = new Chanteur();
-                        $artiste->SelectionChanteur((array)$BDDCo);
+                        $guest->SelectionChanteur((array)$BDDCo);
                         ?>
                     </select>
                 </p>
