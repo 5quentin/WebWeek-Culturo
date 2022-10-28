@@ -19,13 +19,12 @@ require_once "./include/connexionBDD.php";
                 while ($v < $this->nbArtiste && $this->nomArtiste != $this->tabArtiste[$v]['nom']) {
                     $v++;
                     if ($this->nomArtiste == isset($this->tabArtiste[$v]['nom'])) {
-                       // echo "<script>alert('cfygtvyuj')</script>";
                        $this->enregistre = false;
                        
                        
                     } else {
                         $this->enregistre = true;
-                        
+                        break;
                     }
                     
                 }
@@ -42,20 +41,13 @@ require_once "./include/connexionBDD.php";
                 $this->reqpreparee->bindValue(':nom', $this->nomArtiste, PDO::PARAM_STR);
                 $this->reqpreparee->bindValue(':img', $this->imgArtiste, PDO::PARAM_STR);
                 $req = $this->reqpreparee->execute();
-
-                print_r($this->reqpreparee->execute());
                 if ($req == true) {
-
-                    // $coSauv = new funtionSauCo($this->tab_comptes[$v]['id'],'client');
-                    //echo"<script>window.location.href='billet.php';</script>";
                     echo "<script>alert('Nouveau chanteur')</script>";
                 }
-                print_r($this->reqpreparee) ;
 
             }else{
                 echo "<script>alert('Chanteur déjà existant')</script>";
             }
-
         }
 
         public function SuprimerChanteur($nomArtiste){

@@ -113,6 +113,7 @@ html, body{
   width: 100%;
   height: 100%;
   border-radius: 10px;
+  
 }
 #ville{
   display: flex;
@@ -571,4 +572,52 @@ flex-direction: column;
   text-align: justify;
   font-weight: 600;
   line-height: 1.5;
+}
+
+@media screen and (max-width: 800px) {
+  .tachej{
+    display: none;
+  }
+
+  .main > .container{
+    flex-direction: column;
+  }
+
+  .intro{
+    display: flex;
+    justify-content: center;
+
+    width: 100%;
+  }
+
+  .leint{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+    margin-top: 50px;
+
+    text-align: center;
+  }
+
+  .containerMap{
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    height: auto;
+  }
+
+  .contentcontainer{
+    width: 90%;
+
+  }
+
+  .imgcarte{
+    height: auto;
+  }
+
+  .imgcarte > img{
+    height: auto;
+    width: 100%;
+  } 
 }

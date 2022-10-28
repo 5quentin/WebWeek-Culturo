@@ -22,7 +22,7 @@
     include "./POO/Chanteur.php";
 
     $BDDCo = new connexionBDD();
-
+    $guest = new Chanteur();
     $file = "./sauv.txt";
 
     if (file_exists($file) == true) {
@@ -34,14 +34,8 @@
     } else {
         echo '<script>document.location.href="index.php"</script>';
     }
-    if (isset($_POST['addCity']) or isset($_POST['addSing'])) {
-
-        if (isset($_POST['addCity'])) {
-            $imageLink = './images/images villes/';
-        } elseif (isset($_POST['addSing'])) {
-            $imageLink = './images_stars/';
-        }
-        echo '<br>' . $imageLink;
+    
+    if (isset($_POST['addSing'])) {
 
         // taille autorisées (min & max -- en octets)
         $file_min_size = 0;
@@ -49,7 +43,7 @@
         // On vérifie la présence d"un fichier à uploader
         if (($_FILES["image"]["size"] > $file_min_size) && ($_FILES["image"]["size"] < $file_max_size)) :
             // dossier où sera déplacé le fichier; ce dossier doit exister
-            $content_dir = $imageLink;
+            $content_dir = './images_stars/';
             $tmp_file = $_FILES["image"]["tmp_name"];
             if (!is_uploaded_file($tmp_file)) {
                 echo "Fichier non trouvé";
@@ -76,18 +70,9 @@
         else :
             echo "Pas de fichier joint";
         endif;
-
-        echo $get_the_file;
-
-        if (isset($_POST['addCity'])) {
-            $ville = new Ville();
-            $ville->AjouterVille($_POST['nom'], $_POST['pays'], $get_the_file, $_POST['desc'], (array)$BDDCo);
-        }
-
-        if (isset($_POST['addSing'])) {
-            $artiste = new Chanteur();
-            $artiste->AjouterArtiste($_POST['nomSing'], $get_the_file, (array)$BDDCo);
-        }
+        ///////////////////////////////
+        $guest->AjouterArtiste($_POST['nomSing'], $get_the_file, (array)$BDDCo);
+    
     }
 
     if (isset($_POST['addTicket'])) {
@@ -101,45 +86,19 @@
     }
     
     if (isset($_POST['suprGuest'])){
-        $guest = new Chanteur();
+        
         $guest->SuprimerChanteur($_POST['guestSupr']);
     }
     ?>
 
     <div class="container">
         <div class="space"></div>
-        <form class="adminVille" method="POST" action="admin.php" enctype="multipart/form-data">
+        <form class="adminSuprVille" method="POST" action="admin.php" enctype="multipart/form-data">
             <img src="./images/logo.png">
-
             <div class="centre">
 
                 <div class="titre">
-                    <h2>New city : </h2>
-                </div>
-
-                <p class="half">
-                    <input type="text" name="nom" placeholder="Name of the city..." required>
-                    <input type="text" name="pays" placeholder="Name of the contry..." required>
-                </p>
-
-                <p>
-                    <textarea name="desc" placeholder="Description of the city..."></textarea>
-                </p>
-
-                <input id="file" type="file" name="image">
-
-
-            </div>
-            <div class="boutton">
-                <input type="submit" name="addCity" value="Add city">
-            </div>
-        </form>
-
-        <form class="adminSuprVille" method="POST" action="admin.php" enctype="multipart/form-data">
-            <div class="centre">
-
-                <div class="titre2">
-                    <h2>Delete a guest :</h2>
+                    <h2>Delete a city :</h2>
                 </div>
                 <p>
                     <select id="villeSupr" name="villeSupr">
@@ -221,8 +180,7 @@
                 <p>
                     <select id="guestSupr" name="guestSupr">
                         <?php
-                        $artiste = new Chanteur();
-                        $artiste->SelectionChanteur((array)$BDDCo);
+                        $guest->SelectionChanteur((array)$BDDCo);
                         ?>
                     </select>
                 </p>
