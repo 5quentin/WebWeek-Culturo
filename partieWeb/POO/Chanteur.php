@@ -55,7 +55,6 @@ require_once "./include/connexionBDD.php";
             }else{
                 echo "<script>alert('Chanteur déjà existant')</script>";
             }
-
         }
 
         public function SuprimerChanteur($nomArtiste){

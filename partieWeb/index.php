@@ -67,7 +67,6 @@
           </div>
         </div>
 
-
         <div class="contentcontainer">
           <div class="selection">
             <div id="select">
@@ -100,17 +99,11 @@
 
     </div>
 
-
-
-    <!-- Carousel A l'affiche -->
-
-
     <!-- Map du Puy-en-Velay -->
      <div class="contenairePuy">
         <div class="affiche">
           <div class="carousel">
-          <?php include './caroussel.php';?>
-          <script src="./js/jsCaroussel.js"></script>
+            <script src="./js/jsCaroussel.js"></script>
             <?php include "caroussel.php";?>
           </div>
   
@@ -142,7 +135,7 @@
           <div class="titrep"> Culturo Program</div>
           <div class="lieu">
             <div class="theme">
-              <p class="art">Art et Sculpture</p>
+              <p class="art">Art and Sculpture</p>
               <p class="art">Music et dance</p>
               <p class="art">Comedy</p>
               <p class="art">Video Games</p>
@@ -181,9 +174,7 @@
       <div class="bouton">
         <div id="tickcult">Tickets </br> <span>CULTURO</span></div>
       </div>
-    </div> -->
-
-
+    </div>
 
   </div>
 
