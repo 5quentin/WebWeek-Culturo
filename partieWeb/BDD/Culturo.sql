@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : 127.0.0.1
--- Généré le : jeu. 27 oct. 2022 à 16:27
+-- Généré le : ven. 28 oct. 2022 à 08:48
 -- Version du serveur : 10.4.22-MariaDB
 -- Version de PHP : 7.4.27
 
@@ -124,20 +124,30 @@ CREATE TABLE `ville` (
   `id` int(11) NOT NULL,
   `nom` varchar(50) NOT NULL,
   `pays` varchar(50) NOT NULL,
-  `image` varchar(100) NOT NULL DEFAULT './images/images villes/',
-  `presentation` varchar(500) NOT NULL
+  `image` varchar(100) NOT NULL DEFAULT './images/images villes/ville_',
+  `presentation` varchar(500) NOT NULL,
+  `numVille` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
 -- Déchargement des données de la table `ville`
 --
 
-INSERT INTO `ville` (`id`, `nom`, `pays`, `image`, `presentation`) VALUES
-(2, 'ville2', 'France', 'zzz.png', 'ggggg'),
-(3, 'ville3', 'English', 'zza.png', 'qqz'),
-(4, 'ville4', 'France', 'aaa.png', 'ddd'),
-(58, 'Barcelogne', 'Espagne', './barc.png', 'Capital cosmopilite de l\'Espagne'),
-(61, 'lol', 'Espagne', './barc.png', 'Capital cosmopilite de l\'Espagne');
+INSERT INTO `ville` (`id`, `nom`, `pays`, `image`, `presentation`, `numVille`) VALUES
+(90, 'Le Puy-en-Velay', 'France', './images/images villes/ville_', 'Le Puy-en-Velay, anciennement Le Puy, est une commune française, préfecture du département de la Haute-Loire en région Auvergne-Rhône-Alpes. Le Puy-en-Velay comptait 19 215 habitants en 2019 et ses habitants sont appelés Ponots.', 1),
+(91, 'Ségovie', 'Espagne', './images/images villes/ville_', 'Garde est une ville située dans le centre de la région de Beira, entre le Plateau Guarda-Sabugal et la Serra da Estrela. Il est la plus haute ville du Portugal, étant situé à 1056 mètres. Guard est une distance d\'environ 219 km de Porto et 356 kilomètres de la ville de Lisbonne. Le District de Guarda est bordé au nord par le district de Bragança, au sud avec le district de Castelo Branco et l\'ouest avec les districts de Coimbra et Viseu.', 2),
+(92, 'Guarda', 'Portugal', './images/images villes/ville_', 'Le Puy-en-Velay, anciennement Le Puy, est une commune française, préfecture du département de la Haute-Loire en région Auvergne-Rhône-Alpes. Le Puy-en-Velay comptait 19 215 habitants en 2019 et ses habitants sont appelés Ponots.', 3),
+(93, 'Sienne', 'Italie', './images/images villes/ville_', 'Sienne, ville située en Toscane, au centre de l\'Italie, se caractérise par ses bâtiments médiévaux en briques. Sur la Piazza del Campo, la place centrale en forme de coquillage, se dressent le Palazzo Pubblico, l\'hôtel de ville gothique, et la Torre del Mangia, tour étroite du XIVe siècle offrant une vue panoramique depuis son sommet en travertin blanc.', 4),
+(94, 'Gummersebach', 'Allemange', './images/images villes/ville_', 'Gummersbach est une ville allemande du Haut-Berg, au sud-est du land de Rhénanie-du-Nord-Westphalie. Elle est située à 50 km à l\'Est de Cologne. Dans le passé, la ville était surnommée « la ville des tilleuls », la rue principale étant bordée de ces arbres.', 5),
+(95, 'Deurne', 'Pays-Bas', './images/images villes/ville_', 'Deurne est une commune et un village des Pays-Bas de la province du Brabant-Septentrional. ', 6),
+(96, 'Halmstad', 'Suède', './images/images villes/ville_', 'Halmstad est une ville de l\'ouest de la Suède, chef-lieu de la commune du même nom. Elle se situe dans le comté de Halland, sur les rives du Cattégat à l\'embouchure de Nissan, entre les villes de Falkenberg, au nord, et de Laholm, au sud. En 2005, on y dénombrait environ 55 000 habitants.', 7),
+(97, 'Vresse-sur-Semois', 'Belgique', './images/images villes/ville_', 'Vresse-sur-Semois est une commune francophone de Belgique située en Wallonie dans la province de Namur, ainsi qu’une localité où siège son administration. Sa langue traditionnelle était le champenois.', 8),
+(98, 'Leoben', 'Autriche', './images/images villes/ville_', 'Leoben est une ville de Styrie dans le centre de l\'Autriche sur la rivière Mur. C\'est la 19ᵉ ville la plus peuplée de son pays. Leoben est un centre industriel local et abrite l\'université de Leoben, spécialisée dans l\'exploitation de mines.', 9),
+(99, 'Zakopane', 'Pologne', './images/images villes/ville_', 'Zakopane est une station de ski du sud de la Pologne, aux pieds des Tatras. Elle constitue un point de départ apprécié pour les sports d\'hiver, ainsi que pour l\'alpinisme et la randonnée en été. Les stations de ski voisines, Kasprowy Wierch et Gubałówka, sont accessibles via un téléphérique et un funiculaire, et offrent une vue panoramique sur la montagne. La ville est également connue pour ses chalets en bois du début du XXe siècle, symboles de l\'architecture de Zakopane.', 10),
+(100, 'Kilkenny', 'Irlande', './images/images villes/ville_', 'Kilkenny est une ville de 26 512 habitants de la République d\'Irlande sur la Nore située à 150 km au sud-ouest de Dublin dans la province du Leinster. Kilkenny est le chef-lieu du comté du même nom.', 11),
+(101, 'Kolding', 'Danemark', './images/images villes/ville_', 'Kolding est une ville portuaire du Danemark dans la région du Danemark-du-Sud. La ville compte 57 540 habitants au 1ᵉʳ janvier 2012.', 12),
+(102, 'Sisak', 'Croatie', './images/images villes/ville_', 'Sisak est une ville et une municipalité située en Croatie centrale à la confluence des rivières Kupa, Save et Odra. Elle est le chef-lieu du Comitat de Sisak-Moslavina.', 13),
+(103, 'Kutná Hora', 'République tchèque', './images/images villes/ville_', 'Kutná Hora est une ville de la région de Bohême centrale, en Tchéquie, et le chef-lieu du district de Kutná Hora. Sa population s\'élevait à 20 450 habitants en 2022.', 14);
 
 --
 -- Index pour les tables déchargées
@@ -207,7 +217,7 @@ ALTER TABLE `type_billet`
 -- AUTO_INCREMENT pour la table `ville`
 --
 ALTER TABLE `ville`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=62;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=104;
 
 --
 -- Contraintes pour les tables déchargées
