@@ -6,7 +6,7 @@
     <title>Admin Culturo</title>
 
     <link rel="stylesheet" href="./css/header.css" />
-    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" href="./css/formulaires.css" />
     <link rel="stylesheet" type="text/css" href="./css/footer.css" />
 </head>
 
