@@ -1,3 +1,14 @@
+<?php
+  include "./include/connexionBDD.php";
+  include "./POO/CreerPorfil.php";
+  include "./POO/typeBillets.php";
+  include "./POO/Billets.php";
+  include "./POO/ville.php";
+  include "./POO/Chanteur.php";
+  
+  $BDDCo = new connexionBDD();
+?>
+
 <!doctype html>
 <html lang="fr">
 
@@ -7,12 +18,17 @@
   <link rel="stylesheet" href="css/index.css">
   <link rel="stylesheet" href="./css/header.css" />
   <link rel="stylesheet" href="./css/footer.css" />
-  <script src="script.js"></script>
+  <script src="https://kit.fontawesome.com/c6b95d0d70.js" crossorigin="anonymous"></script>
+  <link rel="icon" type="image/png" href="https://static.files.bbci.co.uk/core/website/assets/static/icons/favicon/news/favicon-16.8a240ceacc28296a851d.png" sizes="16x16" data-rh="true">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.1/dist/leaflet.css" integrity="sha256-sA+zWATbFveLLNqWO2gtiw3HL/lh1giY/Inf1BJ0z14=" crossorigin="" />
+  <link rel="stylesheet" href="./css/cssCarousel.css">
+  <script src="https://unpkg.com/leaflet@1.9.1/dist/leaflet.js" integrity="sha256-NDI0K41gVbWqfkkaHj15IzU7PtMoelkzyKp8TOaFQ3s=" crossorigin="" ;></script>
+
 </head>
 
 <body>
 
-<?php include './header_footer/header.html';?>
+  <?php include './header_footer/header.php'; ?>
   <!-- header -->
   <div class="main">
 
@@ -43,55 +59,57 @@
     <!-- Carte intéractive -->
 
 
-      <div class="partieMap">
+    <div class="GrandContenaireMap">
       <div class="containerMap">
-              
-                <div class="placemap">
-                  <img src="https://picsum.photos/500/500" alt="dems">
-                </div>
 
-
-                <div class="contentcontainer">
-                  <div class="selection">
-                    <p class="titre2" id="select">CULTURO SELECTIONS</p>
-                    <div>
-                      <p class="titre2" id="ville">PUY EN VELAY</p>
-                    </div>
-                  </div>
-
-                  <div class="imgcarte">
-                    <img src="images/images villes/lepuy.png" alt="imgville">
-                  </div>
-
-                  <div class="textville">
-                    <p>Le Puy-en-Velay is a French commune, it is the prefecture of the Haute-Loire department in the
-                      Auvergne-Rhône-Alpes region. Le Puy-en-Velay had 19,215 inhabitants in 2019 and its inhabitants are
-                      called Ponots</p>
-                  </div>
-                </div>
-
-            
+        <div id="GroupeMap">
+          <div id="map">
           </div>
+        </div>
 
-          <div class="bouton2">
-            <div class="ticket">
-              <a class="rose" href="./page_billet.php">TICKETS <br> CULTURO SELECTION</a>
+
+        <div class="contentcontainer">
+          <div class="selection">
+            <div id="select">
+              <p class="titre2"> CULTURO SELECTIONS</p>
+            </div>
+            
+            <div id="ville">
+              <p class="titre2" id="nomVille">PUY EN VELAY</p>
             </div>
           </div>
 
+          <div class="imgcarte" id="imgVille">
+            <img src="images/images villes/ville_1.jpg" alt="imgville">
+          </div>
+
+          <div class="textville" id="txtVille">
+            <p>Le Puy-en-Velay is a French commune, it is the prefecture of the Haute-Loire department in the
+              Auvergne-Rhône-Alpes region. Le Puy-en-Velay had 19,215 inhabitants in 2019 and its inhabitants are
+              called Ponots</p>
+          </div>
+        </div>
+        
       </div>
-   
+
+      <div class="bouton2">
+        <div class="ticket">
+          <a class="rose" href="./page_billet.php">TICKETS <br><span>CULTURO SELECTION</span> </a>
+        </div>
+      </div>
+
+    </div>
+
 
 
     <!-- Carousel A l'affiche -->
 
 
     <!-- Map du Puy-en-Velay -->
-    <div class="contenairePuy">
-      <div>
+     <div class="contenairePuy">
         <div class="affiche">
           <div class="carousel">
-            <img id="harry" src="images_stars/harry.png">
+            <?php include "caroussel.php";?>
           </div>
   
           <div class="description">
@@ -104,7 +122,6 @@
               <h3 class="stars">Team G-corp <span> July 21-22-23 </span></h3>
             </div>
           </div>
-        </div>
   
       </div>
   
@@ -162,14 +179,32 @@
       <div class="bouton">
         <div id="tickcult">Tickets </br> <span>CULTURO</span></div>
       </div>
-    </div>
-    
-    
+    </div> -->
+
+
 
   </div>
 
-  <?php include './header_footer/footer.html';?>
+  <?php /*include './header_footer/footer.html';*/ ?>
+  <script src="./js/webWeek.js"></script>
+  <script>
+    function ecrirLog(){
+      <?php
+    $NomVille = json_encode($BDDCo);
+    echo "var TabVille = " . $NomVille . ";\n";
+    ?>
+    TabVilleSelect=TabVille['tab_ville'];
+    
+    for(let i=0; i<TabVilleSelect.length;i++){
+      console.log(TabVilleSelect.length);
+      if(TabVilleSelect[i]['numVille']==valI){
+        NumVilleSelect =TabVilleSelect[i+1]; 
+      }
+    }
+    return NumVilleSelect;
+    }
 
+  </script>
 </body>
 
 </html>

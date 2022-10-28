@@ -5,11 +5,12 @@
         public $paysVille;
         public $img;
         public $presentation;
+        public $numVille;
         public $tabVille = array();
         public $nbVille;
         public $reqpreparee;
 
-        public function AjouterVille($nomVille, $paysVille, $img, $presentation, $tabVille)
+        public function AjouterVille($nomVille, $paysVille, $img, $presentation, $tabVille,$numVille)
         {
             $BDD = new ConnexionBDD();
             //print_r( $this->type_billets[0]['lib']);
@@ -19,6 +20,7 @@
             $this->enregistre= false;
             $this->presentation = $presentation;
             $this->tabVille = $tabVille['tab_ville'];
+            $this->numVille = $numVille;
             $this->nbVille = count($this->tabVille);
 
             $v = 0;
@@ -40,13 +42,24 @@
 
 
             if ($this->enregistre == true) {
+                if($this->img== null){
+                    $this->reqpreparee = $BDD->connection->prepare("INSERT INTO ville(nom,pays,presentation,numVille) Values(:nom,:pays,:presentation,:numVille);");
+                   
+                    $this->reqpreparee->bindValue(':nom', $this->nomVille, PDO::PARAM_STR);
+                    $this->reqpreparee->bindValue(':pays', $this->paysVille, PDO::PARAM_STR);               
+                    $this->reqpreparee->bindValue(':presentation', $this->presentation, PDO::PARAM_STR);
+                    $this->reqpreparee->bindValue(':numVille', $this->numVille, PDO::PARAM_STR);
+
+                }else{
+                    $this->reqpreparee = $BDD->connection->prepare("INSERT INTO ville(nom,pays,image,presentation,numVille) Values(:nom,:pays,:image,:presentation,:numVille);");
+                   
+                    $this->reqpreparee->bindValue(':nom', $this->nomVille, PDO::PARAM_STR);
+                    $this->reqpreparee->bindValue(':pays', $this->paysVille, PDO::PARAM_STR);               
+                    $this->reqpreparee->bindValue(':image', $this->img, PDO::PARAM_STR);
+                    $this->reqpreparee->bindValue(':presentation', $this->presentation, PDO::PARAM_STR);
+                    $this->reqpreparee->bindValue(':numVille', $this->numVille, PDO::PARAM_STR);
+                }
                 
-                $this->reqpreparee = $BDD->connection->prepare("INSERT INTO ville(nom,pays,image,presentation) Values(:nom,:pays,:image,:presentation);");
-                
-                $this->reqpreparee->bindValue(':nom', $this->nomVille, PDO::PARAM_STR);
-                $this->reqpreparee->bindValue(':pays', $this->paysVille, PDO::PARAM_STR);
-                $this->reqpreparee->bindValue(':image', $this->img, PDO::PARAM_STR);
-                $this->reqpreparee->bindValue(':presentation', $this->presentation, PDO::PARAM_STR);
 
                 $req = $this->reqpreparee->execute();
                 if ($req == true) {

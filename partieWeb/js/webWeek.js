@@ -1,4 +1,4 @@
-let valI;
+let valI = 0;
 /////////////////////Voir plus///////////////////////////////////////////////
 function VoirPlus() {
     const paragraphPrez = document.getElementById('VoirPlusGraph');
@@ -46,7 +46,6 @@ fetch('https://france-geojson.gregoiredavid.fr/repo/regions.geojson')
 
 
         //myPoints[0].bindPopup("<b>Le Puy-En-Velay</b><br>main place.");
-
         function getColor(d) {
             return d > 1000 ? '#800026' :
                 d > 500 ? '#BD0026' :
@@ -98,8 +97,9 @@ fetch('https://france-geojson.gregoiredavid.fr/repo/regions.geojson')
             marker.on('click', function (e) {
                 var popLocation = e.latlng;
                 map.setView([popLocation.lat, popLocation.lng], 14);
-                InfoPays(popLocation);
+                
                 info.update(popLocation);
+                InfoPays(popLocation);
                 /*window.setTimeout(() => {
                     map.setView([51.01896550, 7.57780020], 4);
                     InfoPays();
@@ -111,9 +111,9 @@ fetch('https://france-geojson.gregoiredavid.fr/repo/regions.geojson')
 
 
         function InfoPays(e) {
-            const blocNomVille = document.getElementById('blocNomVille');
-            const blocImgVille = document.getElementById('blocImgVille');
-            const blocDescripVille = document.getElementById('blocDescripVille');
+            const blocNomVille = document.getElementById('nomVille');
+            const blocImgVille = document.getElementById('imgVille');
+            const blocDescripVille = document.getElementById('txtVille');
             if (e != null) {
                 for (let i = 0; i < myPoints.length; i++) {
                     if (myPoints[i]._latlng == e) {
@@ -123,30 +123,49 @@ fetch('https://france-geojson.gregoiredavid.fr/repo/regions.geojson')
 
 
                 if (valI != null) {
-
-                    var NomVille = document.createElement('h3');
-                    NomVille.setAttribute('id', 'NomVille');
-                    NomVille.innerHTML = "Bonojur";
+                    ecrirLog();
+                    //console.log(TabVilleSelect[0]['image']);
+                    var NomVille = document.createElement('p');
+                    NomVille.setAttribute('class', 'titre2');
+                    NomVille.innerHTML = NumVilleSelect['nom'];
 
                     var ImageVille = document.createElement('img');
-                    ImageVille.setAttribute('src', '../img/ville_' + valI + '.png');
+                    ImageVille.setAttribute('src', NumVilleSelect['image']+ (valI+1)+ '.jpg');
                     ImageVille.setAttribute('class', 'ImageVille');
 
                     var DescripVille = document.createElement('p');
                     DescripVille.setAttribute('class', 'DescripVille');
-                    DescripVille.innerHTML = "TabVille[2]['presentation']";
+                    DescripVille.innerHTML = NumVilleSelect['presentation'];
 
-                    blocNomVille.innerHTML = '';
+                    blocNomVille.innerHTML = ' ';
                     blocNomVille.appendChild(NomVille);
-                    blocImgVille.innerHTML = '';
+
+                    blocImgVille.innerHTML = ' ';
                     blocImgVille.appendChild(ImageVille);
-                    blocDescripVille.innerHTML = '';
+
+                    blocDescripVille.innerHTML = ' ';
                     blocDescripVille.appendChild(DescripVille);
                 }
             } else {
+                var NomVille = document.createElement('p');
+                    NomVille.setAttribute('class', 'titre2');
+                    NomVille.innerHTML = NumVilleSelect['nom'];
+
+                    var ImageVille = document.createElement('img');
+                    ImageVille.setAttribute('src', NumVilleSelect['image']+ (valI+1)+ '.jpg');
+                    ImageVille.setAttribute('class', 'ImageVille');
+
+                    var DescripVille = document.createElement('p');
+                    DescripVille.setAttribute('class', 'DescripVille');
+                    DescripVille.innerHTML = NumVilleSelect['presentation'];
+                    
                 blocNomVille.innerHTML = '';
+                blocNomVille.appendChild(NomVille);
                 blocImgVille.innerHTML = '';
+                blocImgVille.appendChild(ImageVille);
+
                 blocDescripVille.innerHTML = '';
+                blocDescripVille.appendChild(DescripVille);
             }
 
 
@@ -158,14 +177,15 @@ fetch('https://france-geojson.gregoiredavid.fr/repo/regions.geojson')
         info.onAdd = function (map) {
             this._div = L.DomUtil.create('div', 'info'); // create a div with a class "info"
             this.update();
+            InfoPays
             return this._div;
         };
         info.update = function (e) {
+            
             if (e != null) {
                 this._div.id = "infoZoom";
                 this._div.classList.add('Zoomer');
                 this._div.innerHTML = '<i class="fa-solid fa-compress"></i>';
-
             } else {
                 this._div.id = "infoZoom";
                 this._div.classList.remove('Zoomer');
@@ -178,8 +198,9 @@ fetch('https://france-geojson.gregoiredavid.fr/repo/regions.geojson')
 
         function GrandCarte() {
             map.setView([51.01896550, 7.57780020], 4);
-            InfoPays();
             info.update();
+            InfoPays();
+            
         }
         // method that we will use to update the control based on feature properties passed
 
