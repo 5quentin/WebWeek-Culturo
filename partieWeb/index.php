@@ -109,6 +109,8 @@
      <div class="contenairePuy">
         <div class="affiche">
           <div class="carousel">
+          <?php include './caroussel.php';?>
+          <script src="./js/jsCaroussel.js"></script>
             <?php include "caroussel.php";?>
           </div>
   
