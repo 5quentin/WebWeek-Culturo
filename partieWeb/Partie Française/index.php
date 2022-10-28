@@ -1,32 +1,12 @@
 <?php
-include "./include/connexionBDD.php";
-include "./POO/CreerPorfil.php";
-include "./POO/typeBillets.php";
-include "./POO/Billets.php";
-
-
-$BDDCo = new connexionBDD();
-
-$TypeBillets = new TypeBillets((array)$BDDCo);
-
-$billet = new Billets('Beyler','Olivier', 2, (array)$BDDCo);
-$billet->EnsembleBillets((array)$billet, 'Le Puy-En-Velay VIP');
-$billet->EnregistrementBDD_Billet((array)$billet);
-$billet->AffichageBillet((array)$BDDCo);
-
-$afficher = (array)$BDDCo;
-$afficher2  = $afficher['tab_typeBillet'];
-print_r($afficher2[1]['lib']);
-
-//print_r($BDDCo);
-echo "<br>";
-echo "<br>";
-echo "<br>";
-$Eleve1 = new Profil('Astier', 'Quentin', 'beyler.wilson@gmail.com', '0904889033', 'ZZZ', 'Z');
-
-$Eleve1->setIdentifiant('0');
-$Eleve1->EnregistrementBDD((array)$Eleve1);
-
+  include "./include/connexionBDD.php";
+  include "./POO/CreerPorfil.php";
+  include "./POO/typeBillets.php";
+  include "./POO/Billets.php";
+  include "./POO/ville.php";
+  include "./POO/Chanteur.php";
+  
+  $BDDCo = new connexionBDD();
 ?>
 
 <!DOCTYPE html>
