@@ -7,7 +7,8 @@
 
   <link rel="stylesheet" href="./css/header.css" />
   <link rel="stylesheet" href="./css/formulaires.css" />
-  <link rel="stylesheet" type="text/css" href="../css/footer.css" />
+
+  <link rel="stylesheet" type="text/css" href="./css/footer.css" />
   <script src="script.js"></script>
 </head>
 

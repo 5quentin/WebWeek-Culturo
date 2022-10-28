@@ -20,9 +20,9 @@
 						<nav class= "menu">
 						<div class="burger"><img src="./images/burger.png"></div>
 							<ul>
-								<li><a href="#selection">Selections</a></li>
-								<li><a href="#onDisplay">On display</a></li>
-								<li><a href="#mapp">Map</a></li>
+								<li><a href="index.php#selection">Selections</a></li>
+								<li><a href="index.php#onDisplay">On display</a></li>
+								<li><a href="index.php#mapp">Map</a></li>
 								<li><a>Langue</a></li>
 								<?php
 									$file ="./sauv.txt";
