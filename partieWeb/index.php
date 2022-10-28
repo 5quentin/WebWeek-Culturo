@@ -49,10 +49,12 @@
           <h4 class="learn">Learn more</h4>
         </div>
       </div>
-      <div classe="tacheorange">
+    </div>
+
+
+    <div classe="tacheorange">
         <img src="images/tachej1.png" id="tache1" alt="tache">
       </div>
-    </div>
 
 
 

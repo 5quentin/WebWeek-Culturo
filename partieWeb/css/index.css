@@ -503,8 +503,6 @@ flex-direction: column;
 }
 
 
-
-
 .ContPages{
   display: flex;
   justify-content: center;
@@ -634,8 +632,16 @@ flex-direction: column;
   } 
 
 
-  .contenairePuy{
-    width: 100%;
+  .affiche{
     flex-direction: column-reverse;
+  }
+
+  .carousel{
+    width: auto;
+  }
+
+  #ContenaireProg{
+    display: flex;
+    flex-direction: column;
   }
 }

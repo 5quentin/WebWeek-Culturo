@@ -19,7 +19,9 @@
   <link rel="stylesheet" href="./css/header.css" />
   <link rel="stylesheet" type="text/css" href="./css/footer.css" />
   <script src="https://kit.fontawesome.com/c6b95d0d70.js" crossorigin="anonymous"></script>
+
   <link rel="icon" type="image/png" href="./favicon/favicon.png" sizes="16x16" data-rh="true">
+
   <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.1/dist/leaflet.css" integrity="sha256-sA+zWATbFveLLNqWO2gtiw3HL/lh1giY/Inf1BJ0z14=" crossorigin="" />
   <link rel="stylesheet" href="./css/cssCarousel.css">
   <script src="https://unpkg.com/leaflet@1.9.1/dist/leaflet.js" integrity="sha256-NDI0K41gVbWqfkkaHj15IzU7PtMoelkzyKp8TOaFQ3s=" crossorigin="" ;></script>
@@ -179,8 +181,8 @@
 
   </div>
 
-  <?php /*include './header_footer/footer.html';*/ ?>
 
+  <?php include './header_footer/footer.html'; ?>
   <script src="./js/webWeek.js"></script>
   <script>
     function ecrirLog(){
