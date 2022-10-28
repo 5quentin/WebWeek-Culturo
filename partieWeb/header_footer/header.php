@@ -6,7 +6,7 @@
 				<div class=tete>
 					<div id="contenaireLogo">
 						<div class= "hg" >
-							<a class="logo" href="acceuil.html"><img src="./images/logonb.png"></a>
+							<a class="logo" href="index.php"><img src="./images/logonb.png"></a>
 							<span id="dates">
 								<p >Juil 7-9</p>
 								<p>Juil 21-23</p>
@@ -18,6 +18,7 @@
 
 					<div class="menuorange">
 						<nav class= "menu">
+						<div class="burger"><img src="./images/burger.png"></div>
 							<ul>
 								<li><a href="#selection">Selections</a></li>
 								<li><a href="#onDisplay">On display</a></li>
