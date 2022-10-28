@@ -8,6 +8,7 @@
   <link rel="stylesheet" href="./css/header.css" />
   <link rel="stylesheet" href="./css/formulaires.css" />
   <link rel="stylesheet" type="text/css" href="../css/footer.css" />
+  <link rel="icon" type="image/png" href="./favicon/favicon.png" sizes="16x16" data-rh="true">
   <script src="script.js"></script>
 </head>
 
