@@ -1,25 +1,14 @@
 <?php
-include "./include/connexionBDD.php";
-include "./POO/Chanteur.php";
+include_once "./include/connexionBDD.php";
+include_once "./POO/Chanteur.php";
 $BDDCo = new connexionBDD();
 
 $requete = "SELECT img FROM `chanteurs`;";
 $resultats = $BDDCo->connection->query($requete);
 $tab_Slide= $resultats->fetchAll();   
 $nb_Slide=count($tab_Slide);           
-print_r($tab_Slide);
 ?>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <script src="https://kit.fontawesome.com/c6b95d0d70.js" crossorigin="anonymous"></script>
-  <script src="./js/jsCaroussel.js"> </script>
-  <link rel="stylesheet" href="./css/cssCarousel.css">
-  <title>Document</title>
-</head>
-<body>
+
   <div id ="bando">
                   <i class="fas fa-arrow-left" id="past"></i>
                   <i class="fas fa-arrow-right" id="next"></i>
@@ -38,6 +27,7 @@ print_r($tab_Slide);
                   </div>
 
   </div>
+  <script src="./js/jsCaroussel.js"></script>
   <script>
         const carouselSlide = document.querySelector('#cadre');
         const carouselImages = document.querySelectorAll('#cadre img');
@@ -82,11 +72,7 @@ print_r($tab_Slide);
             
         }
         window.onload= SlideAuto();
-        SlideAuto();
         activationSlideBTN();             
 </script>
-
-</body>
-</html>
 
 

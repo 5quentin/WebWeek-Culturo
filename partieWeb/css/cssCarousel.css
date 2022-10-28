@@ -1,7 +1,7 @@
 
 #bando /*bloc blanc au tour des slides*/{
-    height: 80vh;
-    width: 50%;
+    height: 100%;
+    width: 100%;
     overflow: hidden;
     margin: auto;
     position: relative;
