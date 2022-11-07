@@ -255,7 +255,7 @@ textarea{
     margin-top: 20px;
 }
 
-@media screen and (max-width: 550px) {
+@media only screen and (max-width: 600px) {
     body{
         background-color: #fff5f5;
     }

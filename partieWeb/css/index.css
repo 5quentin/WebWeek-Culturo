@@ -572,7 +572,7 @@ flex-direction: column;
   font-weight: 600;
   line-height: 1.5;
 }
-@media screen and (max-width: 800px) {
+@media only screen and (max-width: 600px) {
   .tachej{
     display: none;
   }
