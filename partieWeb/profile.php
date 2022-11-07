@@ -14,7 +14,8 @@
 
 
 <body>
-  <?php include './header_footer/header.php';
+  <?php 
+    include './header_footer/header.php';
 
     include "./include/connexionBDD.php";
     include "./POO/typeBillets.php";

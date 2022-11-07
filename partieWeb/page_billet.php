@@ -73,7 +73,7 @@
         <?php
 
           include_once('./fonction.php');
-          include "./POO/Billets.php";
+          //include_once "./POO/Billets.php";
               
           $file ="./sauv.txt";
 

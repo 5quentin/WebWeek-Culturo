@@ -2,7 +2,7 @@
   include "./include/connexionBDD.php";
   include "./POO/CreerPorfil.php";
   include "./POO/typeBillets.php";
-  include "./POO/Billets.php";
+  include_once "./POO/Billets.php";
   include "./POO/ville.php";
   include "./POO/Chanteur.php";
   
@@ -175,7 +175,7 @@
       </div>
       <div class="bouton2">
         <div class="ticket">
-          <a class="rose">Tickets </br> <span>CULTURO</span></a>
+          <a class="rose"  href ='page_billet.php'>Tickets </br> <span>CULTURO</span></a>
         </div>
       </div>
     </div>
