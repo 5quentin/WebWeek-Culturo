@@ -84,7 +84,7 @@
 
     $TypeBillets = new TypeBillets((array)$BDDCo);
 
-    $billet = new Billets( $afficherBillet[$proprioBillet]['nom'] ,$afficherBillet[$proprioBillet]['prenom'], 4 , $afficherBillet[$proprioBillet]['concert'],(array)$BDDCo);
+    $billet = new Billets( $afficherBillet[$proprioBillet]['nom'] ,$afficherBillet[$proprioBillet]['prenom'], $afficherBillet[$proprioBillet]['id_compte'] , $afficherBillet[$proprioBillet]['concert'],(array)$BDDCo);
     $billet->EnsembleBillets((array)$billet, $nomBillet);
 
     if (isset($_POST['Cancel'])){
