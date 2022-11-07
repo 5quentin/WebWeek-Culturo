@@ -68,7 +68,7 @@
     $proprioBillet=null;
     for ($y=0 ; $y<count($afficherBillet) ; $y++){
       if ($idCo==$afficherBillet[$y]['id_compte']){
-        $proprioBillet=$y-1;
+        $proprioBillet=$y;
       }
     }
 

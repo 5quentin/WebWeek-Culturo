@@ -126,7 +126,6 @@
             for($i=0;$i<count($ensembillet['tab_Billet']);$i++){
                 
                 if($this->id_compte == $this->tab_Billet[$i]['id_compte']){
-                    echo "<script>console.log(".$this->id_compte."</script>";
                     echo"<br>";
                     echo "Billet pour assister : ".$this->type_billets."<br>";
                     echo "Nom : ".$this->tab_Billet[$i]['nom']."<br>";

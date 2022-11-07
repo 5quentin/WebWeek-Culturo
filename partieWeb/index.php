@@ -104,20 +104,25 @@
     <!-- Map du Puy-en-Velay -->
      <div id="onDisplay" class="contenairePuy">
         <div class="affiche">
-          <div class="carousel">
+          <div class="BlocCarousel">
             <script src="./js/jsCaroussel.js"></script>
             <?php include "caroussel.php";?>
           </div>
   
           <div class="description">
-            <div class="titre">On display</div>
-            <div class="datesfest">
-              <h3 id="white2023">2023</h3>
-              <h3 class="stars">Harry Styles <span> July 21 </span></h3>
-              <h3 class="stars">DJ Snake <span> July 22 </span></h3>
-              <h3 class="stars">David Guetta <span> July 23 </span></h3>
-              <h3 class="stars">Team G-corp <span> July 21-22-23 </span></h3>
+            <div class="descContenaire">
+              <div class="titre">On display</div>
+              <div class="datesfest">
+                <div><h3 id="white2023">2023</h3>
+                <h3 class="stars">Harry Styles <span> July 21 </span></h3>
+                <h3 class="stars">DJ Snake <span> July 22 </span></h3>
+                <h3 class="stars">David Guetta <span> July 23 </span></h3>
+                <h3 class="stars">Team G-corp <span> July 21-22-23 </span></h3>
+              </div>
+                
+              </div>
             </div>
+            
           </div>
   
       </div>
