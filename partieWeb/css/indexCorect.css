@@ -1,0 +1,317 @@
+body  * {
+    font-family: 'Segoe UI';
+    border-radius: 10px;
+}
+
+/*-------------- Landing --------------*/
+
+.container {
+    width: 100%;
+    height: 100vh;
+    
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.container > .logo {
+    width: 50%;
+    height: 100%;
+    background: url("../images/logo.png") no-repeat center;
+    background-size: contain;
+}
+
+.container > .intro {
+    width: 35%;
+    font-family: "GROBOLD";
+}
+
+.container > .intro > h2 {
+    font-size: larger;
+}
+
+.container > .intro > p {
+    font-family: 'Segoe UI';
+    font-size: larger;
+}
+
+.container > .intro > h4 {
+    font-family: 'Segoe UI';
+}
+
+/*------------------------- Map -------------------------*/
+.GrandContenaireMap {
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.GrandContenaireMap > .containerMap {
+    width: 85%;
+
+    display: flex;
+    justify-content: space-between;
+}
+
+.GrandContenaireMap > .containerMap > div  {
+    width: 47%;
+}
+
+.GrandContenaireMap > .containerMap > .contentcontainer  {
+    min-height: 500px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/*-------------- carte interactive --------------*/
+.GrandContenaireMap > .containerMap > #GroupeMap {
+    height: auto;
+}
+
+.GrandContenaireMap > .containerMap > #GroupeMap > #map  {
+    width: 100%;
+    height: 100%;
+}
+
+/*-------------- Texte dynamique --------------*/
+.GrandContenaireMap > .containerMap > .contentcontainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.GrandContenaireMap > .containerMap > .contentcontainer > * {
+    width: 100%;
+    margin: 5px 0px;
+}
+
+/*------- Les deux cases --------*/
+.GrandContenaireMap > .containerMap > .contentcontainer > .selection {
+    width: 100%;
+
+    display: flex;
+    justify-content: space-between;
+}
+
+.GrandContenaireMap > .containerMap > .contentcontainer > .selection > * {
+    width: 49%;
+    height: 55px;
+    color: white;
+    border-radius: 10px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.GrandContenaireMap > .containerMap > .contentcontainer > .selection > #select {
+    background-color: black;
+}
+
+.GrandContenaireMap > .containerMap > .contentcontainer > .selection > #select > p {
+    font-family: 'grobold';
+}
+
+.GrandContenaireMap > .containerMap > .contentcontainer > .selection > #ville {
+    background-color: #161B4B;
+}
+
+/*------- image --------*/
+.GrandContenaireMap > .containerMap > .contentcontainer > .imgcarte {
+    width: 100%;
+}
+
+.GrandContenaireMap > .containerMap > .contentcontainer > .imgcarte > img {
+    width: 100%;
+}
+
+/*------- texte --------*/
+.GrandContenaireMap > .containerMap > .contentcontainer > .textville {
+    background-color: #FCA01F;
+    min-height: 30%;
+}
+
+.GrandContenaireMap > .containerMap > .contentcontainer > .textville > p {
+    padding: 20px;
+}
+
+/*----------------- boutton -----------------*/
+.GrandContenaireMap > .bouton {
+    background-color: #009289;
+    margin-top: 20px;
+    width: 200px;
+    height: 70px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.GrandContenaireMap > .bouton > a {
+    padding: 20px 0px;
+    text-align: center;
+    font-family: 'grobold';
+    font-size: 18px;
+    color: black;
+}
+
+.GrandContenaireMap > .bouton > a > span {
+    font-family: 'grobold';
+    font-size: 12px;
+}
+
+/*------------------------- à l'affiche -------------------------*/
+
+.contenairePuy{
+    width: 100%;
+    margin-top: 100px;
+
+    display: flex;
+    justify-content: center;
+}
+
+.contenairePuy > .affiche {
+    width: 85%;
+
+    display: flex;
+    justify-content: space-between;
+}
+
+.contenairePuy > .affiche > .BlocCarousel {
+    width: 60%;
+}
+
+.contenairePuy > .affiche > .description {
+    width: 35%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+/*---------------- carrousel ----------------*/
+.contenairePuy > .affiche > .BlocCarousel > img {
+    width: 100%;
+    min-width: 566px;
+}
+
+/*---------------- texte ----------------*/
+.contenairePuy > .affiche > .description > .titre {
+    width: 50%;
+    height: 60px;
+    margin-bottom: 10px;
+
+    background-color: #FCA01F;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.contenairePuy > .affiche > .description > .titre > h1 {
+    font-family: 'GROBOLD';
+    font-size: 2.5vmax;
+    margin: 0 5px;
+}
+
+.contenairePuy > .affiche > .description > .datesfest {
+    background-color: #161B4B;
+    color: white;
+}
+
+.contenairePuy > .affiche > .description > .datesfest > div {
+    padding: 30px;
+}
+
+.contenairePuy > .affiche > .description > .datesfest > div > #white2023 {
+	font-size: 80px;
+	text-shadow: 10px 5px #009289;
+    text-align: end;
+    margin: 0;
+}
+
+.contenairePuy > .affiche > .description > .datesfest > div > #white2023 {
+	font-size: 80px;
+	text-shadow: 10px 5px #009289;
+    text-align: end;
+    margin: 0;
+}
+
+.contenairePuy > .affiche > .description > .datesfest > div > h3 > span {
+	font-size: medium;
+    font-weight: lighter;
+    margin-left: 5px;
+}
+
+/*------------------------- Programme -------------------------*/
+.programme{
+    width: 100%;
+    margin-top: 100px;
+
+    display: flex;
+    justify-content: center;
+}
+
+.programme > #ContenaireProg {
+    width: 85%;
+
+    display: flex;
+    justify-content: space-between;
+}
+
+.programme > #ContenaireProg > .gauche {
+    width: 45%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.programme > #ContenaireProg > .carteGoogle {
+    width: 45%;
+}
+
+.programme > #ContenaireProg > .gauche > .titrep {
+    height: 60px;
+    background-color: black;
+    color: white;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.programme > #ContenaireProg > .gauche > .titrep > h1 {
+    font-family: 'GROBOLD';
+}
+
+.programme > #ContenaireProg > .gauche > .lieu {
+    height: calc(100% - 80px);
+    background-color: #161B4B;
+    color: white;
+
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.programme > #ContenaireProg > .gauche > .lieu > * {
+    height: 100%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.programme > #ContenaireProg > .gauche > .lieu > .theme > p {
+    width: 100%;
+    height: 50px;
+    background-color: #009289;
+}
