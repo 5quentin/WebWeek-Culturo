@@ -23,8 +23,18 @@
   
     if (isset($_POST['disconect'])){
           unlink("./sauv.txt");
+          unlink("./mac.txt");
     }
-
+    $MAC =exec('getmac');
+    $MAC = strtok($MAC, ' ');
+    $fichier_Mac= "./mac.txt";
+    if(file_exists($fichier_Mac)){
+        $VarMAC = file_get_contents($fichier_Mac);
+        if($VarMAC!= $MAC){
+            unlink("./sauv.txt");
+            
+        }
+    }
     $file ="./sauv.txt";
 
     if (file_exists($file)!=false){

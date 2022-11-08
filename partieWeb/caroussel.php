@@ -27,52 +27,5 @@ $nb_Slide=count($tab_Slide);
                   </div>
 
   </div>
-  <script src="./js/jsCaroussel.js"></script>
-  <script>
-        const carouselSlide = document.querySelector('#cadre');
-        const carouselImages = document.querySelectorAll('#cadre img');
-
-        ////////////////////////////
-        
-
-
-        /////////////////
-        let counter = 0;
-        var size = carouselImages[0].clientWidth;
-
-        carouselSlide.style.transform = 'translateX('+(-size*counter)+'px)';
-
-        //////////////////
-
-        carouselSlide.addEventListener('transitionend',()=>{
-            if(carouselImages[counter].id=='lastSlide'){
-                carouselSlide.style.transition= "none";
-                counter  = 0;
-                carouselSlide.style.transform = 'translateX('+(-size*counter)+'px)';
-                //alert(counter);
-            }
-            if(carouselImages[counter].id=='firstSlide'){
-                carouselSlide.style.transition= "none";
-                counter  = carouselImages.length -counter;
-                carouselSlide.style.transform = 'translateX('+(-size*counter)+'px)';
-                //alert(counter);
-            }
-        });  
-        const time =3000;
-        function SlideAuto(){
-            
-            const carouselSlide = document.querySelector('#cadre');
-            const carouselImages = document.querySelectorAll('#cadre img');
-            if(counter< carouselImages.length - 1){
-                 carouselSlide.style.transition = "transform 0.4s ease-in-out";
-                 counter++;
-                carouselSlide.style.transform='translateX('+(-size*counter)+'px)';
-            }
-            setTimeout("SlideAuto()", time);
-            
-        }
-        window.onload= SlideAuto();
-        activationSlideBTN();             
-</script>
 
 
