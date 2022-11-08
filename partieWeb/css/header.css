@@ -1,32 +1,34 @@
 /*--------------------Commun-------------------*/
 @font-face {
-    font-family: "GROBOLD";
-    src: url("../fonts/GROBOLD.ttf");
+	font-family: "GROBOLD";
+	src: url("../fonts/GROBOLD.ttf");
 }
 
 @font-face {
-    font-family: "Segoe UI Bold";
-    src: url("../fonts/segoe-ui/Segoe\ UI\ Bold.ttf"),
+	font-family: "Segoe UI Bold";
+	src: url("../fonts/segoe-ui/Segoe\ UI\ Bold.ttf"),
 }
 
 @font-face {
-    font-family: "Segoe UI";
-    src: url("../fonts/segoe-ui/Segoe\ UI.ttf"),
+	font-family: "Segoe UI";
+	src: url("../fonts/segoe-ui/Segoe\ UI.ttf"),
 }
 
 body {
-	margin : 0;
+	margin: 0;
 }
 
-header{
-display: flex;
-height: 10em;
+header {
+	position: absolute;
+	display: flex;
+	height: 10em;
 }
 
-#headervide{
+#headervide {
 	width: 100%;
 }
-#contenaireHeader{
+
+#contenaireHeader {
 	position: fixed;
 	margin-top: 1em;
 	top: 20px;
@@ -36,19 +38,22 @@ height: 10em;
 	display: flex;
 	justify-content: center;
 }
+
 /*--------------------nav-------------------*/
 
 /*----------bleu--------*/
 .tete {
 	display: flex;
-	justify-content: space-between;	
+	justify-content: space-between;
 	width: 95%;
 }
-#contenaireLogo{
+
+#contenaireLogo {
 	display: flex;
 	width: 300px;
 }
-.hg{	
+
+.hg {
 	background-color: #161B4B;
 	display: flex;
 	flex-direction: row;
@@ -59,8 +64,8 @@ height: 10em;
 	width: 220px;
 }
 
-#dates{
-	color : white;
+#dates {
+	color: white;
 	font-family: "GROBOLD";
 	font-size: 14px;
 	display: flex;
@@ -69,12 +74,12 @@ height: 10em;
 }
 
 
-.hg > .logo{
+.hg>.logo {
 	width: 60%;
 	height: 80%;
 }
 
-.hg > .logo > img{
+.hg>.logo>img {
 	height: 100%;
 	padding: 0;
 }
@@ -93,11 +98,13 @@ height: 10em;
 	padding: 0 10px;
 	justify-content: center;
 }
-.menu{
+
+.menu {
 	display: flex;
 	width: 92%;
 }
-.menu ul{
+
+.menu ul {
 	display: flex;
 	list-style: none;
 	justify-content: space-between;
@@ -105,26 +112,28 @@ height: 10em;
 	width: 100%;
 }
 
-.menu > ul {
+.menu>ul {
 	padding: 0;
 }
 
-.menu > ul > li {
+.menu>ul>li {
 	text-align: center;
 }
 
-.menu > ul > li > a {
+.menu>ul>li>a {
 	text-decoration: none;
 	font-size: 13px;
 	font-family: "Segoe UI";
-	color : black;
+	color: black;
 	font-weight: 500;
 	padding-right: 3em;
 }
-.menu > ul > li input{
+
+.menu>ul>li input {
 	cursor: pointer;
 }
-#profil{
+
+#profil {
 	width: 80px;
 	height: 40px;
 	border-radius: 10px;
@@ -134,7 +143,7 @@ height: 10em;
 	justify-content: center;
 }
 
-#billeterie{
+#billeterie {
 	width: 80px;
 	height: 40px;
 	border-radius: 10px;
@@ -145,29 +154,30 @@ height: 10em;
 	cursor: pointer;
 }
 
-#profil input{
+#profil input {
 	font-family: "GROBOLD";
 	background-color: transparent;
 	border: none;
 }
 
-#billeterie input{
-	color : white;
+#billeterie input {
+	color: white;
 	font-family: "GROBOLD";
 	background-color: transparent;
 	border: none;
 }
 
-.burger{
+.burger {
 	display: none;
 }
+
 /*--------------------forme-------------------*/
 
-.top{
+.top {
 	width: 70vw;
 
 	position: absolute;
-	top: -10px; 
+	top: -10px;
 	left: -20px;
 	z-index: -1;
 }
@@ -190,7 +200,7 @@ height: 10em;
 	}
 
 
-	#contenaireLogo{
+	#contenaireLogo {
 		width: 100px;
 	}
 
@@ -205,7 +215,8 @@ height: 10em;
 		display: none;
 	}
 
-	.menu ul li,.menu>.burger {
+	.menu ul li,
+	.menu>.burger {
 		width: 80px;
 		background-color: #FCA01F;
 		border-radius: 10px;
@@ -217,21 +228,20 @@ height: 10em;
 		border-radius: 10px;
 	}
 
-	.menu ul li{
+	.menu ul li {
 		margin: 10px;
 		height: 40px;
 	}
 
-	.burger{
+	.burger {
 		height: 50px;
 	}
 
-	#profil{
+	#profil {
 		border: solid 2px #FCA01F;
 	}
 
-	.menu:hover > ul{
+	.menu:hover>ul {
 		display: block;
 	}
 }
-
