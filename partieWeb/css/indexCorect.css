@@ -61,15 +61,6 @@ body  * {
     width: 47%;
 }
 
-.GrandContenaireMap > .containerMap > .contentcontainer  {
-    min-height: 500px;
-
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-between;
-}
-
 /*-------------- carte interactive --------------*/
 .GrandContenaireMap > .containerMap > #GroupeMap {
     height: auto;
@@ -81,10 +72,13 @@ body  * {
 }
 
 /*-------------- Texte dynamique --------------*/
-.GrandContenaireMap > .containerMap > .contentcontainer {
+.GrandContenaireMap > .containerMap > .contentcontainer  {
+    min-height: 500px;
+
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: space-between;
 }
 
 .GrandContenaireMap > .containerMap > .contentcontainer > * {
@@ -368,4 +362,91 @@ body  * {
 
 .buy > .textSavoir > p > span {
     font-weight: lighter;
+}
+
+
+/*---- Responsive -----*/
+
+@media only screen and (max-width: 1050px) {
+    body {
+        background-color: antiquewhite;
+    }
+
+    .container {
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .container > .logo {
+        height: 50%;
+        width: 60%;
+    }
+
+    .container > .intro {
+        width: 60%;
+    }
+
+
+    .containerMap {
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+    }
+
+    .GrandContenaireMap > .containerMap > .contentcontainer {
+        width: 100%;
+    }
+
+
+    .contenairePuy > .affiche {
+        width: 90%;
+    
+        flex-direction: column-reverse;
+        justify-content: flex-start;
+    }
+
+    .contenairePuy > .affiche > .BlocCarousel {
+        width: 100%;
+    }
+
+    .contenairePuy > .affiche > .description {
+        width: 100%;
+
+        margin: 10px 0;
+    }
+
+
+
+    .programme > #ContenaireProg {
+        width: 90%;
+        height: 100vh;
+        
+        flex-direction: column;
+    }
+
+    .programme > #ContenaireProg > .gauche {
+        width: 100%;
+    }
+
+    .programme > #ContenaireProg > .carteGoogle {
+        width: 100%;
+        margin: 10px 0;
+    }
+
+    .programme > #ContenaireProg > .gauche > .lieu {
+        margin-top: 10px;
+        padding: 10px;
+    }
+
+    .programme > #ContenaireProg > .gauche > .lieu > .theme > div {
+        margin: 20px 0;
+    }
+
+
+
+
+    .buy > .textSavoir {
+        width: 90%;
+        background-color: #FCA01F;
+    }
 }

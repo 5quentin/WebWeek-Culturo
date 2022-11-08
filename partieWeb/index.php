@@ -15,7 +15,6 @@ $BDDCo = new connexionBDD();
 <head>
     <meta charset="utf-8">
     <title>Culturo</title>
-    <link rel="stylesheet" href="css/indexCorect.css">
     <link rel="stylesheet" href="./css/header.css" />
     <link rel="stylesheet" href="./css/footer.css" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
@@ -27,6 +26,7 @@ $BDDCo = new connexionBDD();
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.1/dist/leaflet.css" integrity="sha256-sA+zWATbFveLLNqWO2gtiw3HL/lh1giY/Inf1BJ0z14=" crossorigin="" />
     <link rel="stylesheet" href="./css/cssCarousel.css">
     <script src="https://unpkg.com/leaflet@1.9.1/dist/leaflet.js" integrity="sha256-NDI0K41gVbWqfkkaHj15IzU7PtMoelkzyKp8TOaFQ3s=" crossorigin="" ;></script>
+    <link rel="stylesheet" href="css/indexCorect.css">
 
 </head>
 
@@ -90,7 +90,6 @@ $BDDCo = new connexionBDD();
         </div>
     </div>
 
-    <!-- Map du Puy-en-Velay -->
     <div id="onDisplay" class="contenairePuy">
         <div class="affiche">
             <div class="BlocCarousel">
