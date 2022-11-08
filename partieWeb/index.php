@@ -18,8 +18,11 @@ $BDDCo = new connexionBDD();
     <link rel="stylesheet" href="css/indexCorect.css">
     <link rel="stylesheet" href="./css/header.css" />
     <link rel="stylesheet" href="./css/footer.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
 
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
     <script src="https://kit.fontawesome.com/c6b95d0d70.js" crossorigin="anonymous"></script>
+
     <link rel="icon" type="image/png" href="./favicon/favicon.png" sizes="16x16" data-rh="true">
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.1/dist/leaflet.css" integrity="sha256-sA+zWATbFveLLNqWO2gtiw3HL/lh1giY/Inf1BJ0z14=" crossorigin="" />
     <link rel="stylesheet" href="./css/cssCarousel.css">
@@ -91,10 +94,16 @@ $BDDCo = new connexionBDD();
     <div id="onDisplay" class="contenairePuy">
         <div class="affiche">
             <div class="BlocCarousel">
-                <script src="./js/jsCaroussel.js"></script>
-                <!--<?php include "caroussel.php"; ?>-->
-                <img src="./images_stars/chanteur (3).png">
+                <div class="swiper">
+                    <div class="swiper-wrapper">
+                        <?php include "caroussel.php"; ?>
+                    </div>
+
+                    <div class="swiper-button-prev"></div>
+                    <div class="swiper-button-next"></div>
+                </div>
             </div>
+            <script src="./js/jsCaroussel.js"></script>
 
             <div class="description">
                 <div class="titre">
@@ -120,21 +129,33 @@ $BDDCo = new connexionBDD();
     <div id="mapp" class="programme">
         <div id="ContenaireProg">
             <div class="gauche">
-                <div class="titrep"><h1>Culturo Program</h1></div>
+                <div class="titrep">
+                    <h1>Culturo Program</h1>
+                </div>
                 <div class="lieu">
                     <div class="theme">
-                        <p class="art">Art and Sculpture</p>
-                        <p class="art">Music et dance</p>
-                        <p class="art">Comedy</p>
-                        <p class="art">Video Games</p>
-                        <p class="art">Gastronomy</p>
+                        <div>
+                            <p>Art and Sculpture</p>
+                        </div>
+                        <div>
+                            <p>Music et dance</p>
+                        </div>
+                        <div>
+                            <p>Comedy</p>
+                        </div>
+                        <div>
+                            <p>Video Games</p>
+                        </div>
+                        <div>
+                            <p>Gastronomy</p>
+                        </div>
                     </div>
                     <div class="zone">
-                        <p class="znom">Old-city</p>
-                        <p class="znom">Massot Stadium</p>
-                        <p class="znom">Cinema / Theatre</p>
-                        <p class="znom"> Jeanne d'Arc Hall</p>
-                        <p class="znom"> Henry-Vinay Park</p>
+                        <p>Old-city</p>
+                        <p>Massot Stadium</p>
+                        <p>Cinema / Theatre</p>
+                        <p>Jeanne d'Arc Hall</p>
+                        <p>Henry-Vinay Park</p>
                     </div>
                 </div>
             </div>
@@ -144,8 +165,8 @@ $BDDCo = new connexionBDD();
         </div>
     </div>
 
-    <div class="Buy">
-        <div class="TextSavoir">
+    <div class="buy">
+        <div class="textSavoir">
             <p id="textesav">
                 In this new event concept,
                 Le Puy-en-Velay move on a cultural meeting where a lot of European artists are going to be.
@@ -156,15 +177,11 @@ $BDDCo = new connexionBDD();
             </p>
         </div>
 
-        <div class="bouton2">
-            <div class="ticket">
-                <a class="rose" href='page_billet.php'>Tickets </br> <span>CULTURO</span></a>
-            </div>
+        <div class="bouton">
+            <a class="rose" href='page_billet.php'>Tickets </br> <span>CULTURO</span></a>
         </div>
     </div>
-    </div>
 
-    <?php /*include './header_footer/footer.html';*/ ?>
     <script src="./js/webWeek.js"></script>
     <script>
         function ecrirLog() {
