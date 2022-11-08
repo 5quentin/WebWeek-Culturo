@@ -182,7 +182,7 @@
   </div>
 
 
-  <?php include './header_footer/footer.html'; ?>
+  <?php /*include './header_footer/footer.html'; */?>
   <script src="./js/webWeek.js"></script>
   <script>
     function ecrirLog(){

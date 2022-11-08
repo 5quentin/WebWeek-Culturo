@@ -14,7 +14,8 @@
 
 
 <body>
-  <?php include './header_footer/header.php';
+  <?php 
+    include './header_footer/header.php';
 
     include "./include/connexionBDD.php";
     include "./POO/typeBillets.php";
@@ -22,8 +23,18 @@
   
     if (isset($_POST['disconect'])){
           unlink("./sauv.txt");
+          unlink("./mac.txt");
     }
-
+    $MAC =exec('getmac');
+    $MAC = strtok($MAC, ' ');
+    $fichier_Mac= "./mac.txt";
+    if(file_exists($fichier_Mac)){
+        $VarMAC = file_get_contents($fichier_Mac);
+        if($VarMAC!= $MAC){
+            unlink("./sauv.txt");
+            
+        }
+    }
     $file ="./sauv.txt";
 
     if (file_exists($file)!=false){
@@ -67,7 +78,7 @@
     $proprioBillet=null;
     for ($y=0 ; $y<count($afficherBillet) ; $y++){
       if ($idCo==$afficherBillet[$y]['id_compte']){
-        $proprioBillet=$y-1;
+        $proprioBillet=$y;
       }
     }
 
@@ -83,7 +94,7 @@
 
     $TypeBillets = new TypeBillets((array)$BDDCo);
 
-    $billet = new Billets( $afficherBillet[$proprioBillet]['nom'] ,$afficherBillet[$proprioBillet]['prenom'], 4 , $afficherBillet[$proprioBillet]['concert'],(array)$BDDCo);
+    $billet = new Billets( $afficherBillet[$proprioBillet]['nom'] ,$afficherBillet[$proprioBillet]['prenom'], $afficherBillet[$proprioBillet]['id_compte'] , $afficherBillet[$proprioBillet]['concert'],(array)$BDDCo);
     $billet->EnsembleBillets((array)$billet, $nomBillet);
 
     if (isset($_POST['Cancel'])){
