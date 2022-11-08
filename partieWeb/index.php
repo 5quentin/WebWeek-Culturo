@@ -2,7 +2,7 @@
   include "./include/connexionBDD.php";
   include "./POO/CreerPorfil.php";
   include "./POO/typeBillets.php";
-  include "./POO/Billets.php";
+  include_once "./POO/Billets.php";
   include "./POO/ville.php";
   include "./POO/Chanteur.php";
   
@@ -104,20 +104,25 @@
     <!-- Map du Puy-en-Velay -->
      <div id="onDisplay" class="contenairePuy">
         <div class="affiche">
-          <div class="carousel">
+          <div class="BlocCarousel">
             <script src="./js/jsCaroussel.js"></script>
             <?php include "caroussel.php";?>
           </div>
   
           <div class="description">
-            <div class="titre">On display</div>
-            <div class="datesfest">
-              <h3 id="white2023">2023</h3>
-              <h3 class="stars">Harry Styles <span> July 21 </span></h3>
-              <h3 class="stars">DJ Snake <span> July 22 </span></h3>
-              <h3 class="stars">David Guetta <span> July 23 </span></h3>
-              <h3 class="stars">Team G-corp <span> July 21-22-23 </span></h3>
+            <div class="descContenaire">
+              <div class="titre">On display</div>
+              <div class="datesfest">
+                <div><h3 id="white2023">2023</h3>
+                <h3 class="stars">Harry Styles <span> July 21 </span></h3>
+                <h3 class="stars">DJ Snake <span> July 22 </span></h3>
+                <h3 class="stars">David Guetta <span> July 23 </span></h3>
+                <h3 class="stars">Team G-corp <span> July 21-22-23 </span></h3>
+              </div>
+                
+              </div>
             </div>
+            
           </div>
   
       </div>
@@ -175,7 +180,7 @@
       </div>
       <div class="bouton2">
         <div class="ticket">
-          <a class="rose">Tickets </br> <span>CULTURO</span></a>
+          <a class="rose"  href ='page_billet.php'>Tickets </br> <span>CULTURO</span></a>
         </div>
       </div>
     </div>

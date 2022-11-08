@@ -22,6 +22,7 @@ header{
 display: flex;
 height: 10em;
 }
+
 #headervide{
 	width: 100%;
 }
@@ -40,39 +41,37 @@ height: 10em;
 /*----------bleu--------*/
 .tete {
 	display: flex;
-	justify-content: space-between;
-	
-	width: 93%;
-
+	justify-content: space-between;	
+	width: 95%;
 }
 #contenaireLogo{
 	display: flex;
-	width: 200px;
+	width: 300px;
 }
-.hg{
-	
+.hg{	
 	background-color: #161B4B;
 	display: flex;
 	flex-direction: row;
-	justify-content: space-between;
 	align-items: center;
-
-	width: 100%;
 	padding-left: 1em;
-	padding-right: 0.7em;
+	padding-right: 2em;
 	border-radius: 10px;
+	width: 220px;
 }
 
 #dates{
 	color : white;
 	font-family: "GROBOLD";
-	font-size: 15px;
+	font-size: 14px;
+	display: flex;
+	flex-direction: column;
+	margin-left: 1em;
 }
 
 
 .hg > .logo{
-	height: 75%;
 	width: 60%;
+	height: 80%;
 }
 
 .hg > .logo > img{
@@ -82,7 +81,7 @@ height: 10em;
 
 
 .hg p {
-	line-height: 5px;
+	line-height: 0px;
 }
 
 /*----------orange--------*/
@@ -92,10 +91,11 @@ height: 10em;
 	width: 580px;
 	border-radius: 10px;
 	padding: 0 10px;
+	justify-content: center;
 }
 .menu{
 	display: flex;
-	width: 100%;
+	width: 92%;
 }
 .menu ul{
 	display: flex;
@@ -119,8 +119,11 @@ height: 10em;
 	font-family: "Segoe UI";
 	color : black;
 	font-weight: 500;
+	padding-right: 3em;
 }
-
+.menu > ul > li input{
+	cursor: pointer;
+}
 #profil{
 	width: 80px;
 	height: 40px;
@@ -139,6 +142,7 @@ height: 10em;
 	display: flex;
 	align-items: center;
 	justify-content: center;
+	cursor: pointer;
 }
 
 #profil input{

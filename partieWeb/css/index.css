@@ -296,14 +296,14 @@ flex-direction: column;
 	display: flex;
 	justify-content:space-evenly;
 	z-index: 3;
-	width: 60%;
+	width: 90%;
   align-items: center;
 }
 
-.carousel {
+.BlocCarousel {
 	display: flex;
-	width:50%;
-
+  width: 40%;
+  height: auto;
 }
 
 .contenairePuy #ContenaireProg{
@@ -327,18 +327,43 @@ flex-direction: column;
 }
 
 .description {
-	display: flex;
+  width: 40%;
+}
+.description .descContenaire{
+  display: flex;
 	flex-direction: column;
+  width: 100%;
 }
 
 .titre {
 	background-color: #F69F25;
 	font-family: GROBOLD;
-	font-size : 35px;
-	width: 190px;
+	font-size : 200%;
+	width: 50%;
+  height: 100%;
 	text-align: center;
-	padding : 0.2em 0.5em 0.2em 0.5em;
 	border-radius: 10px;
+}
+
+.datesfest{
+	background-color: #161B4B;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+	color : white;
+	font-family: Segoe UI;
+	margin-top: 1em;
+	font-size: 20px;
+	border-radius: 10px;
+	line-height: 45%;
+  padding: 5vh 0;
+}
+
+.datesfest span{
+	font-family: Segoe UI;
+	font-weight: lighter;
+	font-size: 18px;
 }
 
 .titrep {
@@ -352,22 +377,6 @@ flex-direction: column;
 	border-radius: 10px;
 }
 
-.datesfest{
-	background-color: #161B4B;
-	color : white;
-	font-family: Segoe UI;
-	margin-top: 1em;
-	font-size: 20px;
-	border-radius: 10px;
-	padding: 2em 2em 1em 1.8em;
-	line-height: 45%;
-}
-
-.datesfest span{
-	font-family: Segoe UI;
-	font-weight: lighter;
-	font-size: 18px;
-}
 
 #white2023 {
 	font-size: 80px;
@@ -572,7 +581,7 @@ flex-direction: column;
   font-weight: 600;
   line-height: 1.5;
 }
-@media screen and (max-width: 800px) {
+@media only screen and (max-width: 600px) {
   .tachej{
     display: none;
   }
@@ -635,11 +644,7 @@ flex-direction: column;
   .affiche{
     flex-direction: column-reverse;
   }
-
-  .carousel{
-    width: auto;
-  }
-
+  
   #ContenaireProg{
     display: flex;
     flex-direction: column;

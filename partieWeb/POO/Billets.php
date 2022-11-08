@@ -44,30 +44,6 @@
             }
             
         }
-        public function AffichageBillet($ensembillet){
-            $this->tab_Billet = $ensembillet['tab_Billet'];
-            for($i=0;$i<count($ensembillet['tab_Billet']);$i++){
-                
-                if($this->id_compte == $this->tab_Billet[$i]['id_compte']){
-                    echo"<br>";
-                    echo "Billet pour assister : ".$this->type_billets."<br>";
-                    echo "Nom : ".$this->tab_Billet[$i]['nom']."<br>";
-                    echo "Prenom : ".$this->tab_Billet[$i]['prenom']."<br>";
-                    echo "Numéro de billet : ".$this->tab_Billet[$i]['id']."<br>";
-                    echo "Concert : ".$this->tab_Billet[$i]['concert']."<br>";
-                    echo "Date : ";
-                    for($y=0;$y<count($this->nbtypeBillets);$y++){
-                        if($this->id_type == $this->nbtypeBillets[$y]['id']){
-                            print_r($this->nbtypeBillets[$y]['date']);
-                        }
-                    }
-                    echo"<br>";
-                    echo "Numéro de billet : ".$this->tab_Billet[$i]['id']."<br>";
-                    echo"<br>";
-                }
-                
-            }
-        }
 
         public function EnregistrementBDD_Billet($billet){
             
@@ -142,6 +118,31 @@
             if($req==true){
                 echo "<script>alert('Billet sup')</script>";
                 //echo "<script>document.location.href='profile.php'</script>";
+            }
+        }
+
+                public function AffichageBillet($ensembillet){
+            $this->tab_Billet = $ensembillet['tab_Billet'];
+            for($i=0;$i<count($ensembillet['tab_Billet']);$i++){
+                
+                if($this->id_compte == $this->tab_Billet[$i]['id_compte']){
+                    echo"<br>";
+                    echo "Billet pour assister : ".$this->type_billets."<br>";
+                    echo "Nom : ".$this->tab_Billet[$i]['nom']."<br>";
+                    echo "Prenom : ".$this->tab_Billet[$i]['prenom']."<br>";
+                    echo "Numéro de billet : ".$this->tab_Billet[$i]['id']."<br>";
+                    echo "Concert : ".$this->tab_Billet[$i]['concert']."<br>";
+                    echo "Date : ";
+                    for($y=0;$y<count($this->nbtypeBillets);$y++){
+                        if($this->id_type == $this->nbtypeBillets[$y]['id']){
+                            print_r($this->nbtypeBillets[$y]['date']);
+                        }
+                    }
+                    echo"<br>";
+                    echo "Numéro de billet : ".$this->tab_Billet[$i]['id']."<br>";
+                    echo"<br>";
+                }
+                
             }
         }
     }

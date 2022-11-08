@@ -45,11 +45,43 @@
 
           <div class="titre"><h2>What formula do you want ? :</h2></div>
 
-          <p>
-            <select id="billet" name="type_billet">
-              <?php
-              include "./include/connexionBDD.php";
-              include "./POO/typeBillets.php";
+      <div class="centre">
+
+        <div class="titre"><h2>What formula do you want ? :</h2></div>
+
+        <p>
+          <select id="billet" name="type_billet">
+            <?php
+            include "./include/connexionBDD.php";
+            include "./POO/typeBillets.php";
+            
+            $BDDCo = new connexionBDD();
+
+            $afficher = (array)$BDDCo;
+            $afficher2  = $afficher['tab_typeBillet'];
+
+            for ($i=0 ; $i<count($afficher2) ; $i++){
+              echo("<option value='".$afficher2[$i]['lib']."'>  ".$afficher2[$i]['lib']." (".$afficher2[$i]['prix']."€)</option>");
+            }
+            ?>
+          </select>
+        </p>
+            
+        <p class="half">
+          <input type="text" name="nom" placeholder="Name..." required>
+          <input type="text" name="pnom" placeholder="First Name..." required>
+        </p>
+
+        <div>
+          <input type="checkbox" id="checkConcert" name="concert" value="Oui">
+          <label for="concert">+10€ for concert access</label>
+        </div>
+
+        <?php
+
+          include_once('./fonction.php');
+          //include_once "./POO/Billets.php";
+
               
               $BDDCo = new connexionBDD();
 
