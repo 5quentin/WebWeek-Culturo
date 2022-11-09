@@ -73,7 +73,6 @@ body  * {
 
 /*-------------- Texte dynamique --------------*/
 .GrandContenaireMap > .containerMap > .contentcontainer  {
-    min-height: 500px;
 
     display: flex;
     flex-direction: column;
@@ -111,6 +110,7 @@ body  * {
 
 .GrandContenaireMap > .containerMap > .contentcontainer > .selection > #select > p {
     font-family: 'grobold';
+    text-align: center;
 }
 
 .GrandContenaireMap > .containerMap > .contentcontainer > .selection > #ville {
@@ -129,7 +129,6 @@ body  * {
 /*------- texte --------*/
 .GrandContenaireMap > .containerMap > .contentcontainer > .textville {
     background-color: #FCA01F;
-    min-height: 30%;
 }
 
 .GrandContenaireMap > .containerMap > .contentcontainer > .textville > p {
@@ -370,6 +369,7 @@ body  * {
 @media only screen and (max-width: 1050px) {
 
     .container {
+        height: 80vh;
         flex-direction: column;
         justify-content: center;
     }
