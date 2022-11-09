@@ -182,7 +182,12 @@ header {
 	z-index: -1;
 }
 
-@media screen and (max-width: 800px) {
+@media only screen and (max-width: 1050px) {
+
+	header {
+		background-color: aqua;
+	}
+
 	#dates {
 		display: none;
 	}
@@ -226,6 +231,10 @@ header {
 		justify-content: center;
 
 		border-radius: 10px;
+	}
+
+	.menu > ul > li > a {
+		padding: 0;
 	}
 
 	.menu ul li {
