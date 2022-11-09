@@ -57,15 +57,18 @@ a{
 
 #ig {
 	width: auto;
+	height: 45px;
 	padding-right: 1.7em;
 }
 
 #tt {
 	width: auto;
+	height: 44px;
 	padding-right: 1.7em;
 }
 
 #fb {
+	height: 44px;
 	width: auto;
 }
 
