@@ -370,6 +370,7 @@ body  * {
 
     .container {
         height: 80vh;
+        margin-bottom: 100px;
         flex-direction: column;
         justify-content: center;
     }
