@@ -368,10 +368,7 @@ body  * {
 /*---- Responsive -----*/
 
 @media only screen and (max-width: 1050px) {
-    body {
-        background-color: antiquewhite;
-    }
-
+    
     .container {
         flex-direction: column;
         justify-content: center;
