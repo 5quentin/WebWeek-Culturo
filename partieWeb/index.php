@@ -51,11 +51,7 @@ $BDDCo = new connexionBDD();
         </div>
     </div>
 
-    <!--
-    <div classe="tacheorange">
-        <img src="images/tachej1.png" id="tache1" alt="tache">
-    </div>
-    -->
+    <img src="images/tachej1.png" id="tache1" alt="tache">
 
     <!-- Carte intéractive -->
     <div id="selection" class="GrandContenaireMap">
@@ -120,11 +116,11 @@ $BDDCo = new connexionBDD();
             </div>
         </div>
     </div>
-    <!--
-    <div class="tachej">
-        <img src="images/tachej2.png">
-    </div>
-    -->
+
+    <img id="tache2" src="images/tacheb1.png">
+
+    <img id="tache3" src="images/tachej2.png">
+
     <div id="mapp" class="programme">
         <div id="ContenaireProg">
             <div class="gauche">

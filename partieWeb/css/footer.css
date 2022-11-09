@@ -1,14 +1,9 @@
-body {
-	margin : 0;
-}
-
 footer{
 	display: flex;
 }
 	
 
 #footer1 {
-	display: flex;
 	margin-top: -1em;
 	width: 100%;
 }

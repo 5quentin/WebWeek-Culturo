@@ -1,5 +1,8 @@
 body  * {
     font-family: 'Segoe UI';
+}
+
+body div :not(footer , #map *) , iframe  {
     border-radius: 10px;
 }
 
@@ -363,6 +366,29 @@ body  * {
     font-weight: lighter;
 }
 
+/*---- Formes -----*/
+
+#tache1 , #tache2 , #tache3 {
+    position: absolute;
+    height: 500px;
+
+    z-index: -1;
+}
+
+#tache1 {
+    right: 0px;
+    top: 500px;
+}
+
+#tache2 {
+    left: 0px;
+    top: 1000px;
+}
+
+#tache3 {
+    left: 0px;
+    top: 2000px;
+}
 
 /*---- Responsive -----*/
 
