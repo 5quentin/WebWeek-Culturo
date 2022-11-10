@@ -8,7 +8,7 @@
   <title>Création de compte</title>
   <link rel="icon" type="image/png" href="./favicon/favicon.png" sizes="16x16" data-rh="true">
   <link rel="stylesheet" href="./css/formulaires.css" />
-  <link rel="stylesheet" href="./css/header.css" />
+  <link rel="stylesheet" href="./css/header-footer.css" />
 
 </head>
 
@@ -29,11 +29,11 @@
         } 
 
         elseif(isset($_POST["billet"])){
-          echo '<script>document.location.href="page_billet.php"</script>';
+          echo '<script>document.location.href="page_billetfr.php"</script>';
         }
         
         else{
-          echo '<script>document.location.href="index.php"</script>';
+          echo '<script>document.location.href="indexfr.php"</script>';
         } 
       }
     }
@@ -42,7 +42,7 @@
 
   <div class="container">
     <div class="space"></div>
-    <form class="signin" method="POST" action="connexion.php" enctype="multipart/form-data"> 
+    <form class="signin" method="POST" action="connexionfr.php" enctype="multipart/form-data"> 
       <img src="./images/logo.png">
 
       <div class="centre">
@@ -70,7 +70,7 @@
       </div>
 
       <div class="boutton">
-        <a href="./inscription.php">Créer un compte</a>
+        <a href="./inscriptionfr.php">Créer un compte</a>
         <input type="submit" name="connex" value="Sign in">
       </div>
       
@@ -78,5 +78,5 @@
   </div>
 
 
-  <?php include './header_footer/footer.html';?>
+  <?php include './header_footer/footerfr.html';?>
 </body>

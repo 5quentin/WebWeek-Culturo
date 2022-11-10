@@ -1,0 +1,378 @@
+/*--------------------Commun-------------------*/
+@font-face {
+	font-family: "GROBOLD";
+	src: url("../fonts/GROBOLD.ttf");
+}
+
+@font-face {
+	font-family: "Segoe UI Bold";
+	src: url("../fonts/segoe-ui/Segoe\ UI\ Bold.ttf"),
+}
+
+@font-face {
+	font-family: "Segoe UI";
+	src: url("../fonts/segoe-ui/Segoe\ UI.ttf"),
+}
+
+/*--------------------Header--------------------*/
+header {
+	position: absolute;
+	display: flex;
+	height: 10em;
+}
+
+#headervide {
+	width: 100%;
+}
+
+#contenaireHeader {
+	position: fixed;
+	margin-top: 1em;
+	top: 20px;
+	width: 100%;
+	height: 50px;
+	z-index: 2000;
+	display: flex;
+	justify-content: center;
+}
+
+/*--------------------nav-------------------*/
+
+/*----------bleu--------*/
+.tete {
+	display: flex;
+	justify-content: space-between;
+	width: 95%;
+}
+
+#contenaireLogo {
+	display: flex;
+	width: 300px;
+}
+
+.hg {
+	background-color: #161B4B;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	padding-left: 1em;
+	padding-right: 2em;
+	border-radius: 10px;
+	width: 220px;
+    box-shadow: -2px 2px 20px rgba(0, 0, 0, 0.500);
+}
+
+#dates {
+	color: white;
+	font-family: "GROBOLD";
+	font-size: 14px;
+	display: flex;
+	flex-direction: column;
+	margin-left: 1em;
+}
+
+
+.hg>.logo {
+	width: 60%;
+	min-width: fit-content;
+	height: 80%;
+}
+
+.hg>.logo>img {
+	height: 100%;
+	padding: 0;
+}
+
+
+.hg p {
+	line-height: 0px;
+}
+
+/*----------orange--------*/
+.menuorange {
+	background-color: #FCA01F;
+	display: flex;
+	width: 580px;
+	border-radius: 10px;
+	padding: 0 10px;
+	justify-content: center;
+    box-shadow: -2px 2px 20px rgba(0, 0, 0, 0.500);
+}
+
+.menu {
+	display: flex;
+	width: 92%;
+}
+
+.menu ul {
+	display: flex;
+	list-style: none;
+	justify-content: space-between;
+	align-items: center;
+	width: 100%;
+}
+
+.menu>ul {
+	padding: 0;
+}
+
+.menu>ul>li {
+	text-align: center;
+}
+
+.menu>ul>li>a {
+	text-decoration: none;
+	font-size: 13px;
+	font-family: "Segoe UI";
+	color: black;
+	font-weight: 500;
+	padding-right: 3em;
+}
+
+.menu>ul>li input {
+	cursor: pointer;
+}
+
+#profil {
+	width: 80px;
+	height: 40px;
+	border-radius: 10px;
+	background-color: white;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+#billeterie {
+	width: 80px;
+	height: 40px;
+	border-radius: 10px;
+	background-color: #161B4B;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	cursor: pointer;
+}
+
+#profil input {
+	font-family: "GROBOLD";
+	background-color: transparent;
+	border: none;
+}
+
+#billeterie input {
+	color: white;
+	font-family: "GROBOLD";
+	background-color: transparent;
+	border: none;
+}
+
+.burger {
+	display: none;
+}
+
+/*--------------------forme-------------------*/
+
+.top {
+	width: 70vw;
+
+	position: absolute;
+	top: -10px;
+	left: -20px;
+	z-index: -1;
+}
+
+/*--------------------Responsive-------------------*/
+@media only screen and (max-width: 1050px) {
+
+	#contenaireHeader {
+		height: 4.5vh;
+	}
+
+	#dates {
+		display: none;
+	}
+
+
+	.menuorange {
+		width: auto;
+		background: transparent;
+
+		box-shadow: none;
+	}
+
+
+	.menu {
+		flex-direction: column;
+		align-items: center;
+	}
+
+
+	#contenaireLogo {
+		width: 100px;
+	}
+
+	.menu>.burger {
+		height: 100%;
+	}
+
+	.menu>.burger>img {
+		width: 80%;
+	}
+
+	.menu ul {
+		flex-direction: column;
+		justify-content: center;
+		margin: 0%;
+		display: none;
+	}
+
+	.menu ul li,
+	.menu>.burger {
+		width: 80px;
+		background-color: #FCA01F;
+		border-radius: 10px;
+		box-shadow: -2px 2px 20px rgba(0, 0, 0, 0.500);
+
+		display: flex;
+		align-items: center;
+		justify-content: center;
+
+		border-radius: 10px;
+	}
+
+	.menu > ul > li > a {
+		padding: 0;
+	}
+
+	.menu ul li {
+		margin: 10px;
+		height: 40px;
+	}
+
+	.burger {
+		height: 50px;
+	}
+
+	#profil {
+		border: solid 2px #FCA01F;
+	}
+
+	.menu:hover>ul {
+		display: block;
+	}
+}
+
+
+
+/*--------------------Footer--------------------*/
+footer{
+	display: flex;
+}
+	
+
+#footer1 {
+	margin-top: -1em;
+	width: 100%;
+}
+
+.footer2 {
+	display: flex;
+	justify-content: space-between;
+	background-color: #161B4B;
+	height: 250px;
+	width: 100%;
+	margin-top: -1em;	
+	color: white;
+	font-size: 12px;
+	font-family: "Segoe UI";
+	font-weight: bold;
+}
+.fgauche {
+	display : flex;
+	/*justify-content: start;*/
+	flex-direction: column;
+	align-items: center;
+	
+}
+
+
+.ml {
+	height: 175px;
+	display: flex;
+	justify-content: space-between;
+	flex-direction: column;
+	padding-right: 100px;
+	text-align: center;
+	line-height : 50%;
+	padding-top: 35px;
+	font-size: 20px;
+	
+}
+
+a{
+	text-decoration: none;
+	color: white;
+}
+
+
+
+#ig {
+	width: auto;
+	height: 45px;
+	padding-right: 1.7em;
+}
+
+#tt {
+	width: auto;
+	height: 44px;
+	padding-right: 1.7em;
+}
+
+#fb {
+	height: 44px;
+	width: auto;
+}
+
+
+.rs {
+	display: flex;
+	justify-content: space-evenly;
+	padding-top: 6em;
+	padding-left: 6em;
+	height: 18%;
+	width: 18%;
+}
+
+
+
+
+.email {
+	display: flex;
+	justify-content: center;
+	color : white;
+	font-size: 22px;
+	padding-top: 1em;
+	padding-left: 3.8em;
+}
+
+@media screen and (max-width: 650px) {
+
+	.footer2{
+		flex-direction: column;
+		height:auto;
+	}
+
+	.email {
+		padding-top: 0;
+		padding-left: 0;
+	}
+	
+	.rs {
+		padding-left: 0;
+	}
+
+	.ml {
+		padding-right: 0;
+	}
+}

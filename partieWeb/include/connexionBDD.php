@@ -23,8 +23,8 @@ include('./fonction.php');
 
         public function __construct()
         {
-            //$this->connection = new PDO('mysql:host=localhost;port=3306;dbname=maboyer_culturo','maboyer_culturo', 'mevtrdems');
-            $this->connection = new PDO('mysql:host=localhost;port=3306;dbname=culturo','root', '');
+            $this->connection = new PDO('mysql:host=localhost;port=3306;dbname=maboyer_culturo','maboyer_culturo', 'mevtrdems');
+            //$this->connection = new PDO('mysql:host=localhost;port=3306;dbname=culturo','root', '');
             $this->MAC = exec('getmac');
             $this->MAC = strtok($this->MAC, ' ');
             $this->requete = "SELECT * FROM type_billet";
@@ -63,16 +63,10 @@ include('./fonction.php');
                     if ($this->tab_comptes[$v]['mdp'] == $mdp) {
                         $this->motDePasse = true;
                         if($this->tab_comptes[$v]['mail']=="admin@admin.culturo"){
-                            unlink("./mac.txt");
-                            $coSauv = new funtionSauCo($this->tab_comptes[$v]['id'],'',$this->MAC);
+                            $coSauv = new funtionSauCo($this->tab_comptes[$v]['id'],'');
                             echo '<script>document.location.href="admin.php"</script>';
                         }else{
-                            if(file_exists("./mac.txt")){
-                                unlink("./mac.txt");
-                            }
-                            
-                            $coSauv = new funtionSauCo($this->tab_comptes[$v]['id'],'client',$this->MAC);
-                            echo '<script>alert("'.$this->MAC.'")</script>';
+                            $coSauv = new funtionSauCo($this->tab_comptes[$v]['id'],'client');
                             echo '<script>document.location.href="profile.php"</script>';
                         }
                         

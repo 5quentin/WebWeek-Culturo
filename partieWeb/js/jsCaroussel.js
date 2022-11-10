@@ -1,18 +1,13 @@
-function activationSlideBTN(){
-    var prevBtn = document.querySelector("#past");
-    var nextBtn = document.querySelector("#next");
-    nextBtn.addEventListener('click',()=>{
-        if(counter >=carouselImages.length-1) return;
-        carouselSlide.style.transition = "transform 0.4s ease-in-out";
-        counter++;
-        carouselSlide.style.transform='translateX('+(-size*counter)+'px)';
-    });
+const swiper = new Swiper('.swiper', {
+    // Navigation arrows
+    navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+    },
 
-    prevBtn.addEventListener('click',()=>{
-        if(counter <=0) return;
-        carouselSlide.style.transition = "transform 0.4s ease-in-out";
-        counter--;
-        carouselSlide.style.transform='translateX('+(-size*counter)+'px)';
-    });      
+    autoplay: {
+        delay: 3000,
+    },
 
-}
+    loop: true,
+});
