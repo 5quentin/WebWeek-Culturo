@@ -196,6 +196,8 @@ header {
 	.menuorange {
 		width: auto;
 		background: transparent;
+
+		box-shadow: none;
 	}
 
 
@@ -225,6 +227,7 @@ header {
 		width: 80px;
 		background-color: #FCA01F;
 		border-radius: 10px;
+		box-shadow: -2px 2px 20px rgba(0, 0, 0, 0.500);
 
 		display: flex;
 		align-items: center;

@@ -279,8 +279,8 @@ textarea{
 }
 
 @media only screen and (max-width: 1050px) {
-    .container >form{
-        width: 90vw;
+    .container_billet > form{
+        width: 90%;
     }
 
     .centre{
