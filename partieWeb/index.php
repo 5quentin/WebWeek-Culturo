@@ -7,6 +7,9 @@
   include "./POO/Chanteur.php";
   
   $BDDCo = new connexionBDD();
+  $MACE = exec('getmac');
+  $MACE = strtok($MACE, ' ');
+  echo '<script>console.log("L adresse MAC de l utilisateur est : '.$MACE.'")</script>';
 ?>
 
 <!doctype html>
@@ -113,11 +116,13 @@
             <div class="descContenaire">
               <div class="titre">On display</div>
               <div class="datesfest">
-                <div><h3 id="white2023">2023</h3>
-                <h3 class="stars">Harry Styles <span> July 21 </span></h3>
-                <h3 class="stars">DJ Snake <span> July 22 </span></h3>
-                <h3 class="stars">David Guetta <span> July 23 </span></h3>
-                <h3 class="stars">Team G-corp <span> July 21-22-23 </span></h3>
+                <div>
+                  <h3 id="white2023">2023</h3>
+                  <h3 class="stars">Harry Styles <span> July 21 </span></h3>
+                  <h3 class="stars">DJ Snake <span> July 22 </span></h3>
+                  <h3 class="stars">David Guetta <span> July 23 </span></h3>
+                  <h3 class="stars">Team G-corp <span> July 21-22-23 </span></h3>
+                </div>
               </div>
                 
               </div>
@@ -207,6 +212,53 @@
     }
 
   </script>
+  <script src="./js/jsCaroussel.js"></script>
+  <script>
+        const carouselSlide = document.querySelector('#cadre');
+        const carouselImages = document.querySelectorAll('#cadre img');
+
+        ////////////////////////////
+        
+
+
+        /////////////////
+        let counter = 0;
+        var size = carouselImages[0].clientWidth;
+
+        carouselSlide.style.transform = 'translateX('+(-size*counter)+'px)';
+
+        //////////////////
+
+        carouselSlide.addEventListener('transitionend',()=>{
+            if(carouselImages[counter].id=='lastSlide'){
+                carouselSlide.style.transition= "none";
+                counter  = 0;
+                carouselSlide.style.transform = 'translateX('+(-size*counter)+'px)';
+                //alert(counter);
+            }
+            if(carouselImages[counter].id=='firstSlide'){
+                carouselSlide.style.transition= "none";
+                counter  = carouselImages.length -counter;
+                carouselSlide.style.transform = 'translateX('+(-size*counter)+'px)';
+                //alert(counter);
+            }
+        });  
+        const time =3000;
+        function SlideAuto(){
+            
+            const carouselSlide = document.querySelector('#cadre');
+            const carouselImages = document.querySelectorAll('#cadre img');
+            if(counter< carouselImages.length - 1){
+                 carouselSlide.style.transition = "transform 0.4s ease-in-out";
+                 counter++;
+                carouselSlide.style.transform='translateX('+(-size*counter)+'px)';
+            }
+            setTimeout("SlideAuto()", time);
+            
+        }
+        window.onload= SlideAuto();
+        activationSlideBTN();             
+</script>
 </body>
 
 </html>

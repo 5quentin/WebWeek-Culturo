@@ -332,7 +332,7 @@ flex-direction: column;
 .description .descContenaire{
   display: flex;
 	flex-direction: column;
-  width: 100%;
+  width: 80%;
 }
 
 .titre {
@@ -350,7 +350,6 @@ flex-direction: column;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  align-items: center;
 	color : white;
 	font-family: Segoe UI;
 	margin-top: 1em;
@@ -358,6 +357,14 @@ flex-direction: column;
 	border-radius: 10px;
 	line-height: 45%;
   padding: 5vh 0;
+}
+.datesfest>div{
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+.datesfest>div h3{
+  margin: 0 0 5% 10%;
 }
 
 .datesfest span{
@@ -379,8 +386,9 @@ flex-direction: column;
 
 
 #white2023 {
+  align-self: end;
 	font-size: 80px;
-	margin : 0.2em 0em 1em 1.3em;
+	margin : 10% 7% 15% 1%;
 	text-shadow: 10px 2px #009289;
 }
 
