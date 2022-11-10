@@ -8,7 +8,7 @@
   <title>Création de compte</title>
   <link rel="icon" type="image/png" href="./favicon/favicon.png" sizes="16x16" data-rh="true">
   <link rel="stylesheet" href="./css/formulaires.css" />
-  <link rel="stylesheet" href="./css/header.css" />
+  <link rel="stylesheet" href="./css/header-footer.css" />
 
 </head>
 

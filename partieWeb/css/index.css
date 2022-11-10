@@ -1,652 +1,491 @@
-html, body{
-  margin: 0;
-  padding: 0;
-  width: 100%;
-  position: relative;
-  display: flex;
-	justify-content: center;
-	flex-direction: column;
-  font-family: "GROBOLD";
+body * :not(header *){
+    font-family: 'Segoe UI';
 }
 
-/*********************** Partie Map ***********************/
-.GrandContenaireMap{
-  width: 100%;
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: center;
-  z-index: 2;
-  grid-gap: 20px;
-}
-.containerMap{
-  display: flex;
-  flex-direction: row;
-  justify-content:space-evenly;
-  width: 93%;
-  height: 100%;
-  margin-top: 5em;
-  
-  
+body div :not(footer , #map *) , iframe  {
+    border-radius: 10px;
 }
 
-#GroupeMap{
-  display: flex;
-  flex-direction: row;
-  width: 40%;
-  height: 100%;
-  
+/*-------------- Landing --------------*/
+
+.container {
+    width: 100%;
+    height: 100vh;
+    
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
 }
 
-#map {
-  height: 100%;
-  width: 100%;
-  z-index: 1; 
-  position: relative;
-  border-radius: 15px;
+.container > .logo {
+    width: 50%;
+    height: 100%;
+    background: url("../images/logo.png") no-repeat center;
+    background-size: contain;
 }
 
-
-.info>.fa-compress{
-  opacity: 0;
-}
-.Zoomer>.fa-compress{
-  opacity: 100;
-  cursor: pointer;
-}
-.Zoomer::-webkit-scrollbar{
-  display: none;
-}
-.fa-compress{
-  background-color:white;
-  padding: 8px;
-  opacity: 70%;
-
-}
-#articleMap{
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: space-between;
+.container > .intro {
+    width: 35%;
+    font-family: "GROBOLD";
 }
 
-/*////////////////////////////////////*/
-
-.contentcontainer{
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: center;
-  height: 100%;
-  width: 40%;
-
+.container > .intro > .titreCULT{
+    font-family: 'GROBOLD';
 }
-.selection{
-  display: flex;
-  height: auto;
-  width: 100%;
-  height: 15%;
-  justify-content: space-between;
+
+.container > .intro > h2 {
+    font-size: larger;
+}
+
+.container > .intro > p {
+    font-family: 'Segoe UI';
+    font-size: larger;
+}
+
+.container > .intro > .learn {
+    font-family: 'Segoe UI';
+    color: black;
+    font-weight: bolder;
 
 }
 
-#select{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: black;
-  color: white;
-  border-radius: 10px;
-  font-family: 'GROBOLD';
-  font-size: 20px;
-  width:50%;
-  margin: 0 0 1em 0;
+/*------------------------- Map -------------------------*/
+.GrandContenaireMap {
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
-.imgcarte{
-  width: 100%;
-  height: 40vh;
-  
-}
-.imgcarte>img{
-  width: 100%;
-  height: 100%;
-  border-radius: 10px;
-  
-}
-#ville{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: #161B4B;
-  color: white;
-  width: 45%;
-  border-radius: 10px;
-  border: 50px;
-  font-size: 21px;
-  font-family: 'Segoe UI';
-  font-weight: bold;
-  padding: 0.5em;
-  margin: 0 0 1em 0;
+.GrandContenaireMap > .containerMap {
+    width: 85%;
+    min-height: 65vh;
+
+    display: flex;
+    justify-content: space-between;
 }
 
-
-.titre2{
-  font-size: 19px;
-}
-.textville{
-  background-color: #FCA01F;
-  width: 100%;
-  height: 25%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border-radius: 15px;
-  margin: 1em 0 0 0;
+.GrandContenaireMap > .containerMap > div  {
+    width: 47%;
 }
 
-.textville p{
-  width: 90%;
-  font-family: 'Segoe UI';
-  text-align: justify;
-  font-weight: 600;
-  font-size: 15px;
-  color: white;
+/*-------------- carte interactive --------------*/
+.GrandContenaireMap > .containerMap > #GroupeMap {
+    height: auto;
 }
 
-
-.bouton2{ 
-  display: flex;
-  width: 100%;
-  height: 300px;
-  justify-content: center;
-  
+.GrandContenaireMap > .containerMap > #GroupeMap > #map  {
+    width: 100%;
+    height: 100%;
 }
 
-.rose{
-  text-decoration: none;
-  color: black;
-  text-align: center;
+/*-------------- Texte dynamique --------------*/
+.GrandContenaireMap > .containerMap > .contentcontainer  {
 
-}
-.rose>span{
-  font-size: 18px;
-}
-.ticket{ 
-  display: flex;
-  justify-content: center;
-  font-size: 23px;
-  background-color: #009289;
-  width: 20%;
-  height: 15vh;
-  border-radius: 15px;
-  align-items: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
 }
 
-
-
-
-
-
-
-
-/*********************** Home Page ***********************/
-
-/* partie intro */
-
-
-#tache1 {
-  z-index: 0;
-  position:absolute;
-  right: 0;
-  width: 12%;
+.GrandContenaireMap > .containerMap > .contentcontainer > * {
+    width: 100%;
+    margin: 5px 0px;
 }
 
-.main{
-  display: flex;
-  height: 100vh;
-  width: 100%;
-  flex-direction: column;
-  grid-gap: 180px;
+/*------- Les deux cases --------*/
+.GrandContenaireMap > .containerMap > .contentcontainer > .selection {
+    width: 100%;
+
+    display: flex;
+    justify-content: space-between;
 }
 
-.logo{
-  display: flex;
-  height: auto;
-  width: 160vw;
-  justify-content: center;
+.GrandContenaireMap > .containerMap > .contentcontainer > .selection > * {
+    width: 49%;
+    height: 55px; 
+    color: white;
+    border-radius: 10px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-.container{
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  position: content;
-  width: 100%;
-  margin-top: 10em;
+.GrandContenaireMap > .containerMap > .contentcontainer > .selection > #select {
+    background-color: black;
 }
 
-.intro{
-  display: flex;
-  justify-content: start;
+.GrandContenaireMap > .containerMap > .contentcontainer > .selection > #select > p {
+    font-family: 'grobold';
+    text-align: center;
 }
 
-.intro>div{
-width: 65%;
-display: flex;
-flex-direction: column;
+.GrandContenaireMap > .containerMap > .contentcontainer > .selection > #ville {
+    background-color: #161B4B;
 }
 
-.imglogo{
-  max-width: 600px;
+/*------- carrousel --------*/
+.GrandContenaireMap > .containerMap > .contentcontainer > .imgcarte {
+    width: 100%;
 }
 
-.titreCULT{
-  font-family: 'GROBOLD';
-  margin : 0;
-  margin-bottom: 0.2em;
+.GrandContenaireMap > .containerMap > .contentcontainer > .imgcarte > img {
+    width: 100%;
 }
 
-.titreE{
-  font-family: 'GROBOLD';
-  font-size: 25px;
-  font-weight: 200;
-  margin : 0;
+/*------- texte --------*/
+.GrandContenaireMap > .containerMap > .contentcontainer > .textville {
+    background-color: #FCA01F;
 }
 
-.learn {
-  margin : 0;
-  font-weight: 700;
-  font-family: 'Segoe UI';
-}
-  
-
-.leint p {
-  font-family: 'Segoe UI';
-  font-size: 21px;
-  font-weight: 600;
+.GrandContenaireMap > .containerMap > .contentcontainer > .textville > p {
+    padding: 20px;
 }
 
+/*----------------- boutton -----------------*/
+.bouton {
+    background-color: #009289;
+    margin-top: 20px;
+    width: 200px;
+    height: 70px;
 
-/* Profile Page */
-
-.contEuro{
-	display: flex;
-	position: content;
-	width: 100%;
-	z-index: 3;
-  justify-content: space-evenly;
-	margin-top : 3em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
+.bouton > a {
+    padding: 20px 0px;
+    text-align: center;
+    font-family: 'grobold';
+    font-size: 18px;
+    color: black;
+}
+
+.bouton > a > span {
+    font-family: 'grobold';
+    font-size: 12px;
+}
+
+/*------------------------- à l'affiche -------------------------*/
 
 .contenairePuy{
-	display: flex;
-	flex-direction: column-reverse;
-	position: content;
-	width: 100%;
-	z-index: 3;
-	flex-direction: row;
-  justify-content: center;
+    width: 100%;
+    margin-top: 100px;
 
+    display: flex;
+    justify-content: center;
 }
 
-.affiche {
-	display: flex;
-	justify-content:space-evenly;
-	z-index: 3;
-	width: 90%;
-  align-items: center;
+.contenairePuy > .affiche {
+    width: 85%;
+
+    display: flex;
+    justify-content: space-between;
 }
 
-.BlocCarousel {
-	display: flex;
-  width: 40%;
-  height: auto;
+.contenairePuy > .affiche > .BlocCarousel {
+    width: 60%;
 }
 
-.contenairePuy #ContenaireProg{
-	display: flex;
-	flex-direction: column-reverse;
-	position: content;
-  width: 100%;
-	z-index: 3;
-	flex-direction: row;
-	justify-content: space-evenly;
+.contenairePuy > .affiche > .description {
+    width: 35%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
-
-
-
-
-
-#harry {
-	border-radius: 15px;
-	width: 100%;
+/*---------------- carrousel ----------------*/
+.contenairePuy > .affiche > .BlocCarousel > .swiper {
+    width: 100%;
+    min-width: 567px;
 }
 
-.description {
-  width: 40%;
-}
-.description .descContenaire{
-  display: flex;
-	flex-direction: column;
-  width: 100%;
+.contenairePuy > .affiche > .BlocCarousel > .swiper > .swiper-button-prev , .swiper > .swiper-button-next {
+    color: #161B4B;
 }
 
-.titre {
-	background-color: #F69F25;
-	font-family: GROBOLD;
-	font-size : 200%;
-	width: 50%;
-  height: 100%;
-	text-align: center;
-	border-radius: 10px;
+/*---------------- texte ----------------*/
+.contenairePuy > .affiche > .description > .titre {
+    width: 50%;
+    height: 60px;
+    margin-bottom: 10px;
+
+    background-color: #FCA01F;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-.datesfest{
-	background-color: #161B4B;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: center;
-	color : white;
-	font-family: Segoe UI;
-	margin-top: 1em;
-	font-size: 20px;
-	border-radius: 10px;
-	line-height: 45%;
-  padding: 5vh 0;
+.contenairePuy > .affiche > .description > .titre > h1 {
+    font-family: 'GROBOLD';
+    margin: 0 5px;
 }
 
-.datesfest span{
-	font-family: Segoe UI;
-	font-weight: lighter;
-	font-size: 18px;
+.contenairePuy > .affiche > .description > .datesfest {
+    height: calc(100% - 80px);
+    background-color: #161B4B;
+    color: white;
 }
 
-.titrep {
-	background-color: #000000;
-	color : white;
-	font-family: "GROBOLD";
-	font-size : 35px;
-	width: 360px;
-	text-align: center;
-	padding : 0.2em 0.5em 0.2em 0.5em;
-	border-radius: 10px;
+.contenairePuy > .affiche > .description > .datesfest > div {
+    padding: 30px;
 }
 
-
-#white2023 {
+.contenairePuy > .affiche > .description > .datesfest > div > #white2023 {
 	font-size: 80px;
-	margin : 0.2em 0em 1em 1.3em;
-	text-shadow: 10px 2px #009289;
+	text-shadow: 10px 5px #009289;
+    text-align: end;
+    margin: 0;
 }
 
-.tachej{
-	z-index: 0;
-	position: absolute;
-	top: 90em;
+.contenairePuy > .affiche > .description > .datesfest > div > #white2023 {
+	font-size: 80px;
+	text-shadow: 10px 5px #009289;
+    text-align: end;
+    margin: 0;
 }
 
-
-
-.lieu{
-	background-color: #161B4B;
-	color : white;
-	display: flex;
-	justify-content: center;
-	font-family: 'Segoe UI';
-	font-weight: bold;
-	text-align: center;
-	width: 480px;
-	border-radius: 10px;
-	padding : 1.5em;
-	margin-top: 1.7em;
+.contenairePuy > .affiche > .description > .datesfest > div > h3 > span {
+	font-size: medium;
+    font-weight: lighter;
+    margin-left: 5px;
 }
 
+/*------------------------- Programme -------------------------*/
+.programme{
+    width: 100%;
+    margin-top: 100px;
 
-
-.zone {
-	line-height: 65px;
-	padding-left: 3em;
-  font-family:"Segoe UI"
-}
-
-
-.art {
-	background-color: #009289;
-  font-family:"Segoe UI";
-	display: flex;
-	color: black;
-	text-align: center;
-	border-radius: 10px;
-	justify-content: center;
-	padding-left: 1.5em;
-	padding-right: 1.5em;
-	line-height: 65px;
-	font-weight: 900;
-}
-
-.programme {
-	display: flex;
-	flex-direction: column;
-}
-
-#cartep {
-	border-radius: 10px;
-}
-
-
-.TextSavoir{
-  display: flex;
-  justify-content: center;
-  width: 100%;
-	z-index: 4;
-}
-
-.TextSavoir>p{
-  font-family: "Segoe UI";
-  font-weight: 600;
-  color : white;
-  background-color: #F69F25;
-  width: 800px;
-  border-radius: 15px;
-}
-#textesav {
-  padding : 2em;
-}
-
-#textesav>span {
-  text-align: center;
-  font-weight: 900;
-}
-
-
-.Buy {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  margin-top: -12em;
-}
-
-.souris{
-  width: 50%;
-  justify-content: center;
-}
-
-
-.pageML{
-  display: flex;
-  width: 100vw;
-  justify-content: center;
-}
-
-.souris>h1{
-  background-color:#F69F25;
-  text-align: center;
-  border-radius: 10px;
-  width: 35%;
-  font-size: 25px;
-  padding: 0.8em;
-}
-
-.souris>p{
-  background-color: lightgoldenrodyellow;
-  text-align: justify;
-  border-radius: 10px;
-  font-size: 17px;
-  font-family: 'Segoe UI';
-  padding: 0.8em;
-  line-height: 1.4;
-  padding: 2em;
-  display: flex;
-  flex-direction: column;
-}
-
-.souris>p>span{
-  font-size: 20px;
-  font-family: 'Segoe UI';
-  font-weight: bold;
-}
-
-
-.ContPages{
-  display: flex;
-  justify-content: center;
-}
-
-.Pages{
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-}
-
-
-.Pages>p{
-  text-align: center;
-  font-size: 23px;
-}
-
-.Pages>a{
-  text-decoration: none;
-  color: black;
-  background-color: aliceblue;
-  text-align: center;
-  line-height: 2 ;
-  width: 25em;
-  display: flex;
-  justify-content: center;
-  font-family: 'Segoe UI';
-  font-weight: 600;
-  padding: 0.5em;
-}
-
-.Pages>a:hover{
-  background-color: #F69F25;
-  color: white;
-}
-
-
-.contPersonnel{
-  display: flex;
-  justify-content: center;
-}
-
-.personnel{
-  display: flex;
-  justify-content: center;
-  width: 50%;
-  flex-direction: column;
-}
-
-.personnel>h1{
-  display: flex;
-  justify-content: center;
-  background-color: #161B4B;
-  color: white;
-  border-radius: 10px;
-  font-size: 28px;
-  padding: 0.6em;
-  width: 55%;
-  text-align: center;
-}
-
-.personnel>p{
-  display: flex;
-  justify-content: center;
-  font-family: 'Segoe UI';
-  text-align: justify;
-  font-weight: 600;
-  line-height: 1.5;
-}
-@media only screen and (max-width: 600px) {
-  .tachej{
-    display: none;
-  }
-
-  .main > .container{
-    flex-direction: column;
-  }
-
-  .intro{
     display: flex;
     justify-content: center;
-    width: 100%;
-  }
+}
 
-  .leint{
+.programme > #ContenaireProg {
+    width: 85%;
+    height: 65vh;
+
+    display: flex;
+    justify-content: space-between;
+}
+
+.programme > #ContenaireProg > .gauche {
+    width: 40%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.programme > #ContenaireProg > .carteGoogle {
+    width: 45%;
+}
+
+.programme > #ContenaireProg > .gauche > .titrep {
+    height: 60px;
+    background-color: black;
+    color: white;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.programme > #ContenaireProg > .gauche > .titrep > h1 {
+    font-family: 'GROBOLD';
+}
+
+.programme > #ContenaireProg > .gauche > .lieu {
+    height: calc(100% - 80px);
+    background-color: #161B4B;
+    color: white;
+
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.programme > #ContenaireProg > .gauche > .lieu > * {
+    height: 100%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.programme > #ContenaireProg > .gauche > .lieu > .theme > div {
+    width: 120%;
+    height: 50px;
+    background-color: #009289;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.programme > #ContenaireProg > .gauche > .lieu > .zone > p {
+    font-weight: bold;
+}
+
+
+.programme > #ContenaireProg > .carteGoogle {
+    width: 55%;
+    height: 100%;
+}
+
+.programme > #ContenaireProg > .carteGoogle > iframe {
+    width: 100%;
+    height: 100%;
+}
+
+/*------------------------- à savoir -------------------------*/
+
+.buy {
+    width: 100%;
+    margin-top: 50px;
+
     display: flex;
     flex-direction: column;
     align-items: center;
-    
-    margin: 50px 0;
+}
 
+.buy > .textSavoir {
+    width: 60%;
+    background-color: #FCA01F;
+}
+
+.buy > .textSavoir > p {
+    padding: 20px;
+
+    color: white;
+    font-size: large;
+    font-weight: bold;
     text-align: center;
-  }
+}
 
-  .GrandContenaireMap{
-    width: 100vw;
-    justify-content: center;
-    margin-bottom: 100px;
-  }
+.buy > .textSavoir > p > span {
+    font-weight: lighter;
+}
 
-  .containerMap{
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-    height: 1500px;
-  }
+/*---- Formes -----*/
 
-  #GroupeMap{
-    height: 50vh;
-    width: 90%;
-  }
+#tache1 , #tache2 , #tache3 {
+    position: absolute;
+    height: 500px;
 
-  .contentcontainer{
-    margin-top: 70px;
-    width: 90%;
-    height: auto;
-  }
+    z-index: -1;
+}
 
-  .imgcarte{
-    height: auto;
-  }
+#tache1 {
+    right: 0px;
+    top: 500px;
+}
 
-  .imgcarte > img{
-    height: auto;
-    width: 100%;
-  } 
+#tache2 {
+    left: 0px;
+    top: 1000px;
+}
+
+#tache3 {
+    left: 0px;
+    top: 2000px;
+}
+
+/*---- Responsive -----*/
+
+@media only screen and (max-width: 1050px) {
+
+    .container {
+        height: 80vh;
+        margin-bottom: 100px;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .container > .logo {
+        height: 50%;
+        width: 60%;
+    }
+
+    .container > .intro {
+        width: 60%;
+    }
+
+    
+
+    .GrandContenaireMap > .containerMap {
+        flex-direction: column;
+        width: 90%;
+    }
+
+    .GrandContenaireMap > .containerMap > #GroupeMap {
+        width: 100%;
+        height: 50vh;
+
+        margin-bottom: 5px;
+    }
+
+    .GrandContenaireMap > .containerMap > .contentcontainer   {
+        width: 100%;
+    }
 
 
-  .affiche{
-    flex-direction: column-reverse;
-  }
-  
-  #ContenaireProg{
-    display: flex;
-    flex-direction: column;
-  }
+    
+    .contenairePuy > .affiche {
+        width: 90%;
+    
+        flex-direction: column-reverse;
+        justify-content: flex-start;
+    }
+
+    .contenairePuy > .affiche > .BlocCarousel {
+        width: 100%;
+    }
+
+    .contenairePuy > .affiche > .description {
+        width: 100%;
+
+        margin: 10px 0;
+    }
+
+
+
+    .programme > #ContenaireProg {
+        width: 90%;
+        height: 100vh;
+        
+        flex-direction: column;
+    }
+
+    .programme > #ContenaireProg > .gauche {
+        width: 100%;
+    }
+
+    .programme > #ContenaireProg > .carteGoogle {
+        width: 100%;
+        margin: 10px 0;
+    }
+
+    .programme > #ContenaireProg > .gauche > .lieu {
+        margin-top: 10px;
+        padding: 10px;
+    }
+
+    .programme > #ContenaireProg > .gauche > .lieu > .theme > div {
+        margin: 20px 0;
+    }
+
+
+
+
+    .buy > .textSavoir {
+        width: 90%;
+        background-color: #FCA01F;
+    }
 }

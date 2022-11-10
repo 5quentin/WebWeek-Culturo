@@ -8,13 +8,13 @@
   <title>Billets Culturo</title>
   <link rel="icon" type="image/png" href="./favicon/favicon.png" sizes="16x16" data-rh="true">
   <link rel="stylesheet" href="./css/formulaires.css" />
-  <link rel="stylesheet" href="./css/header.css" />
+  <link rel="stylesheet" href="./css/header-footer.css" />
 
 </head>
 
 <body>
 
-  <?php include './header_footer/header.php';?>
+  <?php include './header_footer/headerfr.php';?>
   <div class="ticketContainer">
     <div class="desc">
       <h1 id="prems">Il existe plusieurs formules,<br> en voici la liste:</h1>
@@ -121,7 +121,7 @@
       </form>
     </div>
   </div>
-    <?php include './header_footer/footer.html';?>
+    <?php include './header_footer/footerfr.html';?>
 
     
     <script type="text/javascript" src="./js/scriptVilles.js"></script>

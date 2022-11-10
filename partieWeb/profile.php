@@ -5,10 +5,9 @@
   <meta charset="utf-8">
   <title>Culturo</title>
 
-  <link rel="stylesheet" href="./css/header.css" />
+  <link rel="stylesheet" href="./css/header-footer.css" />
   <link rel="stylesheet" href="./css/formulaires.css" />
   <link rel="icon" type="image/png" href="./favicon/favicon.png" sizes="16x16" data-rh="true">
-  <link rel="stylesheet" type="text/css" href="./css/footer.css" />
   <script src="script.js"></script>
 </head>
 

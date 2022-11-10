@@ -15,8 +15,9 @@ $BDDCo = new connexionBDD();
 <head>
 	<meta charset="utf-8">
 	<title>Culturo</title>
-	<link rel="stylesheet" href="./css/header.css" />
-	<link rel="stylesheet" href="./css/footer.css" />
+
+	<link rel="stylesheet" href="./css/index.css">
+	<link rel="stylesheet" href="./css/header-footer.css" />
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
 
 	<script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
@@ -24,9 +25,8 @@ $BDDCo = new connexionBDD();
 
 	<link rel="icon" type="image/png" href="./favicon/favicon.png" sizes="16x16" data-rh="true">
 	<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.1/dist/leaflet.css" integrity="sha256-sA+zWATbFveLLNqWO2gtiw3HL/lh1giY/Inf1BJ0z14=" crossorigin="" />
-	<link rel="stylesheet" href="./css/cssCarousel.css">
+	
 	<script src="https://unpkg.com/leaflet@1.9.1/dist/leaflet.js" integrity="sha256-NDI0K41gVbWqfkkaHj15IzU7PtMoelkzyKp8TOaFQ3s=" crossorigin="" ;></script>
-	<link rel="stylesheet" href="css/indexCorect.css">
 </head>
 
 <body>
@@ -46,8 +46,8 @@ $BDDCo = new connexionBDD();
 				Chaque année, une ville Européenne se transforme en réunion culturelle.
 				Cette année, du 21 au 23 juillet 2023, venez profiter de la richesse offerte par Le Puy en Velay en FRANCE.
 			</p>
-			<h4 class="learn">En savoir plus</h4>
-		</div>
+            <a class="learn" href="#textesav">En savoir plus</a>
+        </div>
 	</div>
 
 	<img src="images/tachej1.png" id="tache1" alt="tache">
@@ -81,7 +81,7 @@ $BDDCo = new connexionBDD();
 			</div>
 		</div>
 		<div class="bouton">
-			<a href="./page_billet.php">TICKETS <br><span>SELECTION CULTURO</span> </a>
+			<a href="./page_billetfr.php">TICKETS <br><span>SELECTION CULTURO</span> </a>
 		</div>
 	</div>
 
@@ -171,7 +171,7 @@ $BDDCo = new connexionBDD();
 		</div>
 
 		<div class="bouton">
-			<a class="rose" href='page_billet.php'>Tickets </br> <span>CULTURO</span></a>
+			<a class="rose" href='page_billetfr.php'>Tickets </br> <span>CULTURO</span></a>
 		</div>
 	</div>
 

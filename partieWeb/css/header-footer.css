@@ -14,10 +14,7 @@
 	src: url("../fonts/segoe-ui/Segoe\ UI.ttf"),
 }
 
-body {
-	margin: 0;
-}
-
+/*--------------------Header--------------------*/
 header {
 	position: absolute;
 	display: flex;
@@ -62,6 +59,7 @@ header {
 	padding-right: 2em;
 	border-radius: 10px;
 	width: 220px;
+    box-shadow: -2px 2px 20px rgba(0, 0, 0, 0.500);
 }
 
 #dates {
@@ -97,6 +95,7 @@ header {
 	border-radius: 10px;
 	padding: 0 10px;
 	justify-content: center;
+    box-shadow: -2px 2px 20px rgba(0, 0, 0, 0.500);
 }
 
 .menu {
@@ -182,6 +181,7 @@ header {
 	z-index: -1;
 }
 
+/*--------------------Responsive-------------------*/
 @media only screen and (max-width: 1050px) {
 
 	header {
@@ -252,5 +252,119 @@ header {
 
 	.menu:hover>ul {
 		display: block;
+	}
+}
+
+
+
+/*--------------------Footer--------------------*/
+footer{
+	display: flex;
+}
+	
+
+#footer1 {
+	margin-top: -1em;
+	width: 100%;
+}
+
+.footer2 {
+	display: flex;
+	justify-content: space-between;
+	background-color: #161B4B;
+	height: 250px;
+	width: 100%;
+	margin-top: -1em;	
+	color: white;
+	font-size: 12px;
+	font-family: "Segoe UI";
+	font-weight: bold;
+}
+.fgauche {
+	display : flex;
+	/*justify-content: start;*/
+	flex-direction: column;
+	align-items: center;
+	
+}
+
+
+.ml {
+	height: 175px;
+	display: flex;
+	justify-content: space-between;
+	flex-direction: column;
+	padding-right: 100px;
+	text-align: center;
+	line-height : 50%;
+	padding-top: 35px;
+	font-size: 20px;
+	
+}
+
+a{
+	text-decoration: none;
+	color: white;
+}
+
+
+
+#ig {
+	width: auto;
+	height: 45px;
+	padding-right: 1.7em;
+}
+
+#tt {
+	width: auto;
+	height: 44px;
+	padding-right: 1.7em;
+}
+
+#fb {
+	height: 44px;
+	width: auto;
+}
+
+
+.rs {
+	display: flex;
+	justify-content: space-evenly;
+	padding-top: 6em;
+	padding-left: 6em;
+	height: 18%;
+	width: 18%;
+}
+
+
+
+
+.email {
+	display: flex;
+	justify-content: center;
+	color : white;
+	font-size: 22px;
+	padding-top: 1em;
+	padding-left: 3.8em;
+}
+
+@media screen and (max-width: 650px) {
+
+	.footer2{
+		flex-direction: column;
+		height:auto;
+	}
+
+	.email {
+		padding-top: 0;
+		padding-left: 0;
+	}
+	
+	.rs {
+		padding-left: 0;
+	}
+
+	.ml {
+		padding-right: 0;
 	}
 }
