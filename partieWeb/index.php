@@ -14,6 +14,7 @@ $BDDCo = new connexionBDD();
 
 <head>
     <meta charset="utf-8">
+    <meta name="description" content="Culturo an event across Europe">
     <title>Culturo</title>
 
     <link rel="stylesheet" href="./css/index.css">

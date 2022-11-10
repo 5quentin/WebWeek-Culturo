@@ -74,6 +74,7 @@ header {
 
 .hg>.logo {
 	width: 60%;
+	min-width: fit-content;
 	height: 80%;
 }
 
@@ -184,8 +185,8 @@ header {
 /*--------------------Responsive-------------------*/
 @media only screen and (max-width: 1050px) {
 
-	header {
-		background-color: aqua;
+	#contenaireHeader {
+		height: 4.5vh;
 	}
 
 	#dates {
@@ -211,8 +212,12 @@ header {
 		width: 100px;
 	}
 
+	.menu>.burger {
+		height: 100%;
+	}
+
 	.menu>.burger>img {
-		height: 40px;
+		width: 80%;
 	}
 
 	.menu ul {
