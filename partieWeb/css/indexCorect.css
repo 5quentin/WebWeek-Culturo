@@ -29,6 +29,10 @@ body div :not(footer , #map *) , iframe  {
     font-family: "GROBOLD";
 }
 
+.container > .intro > .titreCULT{
+    font-family: 'GROBOLD';
+}
+
 .container > .intro > h2 {
     font-size: larger;
 }
