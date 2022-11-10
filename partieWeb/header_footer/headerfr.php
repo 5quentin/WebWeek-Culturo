@@ -38,7 +38,7 @@
 							<form method="post" action="./connexionfr.php"><input name="profil" type="submit" value="Profil"></input></form>
 						</li>
 						<li id="billeterie">
-							<form method="post" action="./connexionfr.php"><input name="billet" type="submit" value="billetterie"></input></form>
+							<form method="post" action="./connexionfr.php"><input name="billet" type="submit" value="Billetterie"></input></form>
 						</li>
 					</ul>
 				</nav>
