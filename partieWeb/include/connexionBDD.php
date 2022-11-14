@@ -23,11 +23,10 @@ include('./fonction.php');
 
         public function __construct()
         {
-
             $this->connection = new PDO('mysql:host=localhost;port=3306;dbname=maboyer_culturo','maboyer_culturo', 'mevtrdems');
+            //$this->connection = new PDO('mysql:host=localhost;port=3306;dbname=culturo','root', '');
             $this->MAC = exec('getmac');
             $this->MAC = strtok($this->MAC, ' ');
-
             $this->requete = "SELECT * FROM type_billet";
             $this->resultats = $this->connection->query($this->requete);
             $this->tab_typeBillet = $this->resultats->fetchAll();
@@ -64,12 +63,10 @@ include('./fonction.php');
                     if ($this->tab_comptes[$v]['mdp'] == $mdp) {
                         $this->motDePasse = true;
                         if($this->tab_comptes[$v]['mail']=="admin@admin.culturo"){
-                            unlink("./mac.txt");
-                            $coSauv = new funtionSauCo($this->tab_comptes[$v]['id'],'',$this->MAC);
+                            $coSauv = new funtionSauCo($this->tab_comptes[$v]['id'],'');
                             echo '<script>document.location.href="admin.php"</script>';
                         }else{
-                            unlink("./mac.txt");
-                            $coSauv = new funtionSauCo($this->tab_comptes[$v]['id'],'client',$this->MAC);
+                            $coSauv = new funtionSauCo($this->tab_comptes[$v]['id'],'client');
                             echo '<script>document.location.href="profile.php"</script>';
                         }
                         
