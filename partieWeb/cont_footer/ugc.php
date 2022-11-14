@@ -1,20 +1,15 @@
 <!doctype html>
 <html lang="en">
-
-<head>
-  <meta charset="utf-8">
-  <title>Culturo</title>
-  <link rel="stylesheet" href="../css/index.css">
-  <link rel="stylesheet" href="../css/mention.css">
-  <script src="../script.js"></script>
-</head>
-
+<?php include "../header_footer/head.html"?>
 <body>
 
 <div class="pageML">
     <div class="souris">
-        <h1>GENERAL CONDITIONS OF USE</h1>
 
+    <div class="h1_BtnSortie">
+            <h1>GENERAL CONDITIONS OF USE</h1>
+             <button class="BtnSortie"><a href="../index.php">Go Home <i class="fa-solid fa-right-from-bracket"></i></a> </button>
+        </div>
         <p> 
             <span>ACCESS</span> </br>
             All persons present (spectator or accredited stakeholder) must have a valid ticket. Spectators are required to respect the instructions printed on the back of the tickets as well as these rules of procedure.

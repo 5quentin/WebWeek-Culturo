@@ -1,20 +1,16 @@
 <!doctype html>
 <html lang="fr">
-
-<head>
-    <meta charset="utf-8">
-    <title>Culturo</title>
-    <link rel="stylesheet" href="../css/index.css">
-    <link rel="stylesheet" href="../css/mention.css">
-    <script src="../script.js"></script>
-</head>
+<?php include "../header_footer/head.html"?>
 
 <body>
 
     <div class="pageML">
         <div class="souris">
+            
+        <div class="h1_BtnSortie">
             <h1>Mentions légales</h1>
-
+            <button class="BtnSortie"><a href="../indexfr.php">Retour Menu <i class="fa-solid fa-right-from-bracket"></i></a> </button>
+        </div>
             <p>
                 <span>ÉDITEUR</span> </br>
                 Association CULTURO </br>
