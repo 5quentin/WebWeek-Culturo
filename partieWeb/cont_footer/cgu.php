@@ -1,20 +1,17 @@
 <!doctype html>
 <html lang="fr">
 
-<head>
-  <meta charset="utf-8">
-  <title>Culturo</title>
-  <link rel="stylesheet" href="../css/index.css">
-  <link rel="stylesheet" href="../css/mention.css">
-  <script src="../script.js"></script>
-</head>
+<?php include "../header_footer/head.html"?>
 
 <body>
 
 <div class="pageML">
     <div class="souris">
-        <h1>Conditions générales d'utilisation</h1>
-
+        
+    <div class="h1_BtnSortie">
+            <h1>Conditions générales d'utilisation</h1>
+            <button class="BtnSortie"><a href="../indexfr.php">Retour Menu <i class="fa-solid fa-right-from-bracket"></i></a> </button>
+        </div>
         <p> 
             <span>ACCÈS</span> </br>
             Toute personne présente (spectateur ou intervenant accrédité) doit être munie d’un billet valide. Les spectateurs sont tenus de respecter les consignes imprimées au dos des billets ainsi que du présent règlement intérieur.
