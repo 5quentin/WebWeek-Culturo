@@ -1,0 +1,652 @@
+html, body{
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  position: relative;
+  display: flex;
+	justify-content: center;
+	flex-direction: column;
+  font-family: "GROBOLD";
+}
+
+/*********************** Partie Map ***********************/
+.GrandContenaireMap{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 2;
+  grid-gap: 20px;
+}
+.containerMap{
+  display: flex;
+  flex-direction: row;
+  justify-content:space-evenly;
+  width: 93%;
+  height: 100%;
+  margin-top: 5em;
+  
+  
+}
+
+#GroupeMap{
+  display: flex;
+  flex-direction: row;
+  width: 40%;
+  height: 100%;
+  
+}
+
+#map {
+  height: 100%;
+  width: 100%;
+  z-index: 1; 
+  position: relative;
+  border-radius: 15px;
+}
+
+
+.info>.fa-compress{
+  opacity: 0;
+}
+.Zoomer>.fa-compress{
+  opacity: 100;
+  cursor: pointer;
+}
+.Zoomer::-webkit-scrollbar{
+  display: none;
+}
+.fa-compress{
+  background-color:white;
+  padding: 8px;
+  opacity: 70%;
+
+}
+#articleMap{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/*////////////////////////////////////*/
+
+.contentcontainer{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  height: 100%;
+  width: 40%;
+
+}
+.selection{
+  display: flex;
+  height: auto;
+  width: 100%;
+  height: 15%;
+  justify-content: space-between;
+
+}
+
+#select{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: black;
+  color: white;
+  border-radius: 10px;
+  font-family: 'GROBOLD';
+  font-size: 20px;
+  width:50%;
+  margin: 0 0 1em 0;
+}
+
+.imgcarte{
+  width: 100%;
+  height: 40vh;
+  
+}
+.imgcarte>img{
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+  
+}
+#ville{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #161B4B;
+  color: white;
+  width: 45%;
+  border-radius: 10px;
+  border: 50px;
+  font-size: 21px;
+  font-family: 'Segoe UI';
+  font-weight: bold;
+  padding: 0.5em;
+  margin: 0 0 1em 0;
+}
+
+
+.titre2{
+  font-size: 19px;
+}
+.textville{
+  background-color: #FCA01F;
+  width: 100%;
+  height: 25%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 15px;
+  margin: 1em 0 0 0;
+}
+
+.textville p{
+  width: 90%;
+  font-family: 'Segoe UI';
+  text-align: justify;
+  font-weight: 600;
+  font-size: 15px;
+  color: white;
+}
+
+
+.bouton2{ 
+  display: flex;
+  width: 100%;
+  height: 300px;
+  justify-content: center;
+  
+}
+
+.rose{
+  text-decoration: none;
+  color: black;
+  text-align: center;
+
+}
+.rose>span{
+  font-size: 18px;
+}
+.ticket{ 
+  display: flex;
+  justify-content: center;
+  font-size: 23px;
+  background-color: #009289;
+  width: 20%;
+  height: 15vh;
+  border-radius: 15px;
+  align-items: center;
+}
+
+
+
+
+
+
+
+
+/*********************** Home Page ***********************/
+
+/* partie intro */
+
+
+#tache1 {
+  z-index: 0;
+  position:absolute;
+  right: 0;
+  width: 12%;
+}
+
+.main{
+  display: flex;
+  height: 100vh;
+  width: 100%;
+  flex-direction: column;
+  grid-gap: 180px;
+}
+
+.logo{
+  display: flex;
+  height: auto;
+  width: 160vw;
+  justify-content: center;
+}
+
+.container{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  position: content;
+  width: 100%;
+  margin-top: 10em;
+}
+
+.intro{
+  display: flex;
+  justify-content: start;
+}
+
+.intro>div{
+width: 65%;
+display: flex;
+flex-direction: column;
+}
+
+.imglogo{
+  max-width: 600px;
+}
+
+.titreCULT{
+  font-family: 'GROBOLD';
+  margin : 0;
+  margin-bottom: 0.2em;
+}
+
+.titreE{
+  font-family: 'GROBOLD';
+  font-size: 25px;
+  font-weight: 200;
+  margin : 0;
+}
+
+.learn {
+  margin : 0;
+  font-weight: 700;
+  font-family: 'Segoe UI';
+}
+  
+
+.leint p {
+  font-family: 'Segoe UI';
+  font-size: 21px;
+  font-weight: 600;
+}
+
+
+/* Profile Page */
+
+.contEuro{
+	display: flex;
+	position: content;
+	width: 100%;
+	z-index: 3;
+  justify-content: space-evenly;
+	margin-top : 3em;
+}
+
+
+.contenairePuy{
+	display: flex;
+	flex-direction: column-reverse;
+	position: content;
+	width: 100%;
+	z-index: 3;
+	flex-direction: row;
+  justify-content: center;
+
+}
+
+.affiche {
+	display: flex;
+	justify-content:space-evenly;
+	z-index: 3;
+	width: 90%;
+  align-items: center;
+}
+
+.BlocCarousel {
+	display: flex;
+  width: 40%;
+  height: auto;
+}
+
+.contenairePuy #ContenaireProg{
+	display: flex;
+	flex-direction: column-reverse;
+	position: content;
+  width: 100%;
+	z-index: 3;
+	flex-direction: row;
+	justify-content: space-evenly;
+}
+
+
+
+
+
+
+#harry {
+	border-radius: 15px;
+	width: 100%;
+}
+
+.description {
+  width: 40%;
+}
+.description .descContenaire{
+  display: flex;
+	flex-direction: column;
+  width: 100%;
+}
+
+.titre {
+	background-color: #F69F25;
+	font-family: GROBOLD;
+	font-size : 200%;
+	width: 50%;
+  height: 100%;
+	text-align: center;
+	border-radius: 10px;
+}
+
+.datesfest{
+	background-color: #161B4B;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+	color : white;
+	font-family: Segoe UI;
+	margin-top: 1em;
+	font-size: 20px;
+	border-radius: 10px;
+	line-height: 45%;
+  padding: 5vh 0;
+}
+
+.datesfest span{
+	font-family: Segoe UI;
+	font-weight: lighter;
+	font-size: 18px;
+}
+
+.titrep {
+	background-color: #000000;
+	color : white;
+	font-family: "GROBOLD";
+	font-size : 35px;
+	width: 360px;
+	text-align: center;
+	padding : 0.2em 0.5em 0.2em 0.5em;
+	border-radius: 10px;
+}
+
+
+#white2023 {
+	font-size: 80px;
+	margin : 0.2em 0em 1em 1.3em;
+	text-shadow: 10px 2px #009289;
+}
+
+.tachej{
+	z-index: 0;
+	position: absolute;
+	top: 90em;
+}
+
+
+
+.lieu{
+	background-color: #161B4B;
+	color : white;
+	display: flex;
+	justify-content: center;
+	font-family: 'Segoe UI';
+	font-weight: bold;
+	text-align: center;
+	width: 480px;
+	border-radius: 10px;
+	padding : 1.5em;
+	margin-top: 1.7em;
+}
+
+
+
+.zone {
+	line-height: 65px;
+	padding-left: 3em;
+  font-family:"Segoe UI"
+}
+
+
+.art {
+	background-color: #009289;
+  font-family:"Segoe UI";
+	display: flex;
+	color: black;
+	text-align: center;
+	border-radius: 10px;
+	justify-content: center;
+	padding-left: 1.5em;
+	padding-right: 1.5em;
+	line-height: 65px;
+	font-weight: 900;
+}
+
+.programme {
+	display: flex;
+	flex-direction: column;
+}
+
+#cartep {
+	border-radius: 10px;
+}
+
+
+.TextSavoir{
+  display: flex;
+  justify-content: center;
+  width: 100%;
+	z-index: 4;
+}
+
+.TextSavoir>p{
+  font-family: "Segoe UI";
+  font-weight: 600;
+  color : white;
+  background-color: #F69F25;
+  width: 800px;
+  border-radius: 15px;
+}
+#textesav {
+  padding : 2em;
+}
+
+#textesav>span {
+  text-align: center;
+  font-weight: 900;
+}
+
+
+.Buy {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-top: -12em;
+}
+
+.souris{
+  width: 50%;
+  justify-content: center;
+}
+
+
+.pageML{
+  display: flex;
+  width: 100vw;
+  justify-content: center;
+}
+
+.souris>h1{
+  background-color:#F69F25;
+  text-align: center;
+  border-radius: 10px;
+  width: 35%;
+  font-size: 25px;
+  padding: 0.8em;
+}
+
+.souris>p{
+  background-color: lightgoldenrodyellow;
+  text-align: justify;
+  border-radius: 10px;
+  font-size: 17px;
+  font-family: 'Segoe UI';
+  padding: 0.8em;
+  line-height: 1.4;
+  padding: 2em;
+  display: flex;
+  flex-direction: column;
+}
+
+.souris>p>span{
+  font-size: 20px;
+  font-family: 'Segoe UI';
+  font-weight: bold;
+}
+
+
+.ContPages{
+  display: flex;
+  justify-content: center;
+}
+
+.Pages{
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+
+.Pages>p{
+  text-align: center;
+  font-size: 23px;
+}
+
+.Pages>a{
+  text-decoration: none;
+  color: black;
+  background-color: aliceblue;
+  text-align: center;
+  line-height: 2 ;
+  width: 25em;
+  display: flex;
+  justify-content: center;
+  font-family: 'Segoe UI';
+  font-weight: 600;
+  padding: 0.5em;
+}
+
+.Pages>a:hover{
+  background-color: #F69F25;
+  color: white;
+}
+
+
+.contPersonnel{
+  display: flex;
+  justify-content: center;
+}
+
+.personnel{
+  display: flex;
+  justify-content: center;
+  width: 50%;
+  flex-direction: column;
+}
+
+.personnel>h1{
+  display: flex;
+  justify-content: center;
+  background-color: #161B4B;
+  color: white;
+  border-radius: 10px;
+  font-size: 28px;
+  padding: 0.6em;
+  width: 55%;
+  text-align: center;
+}
+
+.personnel>p{
+  display: flex;
+  justify-content: center;
+  font-family: 'Segoe UI';
+  text-align: justify;
+  font-weight: 600;
+  line-height: 1.5;
+}
+@media only screen and (max-width: 600px) {
+  .tachej{
+    display: none;
+  }
+
+  .main > .container{
+    flex-direction: column;
+  }
+
+  .intro{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+  }
+
+  .leint{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+    margin: 50px 0;
+
+    text-align: center;
+  }
+
+  .GrandContenaireMap{
+    width: 100vw;
+    justify-content: center;
+    margin-bottom: 100px;
+  }
+
+  .containerMap{
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 1500px;
+  }
+
+  #GroupeMap{
+    height: 50vh;
+    width: 90%;
+  }
+
+  .contentcontainer{
+    margin-top: 70px;
+    width: 90%;
+    height: auto;
+  }
+
+  .imgcarte{
+    height: auto;
+  }
+
+  .imgcarte > img{
+    height: auto;
+    width: 100%;
+  } 
+
+
+  .affiche{
+    flex-direction: column-reverse;
+  }
+  
+  #ContenaireProg{
+    display: flex;
+    flex-direction: column;
+  }
+}
