@@ -76,7 +76,7 @@
           <?php
 
           include_once('./fonction.php');
-          include "./POO/Billets.php";
+          include_once "./POO/Billets.php";
 
           $file = "./sauv.txt";
 
@@ -96,7 +96,7 @@
           }
 
           if (isset($_POST["reserve"])) {
-            include "./POO/Billets.php";
+            include_once "./POO/Billets.php";
 
             if (isset($_POST["concert"]) != null) {
               $select = $_POST["concert"];

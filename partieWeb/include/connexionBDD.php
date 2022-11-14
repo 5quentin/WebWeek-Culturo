@@ -23,8 +23,8 @@ include('./fonction.php');
 
         public function __construct()
         {
-            $this->connection = new PDO('mysql:host=localhost;port=3306;dbname=maboyer_culturo','maboyer_culturo', 'mevtrdems');
-            //$this->connection = new PDO('mysql:host=localhost;port=3306;dbname=culturo','root', '');
+            //$this->connection = new PDO('mysql:host=localhost;port=3306;dbname=maboyer_culturo','maboyer_culturo', 'mevtrdems');
+            $this->connection = new PDO('mysql:host=localhost;port=3306;dbname=culturo','root', '');
             $this->MAC = exec('getmac');
             $this->MAC = strtok($this->MAC, ' ');
             $this->requete = "SELECT * FROM type_billet";

@@ -21,6 +21,7 @@ class funtionSauCo{
                     $_SESSION['Id_Co_Clients']=$Indentifiant;
                     file_put_contents($fichier_Im,$Indentifiant);
                    
+                
                 }
             }else{
                 if(!isset($_SESSION['Id_Co_Managers'])){
