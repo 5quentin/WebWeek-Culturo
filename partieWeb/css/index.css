@@ -231,6 +231,14 @@ body div :not(footer , footer *, #map *) , iframe  {
     font-family: 'GROBOLD';
     margin: 0 5px;
 }
+.datesfest>div{
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+.datesfest>div h3{
+  margin: 0 0 5% 10%;
+}
 
 .contenairePuy > .affiche > .description > .datesfest {
     height: calc(100% - 80px);

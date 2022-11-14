@@ -1,0 +1,128 @@
+.souris{
+  width: 50%;
+  justify-content: center;
+}
+
+
+.pageML{
+  display: flex;
+  width: 98vw;
+  justify-content: center;
+}
+.h1_BtnSortie{
+  display: flex;
+  justify-content: space-around;
+  margin-top: 5em;
+  height: auto;
+  align-items: center;
+}
+.h1_BtnSortie>h1{
+  background-color:#F69F25;
+  text-align: center;
+  border-radius: 10px;
+  width: 35%;
+  font-size: 25px;
+  padding: 0.8em;
+}
+
+.souris>p{
+  background-color: lightgoldenrodyellow;
+  text-align: justify;
+  border-radius: 10px;
+  font-size: 17px;
+  font-family: 'Segoe UI';
+  padding: 0.8em;
+  line-height: 1.4;
+  padding: 2em;
+  display: flex;
+  flex-direction: column;
+}
+
+.souris>p>span{
+  font-size: 20px;
+  font-family: 'Segoe UI';
+  font-weight: bold;
+}
+
+
+.ContPages{
+  display: flex;
+  justify-content: center;
+}
+
+.Pages{
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+
+.Pages>p{
+  text-align: center;
+  font-size: 23px;
+}
+
+.Pages>a{
+  text-decoration: none;
+  color: black;
+  background-color: aliceblue;
+  text-align: center;
+  line-height: 2 ;
+  width: 25em;
+  display: flex;
+  justify-content: center;
+  font-family: 'Segoe UI';
+  font-weight: 600;
+  padding: 0.5em;
+}
+
+.Pages>a:hover{
+  background-color: #F69F25;
+  color: white;
+}
+
+
+.contPersonnel{
+  display: flex;
+  justify-content: center;
+}
+
+.personnel{
+  display: flex;
+  justify-content: center;
+  width: 50%;
+  flex-direction: column;
+}
+
+.personnel>h1{
+  display: flex;
+  justify-content: center;
+  background-color: #161B4B;
+  color: white;
+  border-radius: 10px;
+  font-size: 28px;
+  padding: 0.6em;
+  width: 55%;
+  text-align: center;
+}
+
+.personnel>p{
+  display: flex;
+  justify-content: center;
+  font-family: 'Segoe UI';
+  text-align: justify;
+  font-weight: 600;
+  line-height: 1.5;
+}
+.BtnSortie{
+  background-color:#161B4B;
+  text-align: center;
+  border: none;
+  border-radius: 10px;
+  width: 35%;
+  font-size: 25px;
+  padding: 0.8em;
+  height: auto;
+  font-weight: bold;
+  
+}
